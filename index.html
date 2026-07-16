@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominique Devereaux | ibloud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0d0e12;
+            color: #f3f4f6;
+        }
+        .glow-effect {
+            box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0d0e12]/80 border-b border-zinc-800">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono text-lg font-bold tracking-tight text-white hover:text-indigo-400 transition">
+                ibloud<span class="text-indigo-500">.</span>
+            </a>
+            <nav class="flex space-x-6 text-sm font-medium text-zinc-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#featured" class="hover:text-white transition">Featured Project</a>
+                <a href="#repositories" class="hover:text-white transition">Repositories</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 space-y-32">
+
+        <section id="about" class="pt-8 md:pt-16 max-w-3xl space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono text-indigo-400">
+                <span class="w-2 h-2 rounded-full bg-indigo-500 animate-ping"></span>
+                Building in Public
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                Dominique Devereaux <br/>
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+                    Loptr Lab
+                </span>
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
+                Developer, builder, and designer crafting sensory-driven projects, open prototype environments, and digital platforms with absolute structural intent. Rooted in accessibility, community-focused building, and clean architecture.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="https://github.com/ibloud" target="_blank" class="px-6 py-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition flex items-center gap-2 text-sm">
+                    GitHub Profile
+                </a>
+                <a href="#featured" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition text-sm">
+                    Explore My Work
+                </a>
+            </div>
+        </section>
+
+        <section id="featured" class="space-y-8">
+            <div class="border-b border-zinc-800 pb-4">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Flagship Prototype</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-white mt-1">Veiled Dominion Engine</h3>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-center bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-6 md:p-8 glow-effect">
+                <div class="md:col-span-7 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-indigo-950 text-indigo-300 border border-indigo-800">Active Build</span>
+                        <span class="text-zinc-500 text-xs font-mono">Loptr-Lab / veiled-dominion-engine</span>
+                    </div>
+                    <p class="text-zinc-300 text-lg leading-relaxed font-light">
+                        An open-source prototype variant designed to rethink strategic mechanics. <strong>Veiled Dominion</strong> is a 4-player chess variant built on the core principle of mastering restraint and system regulation rather than pure conquest.
+                    </p>
+                    <ul class="text-zinc-400 text-sm space-y-2 list-disc list-inside">
+                        <li>Collaborative, open-source architecture built for rapid prototyping</li>
+                        <li>Inclusive, junior-developer friendly design paradigm</li>
+                        <li>Integrates structural game logic and accessibility standards</li>
+                    </ul>
+                    <div class="pt-4 flex gap-4">
+                        <a href="https://github.com/Loptr-Lab/veiled-dominion-engine" target="_blank" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition flex items-center gap-1">
+                            View Source Code <span class="text-xs">→</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-5 bg-gradient-to-br from-zinc-800 to-black h-48 md:h-64 rounded-xl border border-zinc-700/50 flex flex-col items-center justify-center text-center p-6">
+                    <span class="text-5xl mb-2">♟️</span>
+                    <h4 class="font-mono text-sm font-bold text-white">Veiled Dominion</h4>
+                    <p class="text-xs text-zinc-500 mt-1 font-mono">Restraint, Not Conquest.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="repositories" class="space-y-8">
+            <div class="border-b border-zinc-800 pb-4">
+                <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Open Source Ecosystem</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-white mt-1">Associated Repositories</h3>
+            </div>
+
+            <div id="repo-grid" class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30 animate-pulse col-span-2 text-center text-zinc-500 py-12">
+                    Loading public ecosystems from GitHub...
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="border-t border-zinc-800 pt-16 pb-8 space-y-8">
+            <div class="grid md:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white">Let's build something structured.</h3>
+                    <p class="text-zinc-400 text-sm max-w-sm leading-relaxed font-light">
+                        Always open to exploring system architectures, accessibility advocacy, or game theory mechanics. Feel free to connect or open an issue on our public tracks.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-3 md:items-end">
+                    <a href="mailto:contact@loptrlab.com" class="text-zinc-300 hover:text-white transition text-sm font-mono">contact@loptrlab.com</a>
+                    <a href="https://ibloud.xyz" target="_blank" class="text-zinc-300 hover:text-white transition text-sm font-mono">ibloud.xyz</a>
+                    <p class="text-xs text-zinc-600 font-mono mt-4">© 2026 Dominique Devereaux. All rights reserved.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        async function fetchRepos() {
+            const repoGrid = document.getElementById('repo-grid');
+            
+            // We fetch from both your user profile and Loptr-Lab org public profiles
+            const sources = [
+                'https://api.github.com/users/ibloud/repos?sort=updated',
+                'https://api.github.com/orgs/Loptr-Lab/repos?sort=updated'
+            ];
+
+            try {
+                let allRepos = [];
+                for(let url of sources) {
+                    const response = await fetch(url);
+                    if (response.ok) {
+                        const data = await response.json();
+                        allRepos = allRepos.concat(data);
+                    }
+                }
+
+                // Filter out forks or duplicate templates if desired, and limit to top projects
+                // Sort by stargazers + recent updates
+                allRepos.sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at) - new Date(a.updated_at));
+                
+                // Clear the loading indicator
+                repoGrid.innerHTML = '';
+
+                if (allRepos.length === 0) {
+                    repoGrid.innerHTML = `
+                        <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/20 text-center text-zinc-500 col-span-2 py-12">
+                            No public repositories found. Check back soon as builds are pushed live!
+                        </div>
+                    `;
+                    return;
+                }
+
+                allRepos.slice(0, 6).forEach(repo => {
+                    const card = document.createElement('div');
+                    card.className = "p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/20 hover:border-zinc-700/80 hover:bg-zinc-900/40 transition duration-300 flex flex-col justify-between space-y-4";
+                    
+                    card.innerHTML = `
+                        <div class="space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-mono text-indigo-400">${repo.language || 'Code'}</span>
+                                <span class="text-xs text-zinc-500 font-mono">⭐ ${repo.stargazers_count}</span>
+                            </div>
+                            <h4 class="font-bold text-white text-lg tracking-tight hover:text-indigo-400 transition">
+                                <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                            </h4>
+                            <p class="text-zinc-400 text-sm line-clamp-3 font-light">
+                                ${repo.description || 'No description provided yet. Click to view the repository source code and assets.'}
+                            </p>
+                        </div>
+                        <div class="pt-2">
+                            <a href="${repo.html_url}" target="_blank" class="text-xs font-mono text-zinc-500 hover:text-indigo-400 transition flex items-center gap-1">
+                                View Repository ↗
+                            </a>
+                        </div>
+                    `;
+                    repoGrid.appendChild(card);
+                });
+
+            } catch (error) {
+                console.error("Error fetching repositories:", error);
+                repoGrid.innerHTML = `
+                    <div class="p-6 rounded-xl border border-red-950 bg-red-950/10 text-center text-red-400 col-span-2 py-12">
+                        Failed to fetch active repositories directly from GitHub. Feel free to view them directly on profile.
+                    </div>
+                `;
+            }
+        }
+
+        fetchRepos();
+    </script>
+</body>
+</html>
