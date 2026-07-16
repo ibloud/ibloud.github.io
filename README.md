@@ -1,4 +1,4 @@
-<img src="IMG_0855.jpeg" width="100%" alt="Dominique Devereaux Portfolio Banner" />
+<img src="assets/banner-img.jpeg" width="100%" alt="Dominique Devereaux Portfolio Banner" />
 
 ## 🌐 Live Ecosystem
 The live production portfolio is dynamically accessible at: **[ibloud.github.io](https://ibloud.github.io)** (Mirror: **[ibloud.xyz](https://ibloud.xyz)**)
