@@ -1,241 +1,262 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominique Devereaux | ibloud</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dominique Devereaux — independent game developer, founder of Loptr Lab, and practice-researcher examining leadership, production, accessibility, and narrative world-building.">
+  <title>Dominique Devereaux | ibloud — Practice & Research</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
         }
-    </script>
-    <style>
-        body {
-            background-color: #0d0e12;
-            color: #f3f4f6;
-        }
-        .glow-effect {
-            box-shadow: 0 0 40px -10px rgba(99, 102, 241, 0.15);
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body { background:#0d0e12; color:#f3f4f6; }
+    .glow { box-shadow:0 0 50px -18px rgba(99,102,241,.28); }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size:32px 32px;
+    }
+    .hairline { border-color:rgba(63,63,70,.72); }
+  </style>
 </head>
 <body class="font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0d0e12]/80 border-b border-zinc-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="font-mono text-lg font-bold tracking-tight text-white hover:text-indigo-400 transition">
-                ibloud<span class="text-indigo-500">.</span>
-            </a>
-            <nav class="flex space-x-6 text-sm font-medium text-zinc-400">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#featured" class="hover:text-white transition">Featured Project</a>
-                <a href="#repositories" class="hover:text-white transition">Repositories</a>
-                <a href="#authorship" class="hover:text-white transition">AI &amp; Authorship</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
-            </nav>
-        </div>
-    </header>
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0d0e12]/85 border-b hairline">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#" class="font-mono text-lg font-bold tracking-tight text-white">ibloud<span class="text-indigo-500">.</span></a>
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-400">
+      <a href="#about" class="hover:text-white transition">About</a>
+      <a href="#research" class="hover:text-white transition">Research</a>
+      <a href="#practice" class="hover:text-white transition">Practice</a>
+      <a href="#repositories" class="hover:text-white transition">Evidence</a>
+      <a href="#authorship" class="hover:text-white transition">Authorship</a>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 space-y-32">
+<main class="max-w-6xl mx-auto px-6 py-12 md:py-16 space-y-28">
 
-        <section id="about" class="pt-8 md:pt-16 max-w-3xl space-y-6">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono text-indigo-400">
-                <span class="w-2 h-2 rounded-full bg-indigo-500 animate-ping"></span>
-                Building in Public
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Dominique Devereaux <br/>
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
-                    Loptr Lab
-                </span>
-            </h1>
-            <p class="text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
-                Developer, builder, and designer crafting sensory-driven projects, open prototype environments, and digital platforms with absolute structural intent. Rooted in accessibility, community-focused building, and clean architecture.
-            </p>
-            <div class="flex flex-wrap gap-4 pt-2">
-                <a href="https://github.com/ibloud" target="_blank" class="px-6 py-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition flex items-center gap-2 text-sm">
-                    GitHub Profile
-                </a>
-                <a href="#featured" class="px-6 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition text-sm">
-                    Explore My Work
-                </a>
-            </div>
-        </section>
+<section id="about" class="pt-6 md:pt-12 max-w-4xl">
+  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono text-indigo-400">
+    <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+    Independent practice · Loptr Lab
+  </div>
 
-        <section id="featured" class="space-y-8">
-            <div class="border-b border-zinc-800 pb-4">
-                <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Flagship Prototype</h2>
-                <h3 class="text-2xl md:text-3xl font-bold text-white mt-1">Veiled Dominion Engine</h3>
-            </div>
+  <h1 class="mt-7 text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+    Dominique Devereaux
+    <span class="block bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Creative practice as research.</span>
+  </h1>
 
-            <div class="grid md:grid-cols-12 gap-8 items-center bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-6 md:p-8 glow-effect">
-                <div class="md:col-span-7 space-y-4">
-                    <div class="flex items-center gap-3">
-                        <span class="px-2.5 py-0.5 rounded text-xs font-mono bg-indigo-950 text-indigo-300 border border-indigo-800">Active Build</span>
-                        <span class="text-zinc-500 text-xs font-mono">Loptr-Lab / veiled-dominion-engine</span>
-                    </div>
-                    <p class="text-zinc-300 text-lg leading-relaxed font-light">
-                        An open-source prototype variant designed to rethink strategic mechanics. <strong>Veiled Dominion</strong> is a 4-player chess variant built on the core principle of mastering restraint and system regulation rather than pure conquest.
-                    </p>
-                    <ul class="text-zinc-400 text-sm space-y-2 list-disc list-inside">
-                        <li>Collaborative, open-source architecture built for rapid prototyping</li>
-                        <li>Inclusive, junior-developer friendly design paradigm</li>
-                        <li>Integrates structural game logic and accessibility standards</li>
-                    </ul>
-                    <div class="pt-4 flex gap-4">
-                        <a href="https://github.com/Loptr-Lab/veiled-dominion-engine" target="_blank" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition flex items-center gap-1">
-                            View Source Code <span class="text-xs">→</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="md:col-span-5 bg-gradient-to-br from-zinc-800 to-black h-48 md:h-64 rounded-xl border border-zinc-700/50 flex flex-col items-center justify-center text-center p-6">
-                    <span class="text-5xl mb-2">♟️</span>
-                    <h4 class="font-mono text-sm font-bold text-white">Veiled Dominion</h4>
-                    <p class="text-xs text-zinc-500 mt-1 font-mono">Restraint, Not Conquest.</p>
-                </div>
-            </div>
-        </section>
+  <p class="mt-7 max-w-3xl text-lg md:text-xl text-zinc-400 leading-relaxed font-light">
+    I build games, systems, fictional worlds, and open prototype environments through Loptr Lab.
+    My practice sits at the intersection of organizational leadership, narrative world-building,
+    accessibility, technology, and independent studio production.
+  </p>
 
-        <section id="repositories" class="space-y-8">
-            <div class="border-b border-zinc-800 pb-4">
-                <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Open Source Ecosystem</h2>
-                <h3 class="text-2xl md:text-3xl font-bold text-white mt-1">Associated Repositories</h3>
-            </div>
+  <div class="flex flex-wrap gap-3 mt-7">
+    <a href="#research" class="px-5 py-3 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition">Read the research</a>
+    <a href="https://github.com/Loptr-Lab" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-semibold transition">Loptr Lab ↗</a>
+    <a href="https://github.com/ibloud" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border hairline hover:border-zinc-600 text-zinc-300 hover:text-white text-sm font-semibold transition">GitHub profile ↗</a>
+  </div>
+</section>
 
-            <div id="repo-grid" class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/30 animate-pulse col-span-2 text-center text-zinc-500 py-12">
-                    Loading public ecosystems from GitHub...
-                </div>
-            </div>
-        </section>
+<section id="research" class="space-y-8">
+  <div class="border-b hairline pb-4">
+    <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Research & Practice</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Leading the Build</h2>
+    <p class="text-zinc-500 mt-2 font-mono text-sm">Organizational Leadership and Narrative World-Building in Independent Game Studio Production</p>
+  </div>
 
-        <section id="authorship" class="space-y-8">
-            <div class="border-b border-zinc-800 pb-4">
-                <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Full Disclosure</h2>
-                <h3 class="text-2xl md:text-3xl font-bold text-white mt-1">A Note on Authorship and AI Tools</h3>
-            </div>
+  <div class="grid lg:grid-cols-12 gap-8">
+    <div class="lg:col-span-7 bg-zinc-900/50 border hairline rounded-2xl p-7 md:p-9 glow">
+      <p class="text-xs font-mono uppercase tracking-widest text-zinc-500">Primary research question</p>
+      <blockquote class="mt-4 text-2xl md:text-3xl font-medium leading-relaxed text-white">
+        How do leadership and production structures in small, founder-led independent game studios shape — and get shaped by — the narrative worlds they build?
+      </blockquote>
+      <p class="mt-6 text-zinc-400 leading-relaxed">
+        The project investigates studio production as a longitudinal creative practice rather than
+        treating a single game as the research object. It asks whether narrative systems, lore,
+        mechanics, shared language, and world-building principles can become part of the
+        organizational infrastructure through which a small studio understands identity,
+        priorities, collaboration, and direction.
+      </p>
+      <a href="research/" class="inline-flex mt-7 text-sm font-semibold text-indigo-400 hover:text-indigo-300 transition">Open the full research programme →</a>
+    </div>
 
-            <div class="bg-zinc-900/50 border border-zinc-800/80 rounded-2xl p-6 md:p-8 space-y-4">
-                <p class="text-zinc-300 text-lg leading-relaxed font-light">
-                    The fiction, characters, and worldview behind Veiled Dominion and its related
-                    projects are mine — written over close to a decade, well before any AI tool
-                    existed to help organize them. I use AI assistance (Claude) the way I'd use an
-                    editor: to structure documentation, debug code, and turn years of scattered
-                    writing into a coherent, working ecosystem. It doesn't originate the ideas
-                    here. It helps build them.
-                </p>
-                <p class="text-zinc-400 text-sm leading-relaxed font-light">
-                    For a full, itemized account of exactly where AI assistance was used in this
-                    codebase and where it wasn't — including which tools, for what, and current
-                    status — see
-                    <a href="https://github.com/Loptr-Lab/veiled-dominion-engine/blob/main/AI_USAGE.md" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition font-medium">AI_USAGE.md</a>
-                    in the flagship repo.
-                </p>
-            </div>
-        </section>
+    <div class="lg:col-span-5 space-y-4">
+      <div class="p-6 rounded-xl border hairline bg-zinc-900/25">
+        <p class="text-xs font-mono uppercase tracking-widest text-indigo-400">Practice site</p>
+        <h3 class="mt-2 text-xl font-bold">Loptr Lab</h3>
+        <p class="mt-3 text-sm text-zinc-400 leading-relaxed">
+          The primary longitudinal practice-research environment: an independent studio in which
+          creative, technical, organizational, and accessibility decisions are developed together.
+        </p>
+        <a href="https://github.com/Loptr-Lab" target="_blank" rel="noopener" class="inline-block mt-4 text-sm text-zinc-300 hover:text-white">View studio repositories ↗</a>
+      </div>
 
-        <section id="contact" class="border-t border-zinc-800 pt-16 pb-8 space-y-8">
-            <div class="grid md:grid-cols-2 gap-8 items-start">
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-white">Let's build something structured.</h3>
-                    <p class="text-zinc-400 text-sm max-w-sm leading-relaxed font-light">
-                        Always open to exploring system architectures, accessibility advocacy, or game theory mechanics. Feel free to connect or open an issue on our public tracks.
-                    </p>
-                </div>
-                <div class="flex flex-col gap-3 md:items-end">
-                    <a href="mailto:questions@loptrlab.com" class="text-zinc-300 hover:text-white transition text-sm font-mono">questions@loptrlab.com</a>
-                    <a href="https://ibloud.xyz" target="_blank" class="text-zinc-300 hover:text-white transition text-sm font-mono">ibloud.xyz</a>
-                    <p class="text-xs text-zinc-600 font-mono mt-4">© 2026 Dominique Devereaux. All rights reserved.</p>
-                </div>
-            </div>
-        </section>
+      <div class="p-6 rounded-xl border hairline bg-zinc-900/25">
+        <p class="text-xs font-mono uppercase tracking-widest text-indigo-400">Research logic</p>
+        <p class="mt-3 text-lg font-medium text-white">Practice → Evidence → Reflection → Analysis → Contribution</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    </main>
+<section id="practice" class="space-y-8">
+  <div class="border-b hairline pb-4">
+    <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Practice Infrastructure</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">The work is the archive.</h2>
+    <p class="mt-3 max-w-3xl text-zinc-400 leading-relaxed">
+      These projects are not presented only as finished portfolio pieces. Their repositories,
+      design decisions, documentation, experiments, and production history form an evolving record
+      of practice through which the research questions can be examined.
+    </p>
+  </div>
 
-    <script>
-        async function fetchRepos() {
-            const repoGrid = document.getElementById('repo-grid');
-            
-            // We fetch from both your user profile and Loptr-Lab org public profiles
-            const sources = [
-                'https://api.github.com/users/ibloud/repos?sort=updated',
-                'https://api.github.com/orgs/Loptr-Lab/repos?sort=updated'
-            ];
+  <div class="grid md:grid-cols-2 gap-6">
+    <article class="p-7 rounded-2xl border hairline bg-zinc-900/30">
+      <p class="text-xs font-mono text-indigo-400">PRIMARY CREATIVE CASE</p>
+      <h3 class="mt-2 text-2xl font-bold">Veiled Dominion</h3>
+      <p class="mt-4 text-zinc-400 leading-relaxed">
+        An open prototype exploring strategic mechanics through restraint, regulation,
+        asymmetric systems, and inclusive architecture. The project provides a site for examining
+        how design principles become technical and organizational constraints.
+      </p>
+      <a href="https://github.com/Loptr-Lab/veiled-dominion-engine" target="_blank" rel="noopener" class="inline-block mt-5 text-sm font-semibold text-indigo-400 hover:text-indigo-300">View engine repository →</a>
+    </article>
 
-            try {
-                let allRepos = [];
-                for(let url of sources) {
-                    const response = await fetch(url);
-                    if (response.ok) {
-                        const data = await response.json();
-                        allRepos = allRepos.concat(data);
-                    }
-                }
+    <article class="p-7 rounded-2xl border hairline bg-zinc-900/30">
+      <p class="text-xs font-mono text-indigo-400">ACCESSIBILITY ARTIFACT</p>
+      <h3 class="mt-2 text-2xl font-bold">Duet</h3>
+      <p class="mt-4 text-zinc-400 leading-relaxed">
+        An accessibility-first browser prototype designed around screen-reader interaction,
+        coordinate commands, visual testing, procedural audio cues, and a snapshot-oriented
+        interface architecture. It treats accessibility as a systems constraint, not merely a
+        presentation layer.
+      </p>
+      <a href="https://github.com/Loptr-Lab/duet_engine_architecture" target="_blank" rel="noopener" class="inline-block mt-5 text-sm font-semibold text-indigo-400 hover:text-indigo-300">View prototype →</a>
+    </article>
 
-                // Filter out forks or duplicate templates if desired, and limit to top projects
-                // Sort by stargazers + recent updates
-                allRepos.sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.updated_at) - new Date(a.updated_at));
-                
-                // Clear the loading indicator
-                repoGrid.innerHTML = '';
+    <article class="p-7 rounded-2xl border hairline bg-zinc-900/30">
+      <p class="text-xs font-mono text-indigo-400">LONGITUDINAL PRACTICE</p>
+      <h3 class="mt-2 text-2xl font-bold">Returning to the Void</h3>
+      <p class="mt-4 text-zinc-400 leading-relaxed">
+        A long-running creative thread extending back to 2016. Its value to the research is
+        longitudinal: it provides a longer trajectory through which founder-led creative practice
+        and production decisions can be considered across changing circumstances.
+      </p>
+      <a href="https://sites.google.com/view/rtn2thevoid/journey" target="_blank" rel="noopener" class="inline-block mt-5 text-sm font-semibold text-indigo-400 hover:text-indigo-300">Explore the project journey →</a>
+    </article>
 
-                if (allRepos.length === 0) {
-                    repoGrid.innerHTML = `
-                        <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/20 text-center text-zinc-500 col-span-2 py-12">
-                            No public repositories found. Check back soon as builds are pushed live!
-                        </div>
-                    `;
-                    return;
-                }
+    <article class="p-7 rounded-2xl border hairline bg-zinc-900/30">
+      <p class="text-xs font-mono text-indigo-400">ORGANIZATIONAL EXPERIMENT</p>
+      <h3 class="mt-2 text-2xl font-bold">Training & Knowledge Transfer</h3>
+      <p class="mt-4 text-zinc-400 leading-relaxed">
+        A contribution pathway that maps prototype engineering, systems design, and technical art
+        onto real project requirements. It provides a practical case for studying onboarding,
+        shared vocabulary, role definition, and knowledge transfer in a small studio.
+      </p>
+      <a href="https://github.com/Loptr-Lab/training" target="_blank" rel="noopener" class="inline-block mt-5 text-sm font-semibold text-indigo-400 hover:text-indigo-300">View training repository →</a>
+    </article>
+  </div>
+</section>
 
-                allRepos.slice(0, 6).forEach(repo => {
-                    const card = document.createElement('div');
-                    card.className = "p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/20 hover:border-zinc-700/80 hover:bg-zinc-900/40 transition duration-300 flex flex-col justify-between space-y-4";
-                    
-                    card.innerHTML = `
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between">
-                                <span class="text-xs font-mono text-indigo-400">${repo.language || 'Code'}</span>
-                                <span class="text-xs text-zinc-500 font-mono">⭐ ${repo.stargazers_count}</span>
-                            </div>
-                            <h4 class="font-bold text-white text-lg tracking-tight hover:text-indigo-400 transition">
-                                <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-                            </h4>
-                            <p class="text-zinc-400 text-sm line-clamp-3 font-light">
-                                ${repo.description || 'No description provided yet. Click to view the repository source code and assets.'}
-                            </p>
-                        </div>
-                        <div class="pt-2">
-                            <a href="${repo.html_url}" target="_blank" class="text-xs font-mono text-zinc-500 hover:text-indigo-400 transition flex items-center gap-1">
-                                View Repository ↗
-                            </a>
-                        </div>
-                    `;
-                    repoGrid.appendChild(card);
-                });
+<section id="method" class="space-y-8">
+  <div class="border-b hairline pb-4">
+    <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Research Method</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">A longitudinal practice-research design</h2>
+  </div>
 
-            } catch (error) {
-                console.error("Error fetching repositories:", error);
-                repoGrid.innerHTML = `
-                    <div class="p-6 rounded-xl border border-red-950 bg-red-950/10 text-center text-red-400 col-span-2 py-12">
-                        Failed to fetch active repositories directly from GitHub. Feel free to view them directly on profile.
-                    </div>
-                `;
-            }
-        }
+  <div class="grid md:grid-cols-5 gap-3">
+    <div class="p-5 rounded-xl border hairline bg-zinc-900/30"><span class="text-xs font-mono text-indigo-400">01</span><h3 class="mt-2 font-semibold">Practice</h3><p class="mt-2 text-xs text-zinc-500">Ongoing studio production</p></div>
+    <div class="p-5 rounded-xl border hairline bg-zinc-900/30"><span class="text-xs font-mono text-indigo-400">02</span><h3 class="mt-2 font-semibold">Archive</h3><p class="mt-2 text-xs text-zinc-500">Repositories, documents, decisions</p></div>
+    <div class="p-5 rounded-xl border hairline bg-zinc-900/30"><span class="text-xs font-mono text-indigo-400">03</span><h3 class="mt-2 font-semibold">Reflection</h3><p class="mt-2 text-xs text-zinc-500">Contemporaneous leadership log</p></div>
+    <div class="p-5 rounded-xl border hairline bg-zinc-900/30"><span class="text-xs font-mono text-indigo-400">04</span><h3 class="mt-2 font-semibold">Comparison</h3><p class="mt-2 text-xs text-zinc-500">2–3 independent studios</p></div>
+    <div class="p-5 rounded-xl border hairline bg-zinc-900/30"><span class="text-xs font-mono text-indigo-400">05</span><h3 class="mt-2 font-semibold">Analysis</h3><p class="mt-2 text-xs text-zinc-500">Thematic interpretation</p></div>
+  </div>
+</section>
 
-        fetchRepos();
-    </script>
+<section id="repositories" class="space-y-8">
+  <div class="border-b hairline pb-4">
+    <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Evidence</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Public practice archive</h2>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6">
+    <a href="https://github.com/Loptr-Lab" target="_blank" rel="noopener" class="group p-7 rounded-2xl border hairline bg-zinc-900/30 hover:bg-zinc-900/60 hover:border-zinc-700 transition">
+      <p class="text-xs font-mono text-indigo-400">STUDIO</p>
+      <h3 class="mt-2 text-xl font-bold group-hover:text-indigo-300 transition">Loptr Lab</h3>
+      <p class="mt-3 text-sm text-zinc-500">Ongoing open-source studio repositories and production artifacts.</p>
+    </a>
+
+    <a href="https://pixie.pckt.blog/" target="_blank" rel="noopener" class="group p-7 rounded-2xl border hairline bg-zinc-900/30 hover:bg-zinc-900/60 hover:border-zinc-700 transition">
+      <p class="text-xs font-mono text-indigo-400">REFLECTIVE ARCHIVE</p>
+      <h3 class="mt-2 text-xl font-bold group-hover:text-indigo-300 transition">PIXIE</h3>
+      <p class="mt-3 text-sm text-zinc-500">Public writing and conceptual exploration surrounding systems, incentives, architecture, and creative practice.</p>
+    </a>
+
+    <a href="https://github.com/ibloud" target="_blank" rel="noopener" class="group p-7 rounded-2xl border hairline bg-zinc-900/30 hover:bg-zinc-900/60 hover:border-zinc-700 transition">
+      <p class="text-xs font-mono text-indigo-400">PERSONAL ARCHIVE</p>
+      <h3 class="mt-2 text-xl font-bold group-hover:text-indigo-300 transition">GitHub</h3>
+      <p class="mt-3 text-sm text-zinc-500">Personal repositories documenting prototypes, experiments, and creative-technical practice.</p>
+    </a>
+  </div>
+</section>
+
+<section id="authorship" class="space-y-8">
+  <div class="border-b hairline pb-4">
+    <p class="text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">Research Integrity</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Authorship & AI tools</h2>
+  </div>
+
+  <div class="bg-zinc-900/50 border hairline rounded-2xl p-7 md:p-9 space-y-5">
+    <p class="text-zinc-300 text-lg leading-relaxed font-light">
+      The fiction, characters, and worldview behind Veiled Dominion and related projects are my own.
+      I use AI assistance as a production and editorial tool for tasks such as documentation,
+      debugging, organization, and restructuring material into working technical systems.
+      The intellectual provenance of a particular artifact is documented where appropriate in the
+      project's repository.
+    </p>
+    <p class="text-sm text-zinc-500 leading-relaxed">
+      For project-specific disclosure, see the AI usage documentation in the flagship repository.
+    </p>
+    <a href="https://github.com/Loptr-Lab/veiled-dominion-engine/blob/main/AI_USAGE.md" target="_blank" rel="noopener" class="text-sm font-semibold text-indigo-400 hover:text-indigo-300">View AI_USAGE.md →</a>
+  </div>
+</section>
+
+<section id="contact" class="border-t hairline pt-14 pb-8">
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <p class="text-xs font-mono uppercase tracking-widest text-indigo-400">Contact</p>
+      <h2 class="mt-2 text-2xl font-bold">Practice, research, collaboration.</h2>
+      <p class="mt-3 text-zinc-500 max-w-xl leading-relaxed">
+        Open to conversations about independent game production, practice research, accessibility,
+        systems architecture, and organizational design.
+      </p>
+    </div>
+    <div class="md:text-right space-y-3">
+      <a href="mailto:questions@loptrlab.com" class="block text-zinc-300 hover:text-white font-mono text-sm">questions@loptrlab.com</a>
+      <a href="https://ibloud.xyz" target="_blank" rel="noopener" class="block text-zinc-300 hover:text-white font-mono text-sm">ibloud.xyz ↗</a>
+      <p class="text-xs text-zinc-600 font-mono pt-3">© 2026 Dominique Devereaux · Loptr Lab</p>
+    </div>
+  </div>
+</section>
+
+</main>
 </body>
 </html>
