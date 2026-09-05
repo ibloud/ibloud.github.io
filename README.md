@@ -42,6 +42,12 @@ This repository provides part of the evidence base for investigating those relat
 
 **[→ Explore the research programme](research/)**
 
+**[→ Explore the creative ecosystem](ecosystem/)** · **[→ Collaboration pathways](collaborate/)** · **[→ Provenance record](provenance/)**
+
+GitHub contributors can also begin with [`COLLABORATE.md`](COLLABORATE.md), which
+defines available disciplines, participation categories, and the minimum written
+agreement required before work begins.
+
 ---
 
 ## Practice Infrastructure
@@ -174,8 +180,19 @@ Where relevant, project documentation identifies the role of AI assistance and d
 ```text
 .
 ├── index.html
+├── COLLABORATE.md
 ├── research/
 │   └── index.html
+├── ecosystem/
+│   └── index.html
+├── collaborate/
+│   └── index.html
+├── provenance/
+│   └── index.html
+├── docs/
+│   ├── ECOSYSTEM_ARCHITECTURE.md
+│   ├── HISTORICAL_TIMELINE.md
+│   └── IP_AND_RIGHTS_MATRIX.md
 ├── assets/
 ├── README.md
 └── LICENSE
