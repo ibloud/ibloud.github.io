@@ -76,6 +76,19 @@ The project explores accessibility as a systems and architectural constraint rat
 
 ---
 
+### Made Sick
+**Consent-first creator care and economic agency**
+
+[Made Sick repository](https://github.com/ibloud/made-sick)
+
+Made Sick is an independent Loptr Lab prototype for creator-owned stories, meaningful milestones, carefully labeled wellness practices, and voluntary participation. Its PIXIE layer supports care actions chosen by the user, accepts changing capacity, and allows pause or withdrawal without penalty.
+
+The project is Dominique Devereaux’s independent expression of the spirit behind Chris Do’s **1 Billion Mission**: helping people make a living doing what they love. Creators looking for practical education in creative business, branding, pricing, and sustainable careers are referred to [The Futur](https://thefutur.com/).
+
+Made Sick and Loptr Lab are not affiliated with or endorsed by Chris Do or The Futur. The referral is optional and remains separate from PIXIE’s health, consent, and participation features.
+
+---
+
 ### Returning to the Void
 **Longitudinal creative practice**
 
@@ -110,6 +123,8 @@ The practice is documented across several connected public surfaces.
 |---|---|
 | **[Loptr Lab](https://github.com/Loptr-Lab)** | Studio repositories and production evidence |
 | **[PIXIE](https://pixie.pckt.blog/)** | Reflective writing, field notes, systems thinking, and development research |
+| **[Made Sick](https://github.com/ibloud/made-sick)** | Consent-first creator care, ownership, and voluntary participation |
+| **[The Futur](https://thefutur.com/)** | Independent external learning pathway for creative business and sustainable careers |
 | **[Personal GitHub](https://github.com/ibloud)** | Prototypes, experiments, and technical practice |
 | **[Portfolio](https://ibloud.github.io/)** | Public-facing synthesis |
 | **[Research](research/)** | Formal statement of the proposed research programme |
