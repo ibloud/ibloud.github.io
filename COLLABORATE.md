@@ -2,6 +2,12 @@
 
 Start with the [creative ecosystem map](https://ibloud.github.io/ecosystem/) and the [public collaboration pathways](https://ibloud.github.io/collaborate/).
 
+## Mission and current terms
+
+Loptr Lab is a pre-seed, people-over-profit, accessibility-first venture working toward a self-sustaining model within a capitalist economy. Money sustains the work; meaningful change for people is its purpose. We accept funding only on terms that keep people and accessibility first. Our long-term vision includes universal basic income. We aim to bring change to life and leave a transparent record of what we tried, what worked, and what failed so others can carry it forward. This mission governs our projects, funding decisions, and partnerships; it is not a temporary marketing position.
+
+Current open review and contribution opportunities are voluntary and unpaid. Before work begins, agree in writing on scope, time, what will be public, credit preferences, and an exit path. You can stop at any point. Participation does not promise employment, ownership, revenue share, academic credit, or future pay. Any paid commission or other formal arrangement requires a separate signed agreement before work begins. External assistance or benefits belong to the participant and are not compensation from Loptr Lab.
+
 ## Current areas of need
 
 - Narrative continuity and distributed-story design
@@ -30,7 +36,7 @@ Do not send confidential, medical, benefits, housing, banking, or identity recor
 A conversation, issue, fork, or pull request is not an offer of employment, academic credit, compensation, revenue share, ownership, access, or canon authority. Before substantive work begins, the parties should identify in writing:
 
 - scope and deliverables;
-- participation status: paid, funded research, academic, volunteer, exploratory, or awaiting funding;
+- participation status: paid under a signed agreement, funded research, academic with written institutional approval, voluntary, or exploratory; no future funding or pay is promised;
 - credit and portfolio rights;
 - ownership and license treatment;
 - confidentiality and data access;
