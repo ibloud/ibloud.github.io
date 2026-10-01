@@ -48,3 +48,13 @@ John August's film [*The Nines*](https://johnaugust.com/projects/the-movie) is i
 ## Canon rule
 
 When documents conflict, follow the canon policy in the repository responsible for the work. This architecture is a map, not a mechanism for overriding local canon.
+
+## Interoperability boundaries — human review pending
+
+The existing ecosystem also needs an explicit map of identity, portable public records, private state, and external services. The [AT Protocol interoperability review](AT_PROTOCOL_INTEROPERABILITY_REVIEW.md) fills those documentation gaps without creating a new release commitment or implementation authority.
+
+The proposal separates PIXIE's publishing and stewardship roles; Made Sick's voluntary public discovery; Germ Network as an external encrypted messaging service; and optional DUET/Veiled Dominion public artifacts from authoritative gameplay. Existing AT identities and selected schemas are candidates for later feasibility work. Tap, self-hosted PDS operation, and application infrastructure require their own evidence and human decisions.
+
+**Current action: documentation and human comment only.** AT Protocol is not a PIXIE Release 1 dependency. No Relay, full AppView, public account hosting, or private-message federation is authorized by this map.
+
+**Human-governance gate remains LOCKED** until a proper, qualified second human administrator has actually been added to the relevant repository. Discussion, a profile, an invitation, automated checks, or this draft do not pass the gate. Local governance policies and destination canon authority continue to apply.
