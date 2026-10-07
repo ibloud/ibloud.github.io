@@ -24,3 +24,8 @@ BskyInfo accepted both submissions for review on 7 October 2026:
 Both are pending review, not accepted listings. No paid placement was purchased.
 
 ATStore: the owner approved the account-access grant. Made Sick Story Finder and Pixie Public Discovery were both submitted successfully on 7 October 2026; both show Pending review at https://atstore.fyi/products/manage . Both are categorized as Built on App → Bluesky → Tool. Each includes a 1600×900 illustrative workflow hero and a square icon; Story Finder uses the supplied Made Sick icon. Artwork source files and a reproducible PNG export script are stored in assets/project-directory/ and tools/make-directory-assets.py. Bluesky Directory showed a site-served security verification in this cloud browser; no submission was made there. The legacy official ecosystem showcase route redirected to app-integration documentation without a directory submission form.
+
+## Made Sick account hosting — 7 October 2026
+
+The @made-sick.org account is hosted on Eurosky; account, website, participant PDS and AppView boundaries are recorded in the [canonical ecosystem hosting note](https://github.com/ibloud/ibloud.github.io/blob/main/docs/ECOSYSTEM_ARCHITECTURE.md#made-sick-account-hosting--7-october-2026), including PLC evidence and the dated policy baseline.
+
