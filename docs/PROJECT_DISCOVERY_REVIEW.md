@@ -29,3 +29,13 @@ ATStore: the owner approved the account-access grant. Made Sick Story Finder and
 
 The @made-sick.org account is hosted on Eurosky; account, website, participant PDS and AppView boundaries are recorded in the [canonical ecosystem hosting note](https://github.com/ibloud/ibloud.github.io/blob/main/docs/ECOSYSTEM_ARCHITECTURE.md#made-sick-account-hosting--7-october-2026), including PLC evidence and the dated policy baseline.
 
+
+
+## Outreach and hosting follow-up — 7 October 2026
+
+- Hosting documentation is merged: ecosystem #18, canonical-link cleanup #19, Made Sick #47 and PIXIE Device Stewardship #22.
+- atmosphere.loptrlab.com passed GitHub Pages DNS validation after the custom domain was re-added to restart certificate provisioning. Enforce HTTPS is enabled. The guide rendered over HTTPS with both the galaxy image and owner-supplied Made Sick icon loaded.
+- Post-migration sign-in was attempted from the live Made Sick join page. It stopped before the provider login with: “Failed to resolve OAuth server metadata for resource: https://eurosky.social/”. No authenticated participant read, create, update or withdrawal was verified; no participant record was written by this check. The owner reports migration is still underway; authenticated testing is paused until it settles. This observation does not establish a permanent application defect.
+- Eurosky protected-resource and authorization-server metadata and Made Sick client metadata returned HTTP 200. Eurosky advertised transition scopes; Made Sick requests a collection-specific participant scope. Compatibility remains unverified; do not broaden requested permissions to bypass the failed check.
+- A directory-eligibility inquiry for Story Finder and Pixie Public Discovery was prepared in Eurosky's official contact form, including the central overview, individual discovery pages, live demos and repositories. It describes public AppView reads and explicitly excludes verified Eurosky authentication/writes. Submission was blocked by a CAPTCHA requirement; the inquiry has NOT been sent and no Eurosky listing request or acceptance is claimed.
+- Next checks: resume secure OAuth validation after migration; verify participant read/create/update/withdrawal using an explicitly approved test record; obtain CAPTCHA authorization or owner completion before sending the prepared inquiry.
