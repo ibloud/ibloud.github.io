@@ -1,0 +1,14 @@
+# Project discovery review — 7 October 2026
+
+The central directory is /ecosystem/. Each listed project has a /ecosystem/projects/<slug>/ discovery page. Existing creative lineage and community credit are retained.
+
+## Demonstrated integrations
+
+- Made Sick Story Finder: live handle resolution and public author-feed retrieval; 101 posts loaded and PIXIE word filtering produced nine matches. Source implements local date/phrase filters and selected reference-ledger export; export-to-Files / assistive-technology testing remain open.
+- Pixie Public Discovery: live searchPosts query for atproto returned ten candidates; public source links and per-candidate dismissal are present. The application remains pre-alpha and has not passed its stable-release or independent governance gates.
+
+Only these two narrowly described read-only tools are eligible for experimental-tool directory submissions in this review. No OAuth, private data access, PDS writes, automated introductions or publishing was demonstrated for the other projects.
+
+Status labels on creative/archive pages describe their public surface, not a runtime audit. No dedicated repository was identified for Daddy’s Little Mortis or Tumblr. Veiled Dominion has no supplied live demo.
+
+Directory acceptance belongs to maintainers; a submission is not an accepted listing.
