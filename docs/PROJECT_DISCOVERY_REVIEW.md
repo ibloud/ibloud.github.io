@@ -24,3 +24,12 @@ BskyInfo accepted both submissions for review on 7 October 2026:
 Both are pending review, not accepted listings. No paid placement was purchased.
 
 ATStore: the owner approved the account-access grant. Made Sick Story Finder and Pixie Public Discovery were both submitted successfully on 7 October 2026; both show Pending review at https://atstore.fyi/products/manage . Both are categorized as Built on App → Bluesky → Tool. Each includes a 1600×900 illustrative workflow hero and a square icon; Story Finder uses the supplied Made Sick icon. Artwork source files and a reproducible PNG export script are stored in assets/project-directory/ and tools/make-directory-assets.py. Bluesky Directory showed a site-served security verification in this cloud browser; no submission was made there. The legacy official ecosystem showcase route redirected to app-integration documentation without a directory submission form.
+
+## Made Sick account hosting — 7 October 2026
+
+The owner supplied a successful migration confirmation for the AT Protocol account `@made-sick.org` to Eurosky (`eurosky.social`) on 7 October 2026. This concerns the account's Personal Data Server (PDS), not the hosting of the made-sick.org website or every Loptr Lab project.
+
+Use of that account must follow the applicable [Eurosky Terms of Service](https://eurosky.tech/accounts/terms/) and [Privacy Policy](https://eurosky.tech/accounts/privacy/). The terms are governed by Netherlands law; Modal describes its GDPR responsibilities and EU PDS hosting. This is not a blanket claim that all Loptr Lab projects are EU-regulated or GDPR-compliant. Assess each project's processing and applicable law separately.
+
+Bluesky and other applications retain their own terms and privacy practices. Public AT Protocol records can be replicated and indexed outside the EU; EU PDS hosting is not a promise of EU-only distribution or confidential storage. Do not put private health records, credentials, recovery keys or participant contact details into public records.
+
