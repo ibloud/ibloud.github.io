@@ -1,6 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://codex.loptrlab.com/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/pixie-playing/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/pixie-oracle/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/sealed-deck/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/sufi-tariqah/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/kemetic-dynasty/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/shinbi-tactics/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/fifth-sun/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/violets-revenge/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/float-cards/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/break-the-grid/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/decks/paragon/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/variants/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/bots/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/studio/</loc>
+  </url>
+  <url>
+    <loc>https://codex.loptrlab.com/sources/</loc>
   </url>
 </urlset>

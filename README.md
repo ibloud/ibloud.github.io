@@ -1,11 +1,13 @@
-# PIXIE — The Codex Project
+# The Codex — Loptr Lab
 
-Local-only review build requested by Dominique, October 8, 2026. No deployment, registration, source push, payment link, analytics or external intake service. Open dist/index.html with its assets or the standalone PIXIE-project-site-preview.html artifact.
+Review draft, October 8, 2026. The owner requires review before publication. Save source and versions without deploying; do not publish until explicitly approved.
 
-User choices: do not use Buy Me a Coffee checkout; route artists to https://loptrlab.com/training; explain industry margins; reuse existing art. Training URL was supplied by the owner; research retrieval failed, so no claim about its contents is made. Current images are AI concept studies, not 108 completed card faces. Proposed founder statement is explicitly labeled for review.
+The existing codex.loptrlab.com hosting project now has a cohesive 16-page design: eleven deck entries, worlds and variants, bots and guides, the PIXIE studio, and provenance. Existing PIXIE illustrations and studio tools are retained. Other deck specimens present recorded card text, not finished illustrations.
 
-Browser interactions: selectable collaborator role and locally downloaded introduction; optional clipboard copy; local cost scenario calculator and JSON export; cycle through five reflection prompts. No personal data is sent or persisted by the page. External links use their own services.
+Build with `python3 build-codex.py`; validate with `python3 validate-codex.py` and `node --check dist/studio-tools.js`. The generated sitemap includes every HTML route. See CODEX-SOURCE-MAP.md for research decisions and source disagreements.
 
-Research uses V&A, US Copyright Office, OpenAI terms, USPTO, FTC and MPC; visible source links and open rights tasks are provided. No trademark clearance, historical contract claim, AI training audit or legal opinion is asserted. Rights and legal research does not imply endorsement or partnership.
+`source/catalogue.json` is the curated deck inventory; `source/card-sources.json` preserves the inspected public card records; `source/pixie-original.html` preserves the original studio material. `dist/` is the static output. Private Drive documents and operational credentials are not included.
 
-Future publishing requires owner review and any resolved payment/intake terms. The two-deck cost model supersedes single-deck assumptions; all figures are explicitly illustrative. All external sources were researched October 8, 2026; no source asset images are reproduced.
+Existing PIXIE tools run locally: collaborator introduction download, budget scenarios and JSON export, reflection prompts. No intake or checkout was added. Cost assumptions remain illustrative. Bot implementation does not establish a live service.
+
+Validation covers source structure, internal links, IDs, image descriptions, sitemap and script syntax. Browser rendering and device interaction require visual review; no deployment is needed to review the standalone HTML copy.
