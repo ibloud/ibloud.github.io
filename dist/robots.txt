@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://decks.loptrlab.com/sitemap.xml

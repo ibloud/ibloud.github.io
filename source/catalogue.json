@@ -1,0 +1,573 @@
+[
+  {
+    "id": "pixie-playing",
+    "name": "PIXIE · The Playing Deck",
+    "family": "PIXIE",
+    "count": "54",
+    "status": "Visual studies",
+    "color": "violet",
+    "mark": "♠",
+    "tagline": "Familiar cards. A guardian at the threshold.",
+    "description": "A standard 52-card pack with two proposed ranked jokers. Heart lanterns, club flowers, repaired diamonds and spade doorways carry PIXIE’s story into familiar table games.",
+    "world": "PIXIE / Creative Experience Decks",
+    "variant": "Bridge, Hearts, Spades and Bid Whist are intended uses; final joker ranking and game-specific testing remain open.",
+    "art": "Existing AI-generated concept studies. Earlier images show a paper book; the intended final object is PIXIE’s sigilled digital codex. A complete 54-face set has not been verified.",
+    "bot": "pixie",
+    "botNote": "PIXIE is the shared guide character. This card deck has no connected game bot.",
+    "image": "pixie-spades.png",
+    "imageAlt": "Existing PIXIE concept card with six spade doorways and a violet-winged skeletal guardian.",
+    "related": [
+      "pixie-oracle",
+      "sealed-deck"
+    ],
+    "source": "Existing Codex development edition, October 8, 2026.",
+    "sourceUrl": "",
+    "specimen": [
+      [
+        "♠",
+        "Choosing",
+        "Leave an exit open."
+      ],
+      [
+        "♥",
+        "Listening",
+        "Attention begins with an invitation."
+      ],
+      [
+        "♦",
+        "Repair",
+        "Ask whose repair it is."
+      ]
+    ]
+  },
+  {
+    "id": "pixie-oracle",
+    "name": "PIXIE · The Reflection Deck",
+    "family": "PIXIE",
+    "count": "54",
+    "status": "Design proposal",
+    "color": "violet",
+    "mark": "✦",
+    "tagline": "Observe. Understand. Choose.",
+    "description": "A tarot-inspired oracle proposal: 22 archetype cards and 32 journey cards, with eight cards for each of four chapters. It is a custom 54-card system, distinct from traditional 78-card tarot.",
+    "world": "PIXIE / Creative Experience Decks",
+    "variant": "Awakening, Listening, Repair and Choosing. Short titles, optional prompts and no reversals are the proposed reading structure.",
+    "art": "Companion visual language exists in the playing-card studies. Completed oracle faces and an approved card-by-card guide are still open.",
+    "bot": "pixie",
+    "botNote": "PIXIE suggests reflection while leaving interpretation and decisions with the reader. The reflection control here cycles authored prompts locally.",
+    "image": "pixie-back.png",
+    "imageAlt": "PIXIE deck-back concept with a violet-winged skeletal guardian and ornate book motif.",
+    "related": [
+      "pixie-playing",
+      "paragon"
+    ],
+    "source": "Existing Codex development edition, October 8, 2026.",
+    "sourceUrl": "",
+    "specimen": [
+      [
+        "01",
+        "Awakening",
+        "Record the observation before the story."
+      ],
+      [
+        "02",
+        "Listening",
+        "Whose perspective is missing?"
+      ],
+      [
+        "03",
+        "Repair",
+        "What is yours to offer—and to decline?"
+      ]
+    ]
+  },
+  {
+    "id": "sealed-deck",
+    "name": "The Sealed Deck",
+    "family": "Sealed Deck",
+    "count": "52",
+    "status": "Rules & court documented",
+    "color": "gold",
+    "mark": "♠",
+    "tagline": "Four suits. Four ways to hold power.",
+    "description": "The 52 Cards of War connects Conquest, Restoration, Intelligence and Fortification with the Death’s Daughter / Veiled Dominion story. Its mixed-pantheon court gives those domains names and histories.",
+    "world": "Veiled Dominion / Daddy’s Little Mortis",
+    "variant": "Core mixed-pantheon edition. Sufi Tariqah is a personal-deck interpretation; Kemetic Dynasty, Shinbi Tactics and Fifth Sun are documented cultural reskins.",
+    "art": "Blackwork and engraved linework with amber accents. The card-reference PDF and full rules text exist; a complete illustrated production deck is not established.",
+    "bot": "rift",
+    "botNote": "The Rift is associated with the wider match-to-lore pathway. Sealed Deck narration and a playable deck integration remain proposed.",
+    "related": [
+      "sufi-tariqah",
+      "kemetic-dynasty",
+      "shinbi-tactics",
+      "fifth-sun",
+      "violets-revenge"
+    ],
+    "source": "August Court Card Bible; Sealed Deck lore bible; 52-card reference PDF; repository card database.",
+    "sourceUrl": "https://github.com/ibloud/violets-revenge/blob/main/CARD-TEXT-DATABASE.md",
+    "specimen": [
+      [
+        "K♠",
+        "Odin",
+        "Conquest · The Old Way"
+      ],
+      [
+        "Q♥",
+        "Isis",
+        "Restoration · The Menders"
+      ],
+      [
+        "A",
+        "The Phoenix",
+        "The Wild Fate · shared across suits"
+      ]
+    ],
+    "court": [
+      [
+        "♠ Conquest",
+        "Odin",
+        "Boudicca",
+        "Cú Chulainn"
+      ],
+      [
+        "♥ Restoration",
+        "Asclepius",
+        "Isis",
+        "Prometheus"
+      ],
+      [
+        "♦ Intelligence",
+        "Hermes",
+        "Cassandra",
+        "Loki"
+      ],
+      [
+        "♣ Fortification",
+        "Ptah",
+        "Seshat",
+        "Imhotep"
+      ]
+    ]
+  },
+  {
+    "id": "sufi-tariqah",
+    "name": "Sufi Tariqah",
+    "family": "Sealed Deck",
+    "count": "52",
+    "status": "Lore & visual brief",
+    "color": "blue",
+    "mark": "♦",
+    "tagline": "The Queen’s path through the court.",
+    "description": "Rebirth’s personal-deck interpretation in the Dueling Systems design. Its four suit paths explore discipline, gnosis, truth and inner structure through an authored Sufi-inspired framework.",
+    "world": "The Weaver / Death and Rebirth",
+    "variant": "The Queen’s deck is paired narratively with Death’s Systems Quartet. Cross-system arbitration, shared resources and cooperative combinations remain unresolved.",
+    "art": "Lapis blue, black and amber; geometric illumination and calligraphic suit studies. The brief is an artistic interpretation, not a religious teaching guide. Finished card art was not verified in this scan.",
+    "bot": "rift",
+    "botNote": "The Rift’s design spec anticipates Sealed Deck events. No dedicated Sufi-deck bot was verified.",
+    "related": [
+      "sealed-deck",
+      "kemetic-dynasty"
+    ],
+    "source": "The Sealed Deck: The Sufi Tariqah Variant; Dueling Systems handoff.",
+    "sourceUrl": "https://github.com/Loptr-Lab/duet-solo-hackathon/blob/main/docs/design/dueling-systems.md",
+    "specimen": [
+      [
+        "K♥",
+        "Rumi",
+        "Ma’rifat · Restoration"
+      ],
+      [
+        "Q♥",
+        "Rabia al-Adawiyya",
+        "Ma’rifat · Restoration"
+      ],
+      [
+        "K♦",
+        "Ibn Sina",
+        "Haqiqat · Intelligence"
+      ]
+    ],
+    "court": [
+      [
+        "♠ Shariat",
+        "Imam Ali",
+        "Mansur al-Hallaj",
+        "The Darvish"
+      ],
+      [
+        "♥ Ma’rifat",
+        "Rumi",
+        "Rabia al-Adawiyya",
+        "Ibn Arabi"
+      ],
+      [
+        "♦ Haqiqat",
+        "Ibn Sina",
+        "Lalla Ded",
+        "The Majzoob"
+      ],
+      [
+        "♣ Tariqat",
+        "Abu Yazid al-Bistami",
+        "Shams of Tabriz",
+        "The Master Calligrapher"
+      ]
+    ]
+  },
+  {
+    "id": "kemetic-dynasty",
+    "name": "The Kemetic Dynasty",
+    "family": "Sealed Deck",
+    "count": "52",
+    "status": "Court & visual brief",
+    "color": "blue",
+    "mark": "♣",
+    "tagline": "A court written in lapis and gold.",
+    "description": "An Ancient Egyptian interpretation of the Sealed Deck’s four domains. Its court is documented suit by suit, from Set and Sekhmet to Ptah, Seshat and Imhotep.",
+    "world": "Veiled Dominion / Sealed Deck",
+    "variant": "A cultural reskin of the Sealed Deck, with the same four-domain structure. Its character assignments do not create a new current four-player ruleset.",
+    "art": "Papyrus-inspired composition, hieroglyphic borders, lapis, gold and black are specified. The text preview below represents the documented court; finished illustrations were not verified.",
+    "bot": "rift",
+    "botNote": "Related to the shared lore pathway; no dedicated Kemetic bot was found.",
+    "related": [
+      "sealed-deck",
+      "shinbi-tactics",
+      "fifth-sun"
+    ],
+    "source": "LORE_SEALED_DECK_BIBLE.md · Global Mythological Skins, variant 1.",
+    "sourceUrl": "",
+    "specimen": [
+      [
+        "K♠",
+        "Set",
+        "Conquest"
+      ],
+      [
+        "Q♦",
+        "Ma’at",
+        "Intelligence"
+      ],
+      [
+        "K♣",
+        "Ptah",
+        "Fortification"
+      ]
+    ],
+    "court": [
+      [
+        "♠ Conquest",
+        "Set",
+        "Sekhmet",
+        "Horus"
+      ],
+      [
+        "♥ Restoration",
+        "Osiris",
+        "Nephthys",
+        "Anubis"
+      ],
+      [
+        "♦ Intelligence",
+        "Thoth",
+        "Ma’at",
+        "Apep"
+      ],
+      [
+        "♣ Fortification",
+        "Ptah",
+        "Seshat",
+        "Imhotep"
+      ]
+    ]
+  },
+  {
+    "id": "shinbi-tactics",
+    "name": "The Shinbi Tactics",
+    "family": "Sealed Deck",
+    "count": "52",
+    "status": "Court & visual brief",
+    "color": "red",
+    "mark": "♠",
+    "tagline": "The court, recast in woodblock ink.",
+    "description": "A Japanese myth and yōkai interpretation of the Sealed Deck. The design connects each suit’s role to a distinct court, from Susanoo’s Conquest to the foundations of Sarutahiko.",
+    "world": "Veiled Dominion / Sealed Deck",
+    "variant": "One of three global mythological skins in the lore bible. This edition is distinct from the Paragon character Shinbi’s Moon card.",
+    "art": "Ukiyo-e-inspired flat color: black, red, ash grey and white. Court names are documented; complete illustrations were not verified.",
+    "bot": "rift",
+    "botNote": "No dedicated Shinbi Tactics bot was found. A shared lore connection is a design relationship only.",
+    "related": [
+      "sealed-deck",
+      "kemetic-dynasty",
+      "fifth-sun"
+    ],
+    "source": "LORE_SEALED_DECK_BIBLE.md · Global Mythological Skins, variant 2.",
+    "sourceUrl": "",
+    "specimen": [
+      [
+        "Q♠",
+        "Tomoe Gozen",
+        "Conquest"
+      ],
+      [
+        "Q♦",
+        "Amaterasu",
+        "Intelligence"
+      ],
+      [
+        "J♦",
+        "Kitsune",
+        "Intelligence"
+      ]
+    ],
+    "court": [
+      [
+        "♠ Conquest",
+        "Susanoo",
+        "Tomoe Gozen",
+        "Musashibō Benkei"
+      ],
+      [
+        "♥ Restoration",
+        "Kannon",
+        "Izanami",
+        "Jizō Bosatsu"
+      ],
+      [
+        "♦ Intelligence",
+        "Tengu",
+        "Amaterasu",
+        "Kitsune"
+      ],
+      [
+        "♣ Fortification",
+        "Sarutahiko",
+        "Benten",
+        "En no Gyōja"
+      ]
+    ]
+  },
+  {
+    "id": "fifth-sun",
+    "name": "The Fifth Sun",
+    "family": "Sealed Deck",
+    "count": "52",
+    "status": "Court & visual brief",
+    "color": "jade",
+    "mark": "♦",
+    "tagline": "Obsidian, jade and the architecture of a world.",
+    "description": "The Sealed Deck’s Mesoamerican interpretation uses an authored court drawn from mythic figures, organized through the same Conquest, Restoration, Intelligence and Fortification domains.",
+    "world": "Veiled Dominion / Sealed Deck",
+    "variant": "The third global mythological skin. These are the design bible’s assignments and interpretations, rather than claims that the traditions share one system.",
+    "art": "Angular stone-carved composition, obsidian black, jade green and amber. Complete card illustrations were not verified.",
+    "bot": "rift",
+    "botNote": "No dedicated Fifth Sun bot was found; future shared narration is not an implemented service.",
+    "related": [
+      "sealed-deck",
+      "kemetic-dynasty",
+      "shinbi-tactics"
+    ],
+    "source": "LORE_SEALED_DECK_BIBLE.md · Global Mythological Skins, variant 3.",
+    "sourceUrl": "",
+    "specimen": [
+      [
+        "K♥",
+        "Quetzalcoatl",
+        "Restoration"
+      ],
+      [
+        "K♦",
+        "Tezcatlipoca",
+        "Intelligence"
+      ],
+      [
+        "Q♣",
+        "Chicomecoatl",
+        "Fortification"
+      ]
+    ],
+    "court": [
+      [
+        "♠ Conquest",
+        "Huitzilopochtli",
+        "Coatlicue",
+        "Popocatépetl"
+      ],
+      [
+        "♥ Restoration",
+        "Quetzalcoatl",
+        "Mictlantecuhtli",
+        "Xolotl"
+      ],
+      [
+        "♦ Intelligence",
+        "Tezcatlipoca",
+        "Tlazoltéotl",
+        "Huehuecóyotl"
+      ],
+      [
+        "♣ Fortification",
+        "Xiuhtecuhtli",
+        "Chicomecoatl",
+        "Tlaloc"
+      ]
+    ]
+  },
+  {
+    "id": "violets-revenge",
+    "name": "Violet’s Revenge",
+    "family": "Game decks",
+    "count": "52",
+    "status": "Card rules & art direction",
+    "color": "violet",
+    "mark": "88",
+    "tagline": "Every card is a case file.",
+    "description": "A Gothic Forensics edition of the 52 Cards of War. Violet’s supernatural morgue gives the four domains new visual identities: the hunt, the autopsy slab, the investigation and the barricade.",
+    "world": "Violet’s Revenge / the Purge",
+    "variant": "The documented deck is a themed legacy War-card design. The separate asymmetric horror game and current Veiled Dominion rules retain their own authority.",
+    "art": "Purple, luminol blue and industrial black. Engraved titles, clinical rules text, evidence tags and a slab-and-scalpel back are specified; a full illustrated set was not verified.",
+    "bot": "violet",
+    "botNote": "Violet’s legacy Discord bot is retired. An opt-in browser persona and the Violet_88 gamemaster are documented proposals, not services connected here.",
+    "related": [
+      "sealed-deck",
+      "float-cards",
+      "break-the-grid"
+    ],
+    "source": "CARD-DESIGN-GUIDE.md; CARD-TEXT-DATABASE.md; Roomy transition; Violet_88 proposal.",
+    "sourceUrl": "https://github.com/ibloud/violets-revenge/blob/main/CARD-DESIGN-GUIDE.md",
+    "specimen": [
+      [
+        "8♠",
+        "Vanguard Charge",
+        "Conquest · Attack strength 8"
+      ],
+      [
+        "6♦",
+        "Shadow Mapwork",
+        "Intelligence · Reveal a hidden location"
+      ],
+      [
+        "10♣",
+        "Unbreakable Line",
+        "Fortification · Full block"
+      ]
+    ]
+  },
+  {
+    "id": "float-cards",
+    "name": "Float Cards",
+    "family": "Game decks",
+    "count": "52",
+    "status": "Engine source · service retired",
+    "color": "red",
+    "mark": "A",
+    "tagline": "Two hidden choices. One reveal.",
+    "description": "A simultaneous card duel using a standard 52-card pack without jokers. Each side commits a card; the higher rank wins the round and deals one RP of damage. Ties deal none.",
+    "world": "Sewers & Shadows / Violet’s card table",
+    "variant": "Human versus Pennywise, or Violet-versus-Pennywise exhibition modes are present in the historical bot source. Float Chess is a sibling engine, not the same ruleset.",
+    "art": "A standard pack is sufficient for the source prototype. A bespoke illustrated Float Cards deck was not found.",
+    "bot": "pennywise-violet",
+    "botNote": "Move selection and persona narration are separate. The October 4 transition records the Discord service at zero running replicas; browser reuse remains proposed.",
+    "related": [
+      "violets-revenge",
+      "sealed-deck"
+    ],
+    "source": "float-cards-engine.js; Discord card commands; Roomy retirement record.",
+    "sourceUrl": "https://github.com/ibloud/sewers-and-shadows-bot/blob/main/bot/float-cards-engine.js",
+    "specimen": [
+      [
+        "6",
+        "Opening hand",
+        "Default: six cards per side"
+      ],
+      [
+        "10",
+        "Starting RP",
+        "Each side begins with 10 RP"
+      ],
+      [
+        "1",
+        "Round damage",
+        "Higher rank deals one RP"
+      ]
+    ]
+  },
+  {
+    "id": "break-the-grid",
+    "name": "Break the Grid",
+    "family": "Game decks",
+    "count": "16",
+    "status": "Paper-playtest module",
+    "color": "jade",
+    "mark": "V3",
+    "tagline": "Change the response. Or change the system.",
+    "description": "Sixteen neutral cards in four categories: Boundary, Connection, Resource and Voice. Every card offers an immediate response and a collective change, turning shared support into a choice players can make.",
+    "world": "Break the Grid / Inpatient Corridors",
+    "variant": "A new compact pressure/support module for initial two-player paper tests. It is separate from the archived War Hand and the earlier artist-linked Inpatient concept.",
+    "art": "The printable review sheet and all sixteen card texts exist. Code, title and category accompany every card so meaning never depends on color alone. Balance values remain provisional.",
+    "bot": "none",
+    "botNote": "No deck-specific bot was verified. A future Duet implementation is proposed; this catalogue does not automate facilitation.",
+    "related": [
+      "violets-revenge",
+      "sealed-deck"
+    ],
+    "source": "BREAK-THE-GRID-DECK.md and current project README.",
+    "sourceUrl": "https://github.com/ibloud/inpatient-corridors-review/blob/main/BREAK-THE-GRID-DECK.md",
+    "specimen": [
+      [
+        "C1",
+        "Check In",
+        "Connection · consent-based support"
+      ],
+      [
+        "R1",
+        "Safe Room",
+        "Resource · make a square safe"
+      ],
+      [
+        "V3",
+        "Rewrite One Rule",
+        "Voice · collective change"
+      ]
+    ]
+  },
+  {
+    "id": "paragon",
+    "name": "Return to the Void",
+    "family": "Tarot",
+    "count": "78",
+    "status": "Original direction · prototype proposed",
+    "color": "gold",
+    "mark": "XVIII",
+    "tagline": "Original heroes. Choices with consequences.",
+    "description": "An original hero-card experiment connects character tensions, tactical builds and authored story consequences. Independent characters and worldbuilding lead the new direction; the earlier 78-card Paragon assignments remain historical research.",
+    "world": "Return to the Void / original hero-card research",
+    "variant": "Major Arcana frame hero tensions; Minor Arcana describe tactical tradeoffs; a story spread offers situations and consequential choices. The first playable milestone is one original hero, one modifier and one authored choice. Existing Veiled Dominion canon remains separate.",
+    "art": "Use original writing and generic placeholders. Future assets require creator, source, license or permission, modification history and permitted-use records. Renaming legacy heroes is not an IP transition. Neither complete legal clearance nor a finished game is claimed.",
+    "bot": "none",
+    "botNote": "No playable tarot bot is implemented. Future bots must use the same rules and legal information as players. Optional generated dialogue cannot decide mechanics, rewards, canon or authoritative state.",
+    "related": [
+      "pixie-oracle",
+      "sealed-deck"
+    ],
+    "source": "Original direction merged in Paragon-Reborn #17; separate receiving contract remains under review in Veiled Dominion Engine #53. Status checked October 8, 2026, America/Chicago.",
+    "sourceUrl": "https://github.com/ibloud/Paragon-Reborn/pull/17",
+    "specimen": [
+      [
+        "01",
+        "Temperance",
+        "Working brief: civic heat steward · conflicting needs"
+      ],
+      [
+        "02",
+        "Hanged Man",
+        "Working brief: route surveyor · relinquishing certainty"
+      ],
+      [
+        "03",
+        "Star",
+        "Working brief: seed archivist · credible recovery"
+      ]
+    ],
+    "countLabel": "78 historical assignments"
+  }
+]

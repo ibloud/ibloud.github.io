@@ -1,0 +1,12 @@
+const {chromium}=require('playwright');
+const {pathToFileURL}=require('url');
+const path=require('path');
+(async()=>{const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1050}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(pathToFileURL(path.resolve('pixie-deck-site/dist/index.html')).href);await page.screenshot({path:'output/PIXIE-site-desktop.png',fullPage:false});
+const initial=await page.locator('#break-even').innerText();if(initial!=='89 orders')throw Error('Unexpected default cost calculation: '+initial);
+await page.locator('#price').fill('20');if(!(await page.locator('#viability').innerText()).includes('cannot break even'))throw Error('Loss scenario not identified');await page.locator('#price').fill('0');if(!(await page.locator('#break-even').innerText()).includes('No positive margin'))throw Error('Zero margin not handled');await page.locator('#price').fill('78');
+await page.locator('#next-prompt').click();if(!(await page.locator('#practice-prompt').innerText()).includes('perspective'))throw Error('Reflection failed');
+await page.locator('#specialty').fill('Bid Whist');const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#download-intro').click()]);if(download.suggestedFilename()!=='PIXIE-collaborator-introduction.txt')throw Error('Introduction export failed');
+await page.setViewportSize({width:390,height:844});await page.goto(pathToFileURL(path.resolve('output/PIXIE-project-site-preview.html')).href);await page.screenshot({path:'output/PIXIE-site-mobile.png',fullPage:false});
+const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);if(overflow)throw Error('Mobile horizontal overflow');const broken=await page.locator('img').evaluateAll(xs=>xs.filter(x=>!x.complete||x.naturalWidth===0).length);if(broken)throw Error('Broken images');
+await page.setViewportSize({width:768,height:1024});await page.evaluate(()=>document.documentElement.style.fontSize='32px');if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('200% text overflow');
+if(errors.length)throw Error(errors.join('\n'));console.log(JSON.stringify({desktop:true,mobile:true,textZoom200:true,calculator:true,reflection:true,introductionDownload:true,images:true,pageErrors:errors}));await browser.close();})();
