@@ -33,3 +33,11 @@ The Codex catalogue brings decks, game variants and their associated automated c
 ## Drive records read
 
 Sealed Deck — Court Card Bible (Canon); LORE_SEALED_DECK_BIBLE.md; THE SEALED DECK: THE SUFI TARIQAH VARIANT; DLM_SEALED_DECK_DESIGN_REQUIREMENTS.md; The Systems Quartet; SICKBOI.EXE; Back in Derry; The Paracausal Edition; Street Level / Syndicate; Dark Bauhaus / Gallery Edition; Design Variant Pack: The Inpatient Corridors; Proposal: Violet_88; The Rift Engagement Design; Paragon Deck workbook; Deck Design Notes; The Queen's Journey: Design Bible; fifth-suit Space exploration; veiled dominion cards.pdf.
+
+## Original direction update — October 8, 2026, America/Chicago
+
+- Paragon-Reborn #17 is now merged at `3ddb52994be4450c11c54ec07d2288372587a375`; the user's earlier unmerged status is superseded by the observed PR record.
+- Veiled Dominion Engine #53 remains draft at `1c4543e886a0977d2d08485c3b584c12ef308387`. Upstream reports typecheck passing and 24 existing exercise failures; no local claim of revalidation.
+- Return to the Void now leads with independent original briefs. The old 78-card count is explicitly historical, not a promised new roster size. Historical names appear only in the archive, never as new hero specimens.
+- Added the three-layer hero/build/story model, first playable milestone, balance and replay requirements, provenance and rights boundaries. No automatic adoption by PIXIE, Duet, existing Sealed Deck skins or unrelated bots.
+- Added Phuture Me as an external design reference only. No code integration, copied art, account, upload or purchase. See PHUTURE-REVIEW.md.
