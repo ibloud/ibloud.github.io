@@ -4,6 +4,43 @@
 
 This document is the canonical public map of how Dominique Devereaux's creative archives, prototypes, games, research, and contributor pathways relate. It records development lineage without declaring every work part of one literal fictional continuity.
 
+## Studio viability pilot — owner-confirmed direction, 18 October 2026
+
+**The Loptr Lab ecosystem is the testing ground for the viability of an open-source multimedia training studio. PIXIE is its contributor companion: helping people join, learn, coordinate work, and return with context intact.** Dominique confirmed this direction on 18 October 2026 and requested that it be maintained in repository documentation rather than depend on assistant memory.
+
+Existing games, stories, media projects, creator tools and training pathways provide real work through which to test the studio model. Their individual repositories retain implementation, license and canon authority. PIXIE provides continuity and contextual guidance across those surfaces; she is not limited to an evidence-audit role or owned by a single game.
+
+### What the pilot must establish
+
+| Question | Evidence to record |
+|---|---|
+| Can contributors find suitable work and get started? | A reproducible entry path, clear task instructions, observed barriers and an actual first contribution. |
+| Does training lead to useful creative and technical work? | The learning activity, resulting artifact, review and what the contributor could do afterward. |
+| Can people resume and collaborate with less repeated explanation? | Shared checkpoints, decisions, blockers and handoffs; examples of context retained or missed and avoidable rework. |
+| Can the studio sustain itself financially? | Candidate customers and offers, delivery/maintenance costs, feedback and evidence of willingness to pay. Treat revenue assumptions as hypotheses until tested. |
+
+Use participant-approved observations and existing project records. Do not introduce private profiling or unnecessary data collection to measure the pilot. Record what failed as well as what worked; do not invent targets, validated demand, revenue or acceptance.
+
+### PIXIE testing and release priorities
+
+The immediate purpose is usable contributor testing within the existing ecosystem while PIXIE is still in development. Mark unfinished capabilities, provide working participation paths and capture defects and progress in GitHub. A complete commercial product is not a prerequisite for this testing.
+
+Contributor access to the website, installing a development/test plugin connection, public-directory approval and commercial readiness are separate milestones. Verify each actual access path with another contributor; never describe a private plugin release or public website as proof that others can install the ChatGPT plugin.
+
+Clippy is a reference for contextual assistance; Atmosfear is a reference for recurring presence and dramatic timing. These are design references, not authorization to import their characters, assets or game rules. Keep contributor guidance accessible and user-controlled.
+
+### Pitch and monetization
+
+Develop the project pitch from demonstrated studio workflows and pilot findings. Describe the problem, intended users/customers, training and production value, PIXIE's coordination role, evidence, costs and candidate revenue model. PIXIE may become part of that offer; do not reduce the studio to a plugin listing.
+
+Revenue is intended to sustain the studio's people-over-profit, accessibility-first mission. Open participation and project-specific open-source licenses remain in force. Paid offers, pricing, compensation, ownership and rights require explicit decisions under the existing [mission and participation terms](../MISSION.md); do not silently convert voluntary contributions into promised employment or an agreed commercial arrangement.
+
+### Continuity rule for maintainers and AI assistants
+
+Read this direction and the affected project's current records before proposing work. Reuse the existing architecture, repositories, domain and contribution paths. Preserve accepted decisions with source links and dates, and distinguish owner-confirmed direction, proposals, implemented behavior and verified outcomes. Update this section through reviewed repository changes when Dominique changes the direction; do not substitute conversation memory or create a competing project definition.
+
+The [training contributor guide](https://loptr-lab.github.io/training/pixie-contributors.html) applies this direction to the current PIXIE workflow. [Training issue #42](https://github.com/Loptr-Lab/training/issues/42) records implementation and release gaps; this strategic direction does not mark them complete.
+
 ## Architecture
 
 | Work or surface | Ecosystem role | Authority |
@@ -14,7 +51,7 @@ This document is the canonical public map of how Dominique Devereaux's creative 
 | *Battle the Beast* | Transformative nonlinear story and interactive narrative prototype | Historical design provenance; no Veiled Dominion rules authority |
 | *Violet's Revenge* | Original gothic-forensics game branch in which inherited history becomes an investigation | Its repository controls current project canon |
 | *Veiled Dominion* | Primary original creative case and current playable systems design | Engine repository controls game canon and rules |
-| PIXIE | Reflective and political publishing surface for authorship, ownership, public-domain, accessibility, and production questions | Commentary and research evidence; not automatic game canon |
+| PIXIE | Cross-project contributor companion for joining, learning, coordination and resuming work; related publishing surfaces address authorship and production | Owning project sources control implementations; commentary and proposals are not automatic canon |
 | Loptr Lab | Production, governance, training, accessibility, and research practice | Studio repositories control their respective implementations |
 
 ## Development lineage
