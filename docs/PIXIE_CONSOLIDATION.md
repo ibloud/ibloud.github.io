@@ -89,6 +89,43 @@ Do not recruit advertised paid positions before the funding commitment exists.
 
 ## Release status
 
-Steps 1–5 are approved. Implementation and verification are in progress.
-Do not treat this document's existence as release acceptance. Record PRs,
-deployments, failed checks and remaining issues here before marking completion.
+Outreach gate: CLOSED
+
+Steps 1–5 are approved. Source consolidation and the planning-only pilot proposal
+are delivered. Automated and selected live checks pass; independent contributor
+and mobile/accessibility acceptance remain open. Do not describe the full release
+as accepted.
+
+### Published source and deployment receipts — 18 October 2026
+
+- [Canonical direction and pilot proposal, PR 28](https://github.com/ibloud/ibloud.github.io/pull/28): merged.
+- [Holdings audience correction, PR 59](https://github.com/ibloud/pixie-holdings/pull/59): merged; updated homepage and development archive retrieved live.
+- [Creator OS mobile/reporting purpose, PR 57](https://github.com/ibloud/pixie-creator-os/pull/57): merged; repository CI passed; reporting prompt retrieved live.
+- [50 Ways PIXIE explanation, PR 70](https://github.com/ibloud/50-ways-to-leave-another/pull/70): merged; both check suites passed; updated introduction retrieved live.
+- Existing Project Companion Site version 12: deployment succeeded. Its 12-project catalog, checkpoint-draft tool and read of training issue 42 were exercised through the connected plugin. Nineteen local tool/coordination tests and TypeScript checking passed.
+- Existing ecosystem Site version 4: deployment succeeded; corrected Holdings naming and remote-studio introduction.
+- Plugin persona remains at version 1.0.4 and its voice instructions were read back after the Site update.
+
+### Remaining acceptance and known limits
+
+- Independent contributor test of public website and plugin installation path.
+  Anonymous requests from this execution environment returned 403 despite public
+  Site configuration; connected MCP calls succeeded. Do not infer visitor access
+  or private visibility from either result alone.
+- iPad Safari, Files and VoiceOver walkthrough of the mobile activation workflow,
+  plus visual review of the changed public pages. Existing CI browser tests do
+  not replace these device checks.
+- No real public issue, post or promotion was submitted for testing. No payment,
+  recording, authentication or direct-publishing adapter was connected.
+- Shared-memory/runtime integration is not claimed. Repository sources retain
+  their distinct responsibilities.
+
+The weekly speaking-opportunity check is configured to consult this record and
+remain silent while the outreach gate is closed. Open it only after the approved
+release acceptance is recorded. Seek aligned paid or expenses-covered opportunities;
+do not contact organizers, apply or commit spending automatically.
+
+The next bounded task is the contributor/mobile acceptance walkthrough, recorded
+with build, device, expected and observed results in
+[training issue 42](https://github.com/Loptr-Lab/training/issues/42).
+
