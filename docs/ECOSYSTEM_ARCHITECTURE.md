@@ -29,6 +29,25 @@ Contributor access to the website, installing a development/test plugin connecti
 
 Clippy is a reference for contextual assistance; Atmosfear is a reference for recurring presence and dramatic timing. These are design references, not authorization to import their characters, assets or game rules. Keep contributor guidance accessible and user-controlled.
 
+### Remote studio and mobile activations — owner direction, 18 October 2026
+
+Operate as a virtual/remote studio with low overhead. Prefer coworking or
+short-term event space when useful rather than a permanent studio lease.
+Focus partner development on a bounded offer and demonstrated work. Begin
+targeted speaking-opportunity discovery after the five-step PIXIE consolidation
+release is complete; do not treat visibility, travel or unpaid exposure as revenue.
+
+PIXIE Creator OS is Dominique's mobile workspace for preparing activations,
+promotions and field reports. Its purpose is to keep source context, attribution,
+permission, commercial relationships and reporting uncertainty attached to work
+prepared on the go. Current manual handoffs remain manual; the purpose does not
+establish connected publishing, automated fact-checking or rights clearance.
+
+The [approved consolidation scope and release record](PIXIE_CONSOLIDATION.md)
+defines audiences, implementation homes, acceptance checks and a proposed paid
+pilot. Preserve existing project histories and designs. Violet-related projects
+remain distinct creative work; they do not define the full studio offering.
+
 ### Pitch and monetization
 
 Develop the project pitch from demonstrated studio workflows and pilot findings. Describe the problem, intended users/customers, training and production value, PIXIE's coordination role, evidence, costs and candidate revenue model. PIXIE may become part of that offer; do not reduce the studio to a plugin listing.
