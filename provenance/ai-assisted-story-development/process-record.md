@@ -100,3 +100,39 @@ Dominique supplied the published scene link and directed implementation of this 
 Scene: https://pixie.pckt.blog/pixie-incident-review-r417uz7
 
 Case study: https://ibloud.github.io/provenance/ai-assisted-story-development/
+
+## 11. Ecosystem assessment following use of Manus.im — 18 October 2026
+
+Dominique identified this follow-up as occurring after her use of [Manus.im](https://manus.im/) and supplied **PIXIE story and ecosystem evidence audit — 18 October 2026.md** for review. She then asked ChatGPT to distinguish unnecessary recreation from genuine loss and to include the assessment here. The supplied audit is the handoff evidence; this record does not independently verify the Manus.im session, its full inputs, or which tool performed each reported action.
+
+**Finding: the available evidence supports duplicated explanation and retrieval gaps; it does not establish permanent loss of original story text or source code.** During this follow-up, ChatGPT retrieved the existing [canonical ecosystem architecture](https://github.com/ibloud/ibloud.github.io/blob/main/docs/ECOSYSTEM_ARCHITECTURE.md), which already documents lineage, distributed discovery, and local project authority. ChatGPT’s initial suggestion that a new public map was needed overlooked that existing authority.
+
+### What was recreated or added
+
+| Item | Assessment | Evidence boundary |
+|---|---|---|
+| Ecosystem map and lineage | Existing authority overlooked | The canonical architecture already maps the creative lineage, distributed discovery model, and project authority. Reconstructing those relationships as unknown repeated documented work. |
+| Separate ecosystem guide | Potentially redundant explanation | The supplied audit reports a new guide repository. Its contents and current availability were not verified in this follow-up; its independent necessity is not established. Any guide should link to the canonical map. |
+| Provenance cube addendum and typography changes | Unnecessary additions reported by the audit | The audit says these local edits were started without being necessary to the assessment. They were not recovery of missing source material; their present state was not verified. |
+| AI incident-review scene | New generated material | The scene’s invented events are proposals, not recovered archive text. They cannot establish the contents of earlier writing. |
+| Separate PIXIE software experiments | Duplication not established | Different helpers, discovery tools, workspace prototypes, and server experiments may serve different purposes. Shared branding does not establish redundant implementation. |
+
+### What was genuinely lost?
+
+No permanent artifact loss was confirmed in this review. The following are retrieval, traceability, or verification gaps rather than established destruction:
+
+| Material or capability | Supported status |
+|---|---|
+| Earlier conversations and complete Wattpad archive | Unretrieved; deletion or irrecoverability not established. |
+| A to Z of Magic source location | A supplied passage survives in the process record, but a full story permalink remains missing from this record. |
+| Chronology, character identities, and canon decisions | Unresolved in the retrieved evidence; this does not establish that Dominique never made those decisions. |
+| Hosted MCP endpoint or unified PIXIE runtime | Working functionality was not verified. Loss of a previously working integrated service was not established. |
+| Five documentation repairs and other local edits | Reported unpublished work whose recovery status requires a checkout, branch, commit, or patch. This follow-up did not locate those artifacts. |
+
+Attempts to retrieve the reported guide README and an assumed inventory path returned “Not Found.” That result does not distinguish an incorrect path, access limits, relocation, or deletion, and is not proof of loss.
+
+### What this adds to the AI-use record
+
+The demonstrated failure was continuity in the assistance: an existing architecture was overlooked while fresh explanations were proposed. Dominique used a cross-tool handoff and follow-up questioning to expose the difference between missing retrieval, new AI output, and actual recovery. This is an assessment of the available record, not a claim that Manus.im caused every reported problem.
+
+The corrective approach is to reconnect authoritative sources before recreating them, identify surviving unpublished work by concrete artifacts, and keep public guides subordinate to the canonical map. AI may propose clearly labeled possibilities; Dominique decides what enters story canon. This assessment adds no story events or canon decisions.
