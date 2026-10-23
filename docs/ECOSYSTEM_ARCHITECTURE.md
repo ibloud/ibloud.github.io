@@ -60,6 +60,20 @@ Read this direction and the affected project's current records before proposing 
 
 The [training contributor guide](https://loptr-lab.github.io/training/pixie-contributors.html) applies this direction to the current PIXIE workflow. [Training issue #42](https://github.com/Loptr-Lab/training/issues/42) records implementation and release gaps; this strategic direction does not mark them complete.
 
+### Mandatory existing-work check — owner direction, 23 October 2026
+
+Before proposing or creating a directory, database, guide, repository, plugin, page or workflow:
+
+1. Inspect available local files and existing project instructions first.
+2. Read this canonical map and the affected project's current source. Use connected GitHub and existing PIXIE tools when local source is absent; a failed retrieval is not evidence that the work does not exist.
+3. Identify the existing implementation or resource, its owning source and the precise unmet need. Reuse, link or extend it. Do not create a parallel solution merely because it is easier to start fresh.
+4. If source cannot be retrieved, report the specific gap and continue source discovery; do not claim absence or propose a replacement as established necessity.
+5. Before any new artifact, state what was checked, what will be reused and why an addition is necessary. Keep that evidence concise in the work record.
+
+**Existing ecosystem responsibilities:** Made-Sick.org is the existing resource-discovery directory; do not propose a second general directory. 50 Ways to Leave Another provides the creative and educational context for rights, ownership, agreements and questions to ask relevant professionals. PIXIE's owner-confirmed purpose includes carrying the administrative work creatives dread so they can deepen their discipline: helping find relevant collaborators or professionals, prepare enquiries, organise records and follow through. These are product direction, not claims that every function is implemented.
+
+Public discovery and learning how to connect can use the established surfaces. Private briefs, correspondence and follow-up records must not be placed in public contribution records. A new professional database is not the default; establish a specific unmet need before proposing one.
+
 ## Architecture
 
 | Work or surface | Ecosystem role | Authority |
