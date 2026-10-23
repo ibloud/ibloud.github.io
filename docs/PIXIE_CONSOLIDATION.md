@@ -129,3 +129,20 @@ The next bounded task is the contributor/mobile acceptance walkthrough, recorded
 with build, device, expected and observed results in
 [training issue 42](https://github.com/Loptr-Lab/training/issues/42).
 
+
+### Connected creative-help release — 23 October 2026
+
+- Existing resource owner: Made-Sick. [PR 63](https://github.com/ibloud/made-sick/pull/63) merged; public `directory-resources.json` and visible directory cards use one source. Six existing resource entries retained; London music-law and official solicitor/accountant search routes added. Lookup is not professional credential, ethics or suitability verification.
+- Existing Companion Site **version 13**, source `4fa0e35a5872e9f3b8c09c6ae22a4e06cc8dc98d`, deployed successfully with MCP enabled. Added `discover_resources`, `get_resource`, `prepare_enquiry`, `prepare_followup`, and `resume_followup`; existing six contributor tools retained. Made-Sick is the thirteenth project. Server initialization includes the existing-work rule.
+- Existing ecosystem Site **version 5**, source `0244b4b0109feca391e47a6164b8f4b7cf3a6979`, deployed successfully. Task entry points show discovery → preparation → administration and the shared operating commitments.
+- Creator OS [PR 58](https://github.com/ibloud/pixie-creator-os/pull/58) merged after CI. Reuses the Companion flow from Connections and Network Intelligence; demo email intake replaced by an explicit enquiry handoff. The published homepage link was retrieved.
+- 50 Ways [PR 78](https://github.com/ibloud/50-ways-to-leave-another/pull/78) merged after both CI suites passed. Existing PIXIE introduction now links discovery and enquiry preparation; published link retrieved. No redesign or additional guide.
+- Existing-work prerequisite [PR 30](https://github.com/ibloud/ibloud.github.io/pull/30) merged into the canonical map.
+
+Verification: 24 Companion tests, TypeScript and build passed; 66 Made-Sick tests plus generated-card drift checks passed; 18 focused Creator OS tests and its full GitHub CI passed; five ecosystem routing/packaging tests and build passed. Live source lookup returned London music-law provider and a separately labelled directory route; accountant lookup returned an official directory route. An unmatched jurisdiction returned zero results. Published HTTP API enquiry/resume retained identity and required review. Connected MCP `list_projects` returned the v0.5 catalog. The five new tool implementations share the tested service; individual invocation of those new tool names through the ChatGPT host was not available in this already-open session.
+
+Live desktop browser: discovery → selection → fictional enquiry → review → JSON download → clear → file import completed. The same PIXIE ID and draft returned; copying/export stayed disabled until fresh review. Nothing was sent to a professional. Initial managed preview could not connect; published browser checks were used instead.
+
+Storage and remaining acceptance: browser enquiry text and imported follow-up stay in tab memory until explicit copy/download; no server follow-up database or automatic messaging. MCP inputs/outputs remain subject to host retention. Exported `pixie-network-followup/v1` records reuse `pixie_id` / `network-card` identity; they do not establish automatic Obsidian writes or cross-application synchronization. Physical iPad Safari, Files, VoiceOver, narrow-screen visual review and independent visitor/plugin installation acceptance remain open. This release does not open the earlier outreach gate.
+
+Next acceptance task: on an iPad, use the Companion “Find the right help” flow, export the fictional follow-up to Files, clear and import it, then confirm the same ID, restored text, readable layout and fresh-review gate. Record device/build/observations in the existing [training issue 42](https://github.com/Loptr-Lab/training/issues/42). The first functional slice is released; broader matching and additional service adapters remain future work.
