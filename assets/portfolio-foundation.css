@@ -198,3 +198,16 @@ main{width:min(100% - 2.5rem,76rem);margin-inline:auto}
 body.ll-ecosystem .hero{padding-bottom:1rem}
 body.ll-ecosystem .hero .lead{max-width:64rem}
 @media(max-width:850px){.ll-unified-inner{align-items:flex-start;flex-direction:column}.ll-unified-nav{gap:.3rem 1.25rem}}
+
+/* Focused founder page: one fluid reading column, no unused right-side grid. */
+.ll-founder-main{width:min(100% - 2.5rem,76rem);margin-inline:auto;padding:clamp(2rem,5vw,5rem) 0 5rem}
+.ll-founder-intro,.ll-founder-section{max-width:100%;padding-block:clamp(1.5rem,3.5vw,3rem);border-bottom:1px solid var(--ll-line)}
+.ll-founder-intro{padding-top:1rem}
+.ll-founder-main h1{font-size:clamp(2.8rem,6vw,5.5rem);letter-spacing:-.04em;line-height:1.08}
+.ll-founder-main h2{font-size:clamp(1.75rem,3vw,2.7rem)}
+.ll-founder-main p{max-width:85ch;font-size:clamp(1.13rem,1.45vw,1.33rem);line-height:1.65;color:var(--ll-muted)}
+.ll-founder-main .ll-lead{font-size:clamp(1.4rem,2.2vw,1.85rem);color:var(--ll-text);max-width:65ch}
+.ll-founder-main .ll-kicker{font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:var(--ll-accent)}
+.ll-founder-links{display:flex;gap:.65rem 1.6rem;flex-wrap:wrap;margin-top:1.25rem}
+.ll-founder-links a{display:inline-flex;align-items:center;min-height:44px;font-size:1.05rem;color:var(--ll-link);font-weight:700}
+.ll-founder-end{border-bottom:0}
