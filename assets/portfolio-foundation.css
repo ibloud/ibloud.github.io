@@ -214,3 +214,11 @@ body.ll-ecosystem .hero .lead{max-width:64rem}
 
 /* Compact vertical rhythm, applies consistently to portfolio and ecosystem */
 main > section+section{margin-top:clamp(1.25rem,2.5vw,2.75rem)!important}body.ll-ecosystem .section{padding-block:clamp(1.3rem,2.5vw,2.25rem)!important}body.ll-ecosystem .hero{padding-top:clamp(1.75rem,3.5vw,3rem)!important;padding-bottom:.5rem!important}body.ll-ecosystem .hero+.section{padding-top:1.5rem!important}.ll-founder-intro,.ll-founder-section{padding-block:clamp(1.1rem,2.2vw,2rem)!important}
+
+/* Readable full-width editorial alignment for the whole portfolio */
+.ll-founder-main,.ll-unified-inner,main.wrap,main.max-w-5xl,main.max-w-6xl{width:min(calc(100% - 2.5rem),76rem)!important;max-width:76rem!important;margin-left:auto!important;margin-right:auto!important}
+.ll-founder-main p,.ll-founder-section p,main.wrap p,main.max-w-5xl p,main.max-w-6xl p{max-width:none!important}
+.ll-founder-main section,.ll-founder-main .ll-founder-intro,.ll-founder-main .ll-founder-section{max-width:100%!important;width:100%}
+.ll-founder-main .ll-founder-links{max-width:100%}
+.ll-founder-main p{font-size:clamp(1.125rem,1.35vw,1.3rem)}
+@media(min-width:900px){.ll-founder-main p{max-width:100%!important}.ll-founder-main .ll-lead{max-width:100%!important}}
