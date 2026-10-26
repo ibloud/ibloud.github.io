@@ -73,3 +73,38 @@ article{max-width:76ch;margin:auto}article p{line-height:1.85;color:#c4c4cd;marg
 @scope (body.ll-ecosystem-ai-development-case-study) {
 body{background:#0d0e12;color:#f3f4f6;font:1.15rem/1.65 system-ui,sans-serif;margin:0}main{max-width:48rem;margin:auto;padding:2rem 1.25rem 5rem}h1,h2{line-height:1.2}h1{font-size:clamp(2rem,5vw,3.2rem)}a{color:#c7d2fe}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:4px}.muted{color:#b6bdc9}li{margin:.7rem 0}footer{border-top:1px solid #565865;padding-top:1.5rem;margin-top:3rem}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 }
+
+/* ecosystem/projects/50-ways/index.html */
+@scope (body.ll-ecosystem-projects-50-ways) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/story-lab/index.html */
+@scope (body.ll-ecosystem-projects-story-lab) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/ren-rhapsody/index.html */
+@scope (body.ll-ecosystem-projects-ren-rhapsody) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/pixie-creator/index.html */
+@scope (body.ll-ecosystem-projects-pixie-creator) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/tumblr-archive/index.html */
+@scope (body.ll-ecosystem-projects-tumblr-archive) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/pixie-holdings/index.html */
+@scope (body.ll-ecosystem-projects-pixie-holdings) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/violets-revenge/index.html */
+@scope (body.ll-ecosystem-projects-violets-revenge) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
