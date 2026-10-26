@@ -184,3 +184,17 @@ body.ll-ecosystem .nav{gap:.75rem 1.35rem}
 body.ll-ecosystem a{color:#e3b7e8}
 body.ll-ecosystem .hero h1{max-width:18ch;line-height:1.13}
 .ll-ai-links a,.ll-actions a{min-height:44px;display:inline-flex;align-items:center}
+
+/* Single navigation component across founder and studio pages */
+.ll-unified-header{position:sticky;top:0;z-index:50;background:#242232;border-bottom:1px solid #686178;color:#f4eff4}
+.ll-unified-inner{width:min(100% - 2.5rem,76rem);margin-inline:auto;min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap;padding:.75rem 0}
+.ll-unified-brand{font:800 clamp(1.05rem,1.7vw,1.3rem)/1.2 system-ui,sans-serif;letter-spacing:.04em;text-decoration:none;color:#f4eff4!important;white-space:nowrap}
+.ll-unified-nav{display:flex;gap:.5rem clamp(.7rem,1.7vw,1.5rem);align-items:center;flex-wrap:wrap}
+.ll-unified-nav a{font:650 clamp(.95rem,1.25vw,1.08rem)/1.3 system-ui,sans-serif;color:#e3b7e8!important;padding:.6rem .1rem;min-height:44px;display:inline-flex;align-items:center}
+.ll-unified-nav a:hover{text-decoration:underline}
+main{width:min(100% - 2.5rem,76rem);margin-inline:auto}
+.ll-meet-no-image{display:block!important;max-width:70rem!important}
+.ll-meet-no-image .ll-meet-copy{width:100%;max-width:66rem}
+body.ll-ecosystem .hero{padding-bottom:1rem}
+body.ll-ecosystem .hero .lead{max-width:64rem}
+@media(max-width:850px){.ll-unified-inner{align-items:flex-start;flex-direction:column}.ll-unified-nav{gap:.3rem 1.25rem}}
