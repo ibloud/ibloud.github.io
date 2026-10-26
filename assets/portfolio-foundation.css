@@ -165,3 +165,22 @@ body{background:var(--ll-bg)!important;color:var(--ll-text)!important}
 .ll-meet-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);align-items:start;gap:clamp(1.7rem,4vw,4rem);max-width:none!important}.ll-meet-copy{min-width:0}.ll-meet-photo{margin:0;align-self:start;max-width:470px}.ll-meet-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:1.1rem;border:1px solid #8e7896}.ll-meet-photo figcaption{font-size:.9rem;color:var(--ll-muted);margin-top:.7rem}@media(max-width:760px){.ll-meet-layout{grid-template-columns:1fr}.ll-meet-photo{max-width:440px}}
 
 .ll-ai-links{display:flex;flex-wrap:wrap;gap:.6rem 1.25rem;margin-top:1.5rem}.ll-ai-links a{font-size:1rem;font-weight:650;color:var(--ll-link)}
+
+/* 2026-10-26 continuity repair: shared typography/theme after legacy consolidation. */
+:root{--ll-bg:#15131e;--ll-panel:#242232;--ll-text:#f4eff4;--ll-muted:#dbd3e2;--ll-line:#686178;--ll-link:#e3b7e8;--ll-focus:#ffe1a0}
+html{font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important;font-size:clamp(18px,1.05rem + .28vw,20px)!important;line-height:1.6!important}
+main :is(p,li){line-height:1.65}main p{max-width:74ch}
+body.ll-ecosystem :is(.wrap,.bar,.card,.nav,.top),body.ll-ecosystem :is(h1,h2,h3,p,a,li){font-family:inherit}
+body.ll-ecosystem .hero{padding-top:clamp(2.5rem,6vw,5rem)}
+body.ll-ecosystem .section{padding-block:clamp(2rem,4vw,3.25rem)}
+body.ll-ecosystem .grid{gap:clamp(1rem,2vw,1.4rem)}
+body.ll-ecosystem .card{padding:clamp(1.25rem,2vw,2rem)}
+body.ll-ecosystem .top{background:#242232;border-bottom:1px solid #686178}
+body.ll-ecosystem :is(.card,.feature){background:#242232;border-color:#686178}
+body.ll-ecosystem .eyebrow{color:#e3b7e8}
+body.ll-ecosystem .lead{color:#dbd3e2}
+body.ll-ecosystem .nav{gap:.75rem 1.35rem}
+body.ll-ecosystem a{color:#e3b7e8}
+body.ll-ecosystem .hero h1{max-width:18ch;line-height:1.13}
+.ll-ai-links a,.ll-actions a{min-height:44px;display:inline-flex;align-items:center}
