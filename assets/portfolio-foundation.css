@@ -1,0 +1,20 @@
+/* Loptr Lab portfolio-wide design foundation · 2026-10-26.
+   Shared visual system; legacy component-specific inline styles are retained pending template migration. */
+:root{color-scheme:dark;--ll-bg:#121b1c;--ll-panel:#1b292a;--ll-text:#f4f2e9;--ll-muted:#d0d9d4;--ll-line:#627b79;--ll-link:#a9e1d7;--ll-focus:#ffe08d;--ll-accent:#f3c578}
+html{scroll-padding-top:6rem}body{background-color:var(--ll-bg)!important;color:var(--ll-text)!important;font-size:clamp(18px,1.12rem + .15vw,20px);line-height:1.65}
+p,li{line-height:1.65}p{max-width:75ch}h1,h2,h3{line-height:1.22;letter-spacing:-.018em}h1{font-size:clamp(2.3rem,4.7vw,4rem)}h2{font-size:clamp(1.7rem,3vw,2.5rem)}h3{font-size:clamp(1.3rem,2vw,1.65rem)}
+a{overflow-wrap:anywhere;text-underline-offset:.18em}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--ll-focus)!important;outline-offset:4px!important}
+main{min-width:0}main > section{scroll-margin-top:6rem}main > section+section{margin-top:clamp(2.5rem,5vw,5rem)}
+main :is(.text-zinc-400,.text-zinc-500,.text-gray-400,.text-slate-400){color:var(--ll-muted)!important}
+main :is(.text-indigo-400,.text-indigo-300,.text-pink-300){color:var(--ll-link)!important}
+main :is(.bg-zinc-900\/40,.bg-zinc-900\/30,.bg-zinc-900\/50){background-color:var(--ll-panel)!important}
+main :is(.border-indigo-500\/20,.border-pink-500\/20){border-color:var(--ll-line)!important}
+main :is(.grid,.flex){min-width:0}main :is(.rounded-xl,.rounded-2xl){border-radius:1.1rem}
+header nav,nav[aria-label]{gap:.8rem 1.3rem}header a,nav a{min-height:36px}button,a{touch-action:manipulation}
+.ll-sitebar{border-bottom:1px solid var(--ll-line);background:#182425;color:var(--ll-text);font:600 1rem/1.5 system-ui,sans-serif}
+.ll-sitebar-inner{width:min(100% - 2rem,75rem);margin:auto;padding:.9rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem 1.5rem}
+.ll-sitebar a{color:var(--ll-link);padding:.25rem .1rem}
+.ll-sitebar .ll-brand{color:var(--ll-text);font-weight:800;text-decoration:none;letter-spacing:.07em}
+.ll-sitebar nav{display:flex;gap:.5rem 1.2rem;flex-wrap:wrap}
+@media(max-width:720px){.ll-sitebar-inner{align-items:flex-start;flex-direction:column}main > section+section{margin-top:2.5rem}h1{font-size:clamp(2.05rem,9vw,3rem)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
