@@ -108,3 +108,43 @@ body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}
 @scope (body.ll-ecosystem-projects-violets-revenge) {
 body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
 }
+
+/* ecosystem/projects/veiled-dominion/index.html */
+@scope (body.ll-ecosystem-projects-veiled-dominion) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/break-this-build/index.html */
+@scope (body.ll-ecosystem-projects-break-this-build) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/story-finder/index.html */
+@scope (body.ll-ecosystem-projects-story-finder) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/battle-the-beast/index.html */
+@scope (body.ll-ecosystem-projects-battle-the-beast) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/pixie-discovery/index.html */
+@scope (body.ll-ecosystem-projects-pixie-discovery) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/daddys-little-mortis/index.html */
+@scope (body.ll-ecosystem-projects-daddys-little-mortis) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/narrative-provenance/index.html */
+@scope (body.ll-ecosystem-projects-narrative-provenance) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
+
+/* ecosystem/projects/pixie-device-stewardship/index.html */
+@scope (body.ll-ecosystem-projects-pixie-device-stewardship) {
+body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
+}
