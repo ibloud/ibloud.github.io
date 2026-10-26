@@ -48,7 +48,42 @@ Avoid showing every project twice; project detail pages may remain as canonical 
 - One site-owned stylesheet under `/assets/` for shared tokens, type scale, spacing, focus, reduced motion and components. Unify and remove local CSS incrementally rather than stacking overrides indefinitely.
 - Body type at least 18px, line height >=1.5, readable max width, real spacing between navigation controls and interactive targets.
 - Check actual WCAG AA contrast: ordinary text >=4.5:1 and large text >=3:1; focus visibility and 200% zoom; physical iPad and keyboard-only acceptance.
-- Dark earthy teal + warm cream + restrained amber for the person-first, resilient, investigative studio tone; prevent project-specific color bleed.
+- Approved galactic charcoal + muted plum + lilac for the person-first, resilient, investigative studio tone; prevent project-specific color bleed.
 - Check descriptive link text and actual link destinations; do not send reviewers to source code as the principal preview.
 - Verify persona statements against dates and records; label proposals, aspirations and self-reported claims.
 - Real Vercel browser review across representative desktop/tablet/mobile pages before a merge or DNS change.
+
+
+## Binding brand and clean-change protocol · 26 October 2026
+
+This is the operating standard for the Loptr Lab portfolio and PIXIE-assisted proposals. Cross-chat instructions do not replace canonical repository evidence. If a later request conflicts with these rules, explicitly identify the conflict, inspect the existing authority, and obtain owner approval before changing scope or publishing.
+
+### Identity and visual authority
+
+- **Loptr Lab** is the site masthead. **Dominique** is the creator and founder, never presented as PIXIE or an operating system. Meet Dominique concisely covers *why she created the ecosystem, what it represents, and how she directs/uses AI*, citing actual repo evidence.
+- Each project retains its brand and canon authority. The shared portfolio uses the owner-approved **galactic charcoal, muted plum and lilac** palette, complementary rather than identical to Made-Sick's own palette.
+- One authoritative portfolio stylesheet: \`assets/portfolio-foundation.css\`. Its tokens control type scale, contrast, line height, width, gutters, section and heading spacing, focus, navigation and responsive behavior. Check the actual cascade first; **remove the conflicting rule instead of appending another override or changing per-page CSS**. Page markup must not duplicate navigation or define local global style rules.
+- Use Made-Sick's existing \`styles.css\` for design-system discipline (tokens, reset, components, focus treatment), **not as a wholesale color or layout replacement**.
+- Readable type (body at least 18px, line height at least 1.5), WCAG AA contrast (4.5:1 normal, 3:1 large), visible keyboard focus, 200% zoom/reflow, reduced motion, and iPad and keyboard acceptance are mandatory. No wasted right-side content column or unbalanced missing-image placeholder.
+
+### Procedure for every ecosystem change (human, AI, or PIXIE)
+
+1. **Recover context first.** Read the latest canonical ecosystem architecture, this standard, the owner's current request, existing project status, prior decisions and GitHub source. Search current repositories, pages, CSS, issues, branches and public destinations before proposing any new artifact. Avoid re-asking settled questions.
+2. **Define the problem and source authority.** Name the actual user-facing defect, affected repositories/pages, owners, constraints and current release evidence. Distinguish confirmed facts, proposals and unknowns. Do not infer missing from a 404, a failed search or an authentication blocker.
+3. **Prefer the smallest solution.** Reuse an existing page, component, stylesheet, tool, workflow or task. Single responsibility; clear descriptive names; short coherent functions; no magic constants, duplicated logic, needless abstractions, dead code, unexplained flags or unapproved dependency/hosting additions. Preserve privacy and intellectual provenance.
+4. **Fix root causes.** Diagnose cascade, routing, data and navigation failures before patches. Never stack \`!important\` rules or page-local CSS as a workaround. Separate content revisions from global design changes when practical. Keep changes scoped and reviewable.
+5. **Test what users actually do.** Run existing unit/integration/regression checks; check URLs, missing assets, one navigation and one site-owned CSS reference, HTML semantics, focus order, keyboard/screen-reader, reflow, contrast and physical iPad where possible. Deploy exact source to an existing preview only when warranted. HTTP 200 or Vercel READY **is not visual acceptance**. If preview or connection access fails, stop retrying and report the blocker.
+6. **Report before publish.** State exact diff, evidence, unresolved limitations, affected routes and rollback plan. Obtain explicit owner approval before merge, production push, domain change, deleting legacy hosted material or publishing externally. Never say deployed, tested or deleted without evidence.
+7. **Leave maintainable evidence.** Record a concise decision, tests, dated checkpoint and owner acceptance in the owning issue/PR/repo. Keep cross-chat continuity anchored in repository records, not an assistant's recollection alone.
+
+### Stop conditions
+
+Do not proceed to publication if the target URL is inaccessible, the owning source cannot be confirmed, a new page duplicates an existing route, a broken image remains, accessible interaction is untested, the CSS cascade is inconsistent, a preview quota/authorization block remains, or owner acceptance is outstanding. Report partial completion without inventing success.
+
+### Reading basis (guidance, not a substitute for tests)
+
+- [Codacy — What Is Clean Code?](https://blog.codacy.com/what-is-clean-code)
+- [wojteklu — Summary of Clean Code](https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29)
+- [freeCodeCamp — How to Write Clean Code](https://www.freecodecamp.org/news/how-to-write-clean-code/)
+
+These resources inform simplicity, clarity, naming, single responsibility, dry/single source of truth, root-cause fixes, maintainable structure and repeatable tests. They are guidelines rather than a claim of formal code certification.
