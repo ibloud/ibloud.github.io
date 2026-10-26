@@ -211,3 +211,6 @@ body.ll-ecosystem .hero .lead{max-width:64rem}
 .ll-founder-links{display:flex;gap:.65rem 1.6rem;flex-wrap:wrap;margin-top:1.25rem}
 .ll-founder-links a{display:inline-flex;align-items:center;min-height:44px;font-size:1.05rem;color:var(--ll-link);font-weight:700}
 .ll-founder-end{border-bottom:0}
+
+/* Compact vertical rhythm, applies consistently to portfolio and ecosystem */
+main > section+section{margin-top:clamp(1.25rem,2.5vw,2.75rem)!important}body.ll-ecosystem .section{padding-block:clamp(1.3rem,2.5vw,2.25rem)!important}body.ll-ecosystem .hero{padding-top:clamp(1.75rem,3.5vw,3rem)!important;padding-bottom:.5rem!important}body.ll-ecosystem .hero+.section{padding-top:1.5rem!important}.ll-founder-intro,.ll-founder-section{padding-block:clamp(1.1rem,2.2vw,2rem)!important}
