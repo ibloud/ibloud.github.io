@@ -156,3 +156,10 @@ body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}
 @scope (body.ll-ecosystem-projects-duet) {
 body{background:#0d0e12;color:#f3f4f6}.hairline{border-color:rgba(63,63,70,.72)}.glow{box-shadow:0 0 50px -18px rgba(99,102,241,.28)}.grid-bg{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:32px 32px}a:focus-visible{outline:3px solid #a5b4fc;outline-offset:5px}.skip-link{position:absolute;left:1rem;top:-100px;z-index:100;background:#0d0e12;padding:1rem}.skip-link:focus{top:1rem}
 }
+
+/* Consistent founder-led, cosmic portrait palette */
+:root{--ll-bg:#15131e;--ll-panel:#242232;--ll-text:#f4eff4;--ll-muted:#dbd3e2;--ll-line:#686178;--ll-link:#e3b7e8;--ll-focus:#ffe1a0;--ll-accent:#d6b7ec}
+body{background:var(--ll-bg)!important;color:var(--ll-text)!important}
+.ll-collab-path{background:var(--ll-panel);border:1px solid var(--ll-line);border-radius:1.2rem;padding:clamp(1.5rem,3vw,2.5rem)}
+.ll-collab-path h2{font-size:clamp(1.6rem,3vw,2.4rem)}.ll-collab-path p{font-size:1.09rem;color:var(--ll-muted)}.ll-eyebrow{color:var(--ll-accent);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}.ll-actions{display:flex;gap:1rem 1.5rem;flex-wrap:wrap;align-items:center;margin-top:1.7rem}.ll-actions a{padding:.65rem 0;font-weight:700}.ll-actions .ll-primary-link{background:#513758;border:1px solid #bda3cc;color:#fff3ff;border-radius:.7rem;padding:.75rem 1.1rem}.ll-disclosure{font-size:.96rem!important;margin-top:1rem}
+.ll-meet-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);align-items:start;gap:clamp(1.7rem,4vw,4rem);max-width:none!important}.ll-meet-copy{min-width:0}.ll-meet-photo{margin:0;align-self:start;max-width:470px}.ll-meet-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:1.1rem;border:1px solid #8e7896}.ll-meet-photo figcaption{font-size:.9rem;color:var(--ll-muted);margin-top:.7rem}@media(max-width:760px){.ll-meet-layout{grid-template-columns:1fr}.ll-meet-photo{max-width:440px}}
