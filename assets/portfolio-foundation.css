@@ -222,3 +222,54 @@ main > section+section{margin-top:clamp(1.25rem,2.5vw,2.75rem)!important}body.ll
 .ll-founder-main .ll-founder-links{max-width:100%}
 .ll-founder-main p{font-size:clamp(1.125rem,1.35vw,1.3rem)}
 @media(min-width:900px){.ll-founder-main p{max-width:100%!important}.ll-founder-main .ll-lead{max-width:100%!important}}
+
+/* Portfolio layout contract: theme and rhythm are controlled here, not page markup.
+   Edit the variables below to retheme the entire portfolio. */
+:root{
+ --site-surface:#15131e;--site-header:#242232;--site-card:#242232;
+ --site-ink:#f4eff4;--site-copy:#dbd3e2;--site-outline:#686178;
+ --site-action:#e3b7e8;--site-focus:#ffe1a0;
+ --site-gutter:clamp(20px,3.5vw,56px);
+ --site-width:1440px;
+ --site-section-gap:clamp(1.5rem,3vw,2.75rem);
+ --site-section-padding:clamp(1.5rem,2.6vw,2.5rem);
+ --site-prose-size:clamp(1.125rem,1.16vw + .35rem,1.35rem);
+ --site-leading:1.62;
+ --ll-bg:var(--site-surface);--ll-panel:var(--site-card);
+ --ll-text:var(--site-ink);--ll-muted:var(--site-copy);
+ --ll-line:var(--site-outline);--ll-link:var(--site-action);--ll-focus:var(--site-focus)
+}
+html{scroll-padding-top:5.75rem}
+body{background:var(--site-surface)!important;color:var(--site-ink)!important}
+.ll-unified-header{background:var(--site-header)!important;border-bottom:1px solid var(--site-outline)!important}
+.ll-unified-inner,main,main.wrap,main.max-w-5xl,main.max-w-6xl,.ll-founder-main{
+ width:min(calc(100% - 2 * var(--site-gutter)),var(--site-width))!important;
+ max-width:var(--site-width)!important;margin-inline:auto!important
+}
+main.max-w-5xl,main.max-w-6xl{padding-inline:0!important}
+main > section,main > section.max-w-4xl,main > section.max-w-3xl,
+main .ll-founder-intro,main .ll-founder-section{
+ width:100%!important;max-width:none!important;
+ padding-block:var(--site-section-padding)!important
+}
+main > section:first-child{padding-top:clamp(1.75rem,3vw,3rem)!important}
+main > section + section{margin-top:var(--site-section-gap)!important}
+main :is(h1,h2,h3){margin-top:0;max-width:100%;text-wrap:balance}
+main :is(h1,h2){margin-bottom:clamp(.85rem,1.7vw,1.35rem)!important}
+main :is(p,li){font-size:var(--site-prose-size);line-height:var(--site-leading)!important}
+main :is(p,ul,ol){max-width:100%!important}
+main p + p{margin-top:clamp(.8rem,1.4vw,1.25rem)!important}
+main :is(.text-sm,.text-xs){line-height:1.5}
+main :is(.grid){gap:clamp(1rem,1.7vw,1.6rem)}
+main :is(.card,article.rounded-xl,article.rounded-2xl){padding:clamp(1.25rem,2.1vw,2rem)}
+body.ll-ecosystem .hero{padding-top:clamp(1.75rem,3vw,3rem)!important;padding-bottom:var(--site-section-padding)!important}
+body.ll-ecosystem .section{padding-block:var(--site-section-padding)!important}
+body.ll-ecosystem .hero .lead{max-width:100%!important}
+body.ll-ecosystem .grid{gap:clamp(1rem,1.7vw,1.6rem)}
+.ll-founder-main .ll-founder-intro,.ll-founder-main .ll-founder-section{padding-block:var(--site-section-padding)!important}
+.ll-founder-main .ll-lead{max-width:100%!important}
+@media(max-width:720px){
+ :root{--site-gutter:1rem;--site-section-padding:1.5rem;--site-section-gap:1rem}
+ .ll-unified-inner{min-height:auto}
+ main :is(h1,h2){text-wrap:wrap}
+}
