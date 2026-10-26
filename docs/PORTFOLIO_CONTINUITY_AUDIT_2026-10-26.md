@@ -87,3 +87,144 @@ Do not proceed to publication if the target URL is inaccessible, the owning sour
 - [freeCodeCamp — How to Write Clean Code](https://www.freecodecamp.org/news/how-to-write-clean-code/)
 
 These resources inform simplicity, clarity, naming, single responsibility, dry/single source of truth, root-cause fixes, maintainable structure and repeatable tests. They are guidelines rather than a claim of formal code certification.
+
+## Compliance reconciliation — 26 October 2026, local review only
+
+### Source and preservation record
+
+The existing review branch `review/portfolio-continuity-audit-2026-10-26` was
+read at `5ecd1c71aefa2e69bf235fb15d67a6e0421d3299`. GitHub comparison reports
+91 commits ahead of main, zero behind; main/merge base is
+`7e87894067975477af4f9aecf6d4f76781652b33`. The continuity audit and foundation
+stylesheet already exist on the review branch; the audit was not retrieved from
+main. This is not evidence of loss. No duplicate guide or CSS architecture was added.
+
+Public Git transport from this executor failed to connect to its proxy. It was
+not retried. Connected GitHub reads supplied the pinned text sources for an
+isolated local review snapshot. The snapshot is not the repository's full history;
+its local Git commits must not replace or be pushed over the upstream branch.
+Apply only the bounded correction patch to the reviewed upstream revision after
+owner approval and a fresh branch comparison. No existing Companion or guide
+checkout, archive, checkpoint, Sites source or Tangled ref was changed.
+
+### Phase A — findings and correction boundary
+
+| Repository / application | Authority and implementation | Confirmed finding / standard | Severity | Smallest correction / tests | Unverified or blocked |
+| --- | --- | --- | --- | --- | --- |
+| Portfolio, `ibloud/ibloud.github.io` | Existing review branch, 24 HTML pages and `assets/portfolio-foundation.css` | Malformed `@scope` blocks, duplicate legacy CSS, competing theme/type/width rules and Tailwind runtime styling contradict one authoritative cascade | High | Repair foundation; replace presentation utilities with shared components; validate every page, CSS loading, contrast, zoom/reflow and keyboard | Exact-source Vercel, physical iPad/Safari and screen reader acceptance |
+| Portfolio navigation | Same source | Story-process page retained a different primary menu; accountability case study had only a breadcrumb; some pages lacked a usable shared skip target | High | One five-destination header, current-page state and working skip-to-main on all pages | External destinations' complete journeys not exercised |
+| Portfolio collaboration | Existing page and Training workflow | Text said GitHub records accepted work and ended with email intake as the general contribution route | Medium | Separate submission from acceptance; point open contributions through Training/PIXIE; retain email for private commissions | Maintainer acceptance and independent onboarding |
+| PIXIE installed guidance | Connected installed skill plus repository skill | Installed skill lacks the review branch's Mandatory clean-change section | High | Prepare existing repository guidance for a separately authorized plugin release; do not claim repository changes update installed guidance | Plugin search did not return an exact editable PIXIE ID/release; no guarded release update possible here |
+| Companion backend | Existing Sites source; complete backend GitHub authority unresolved | An explicit source dependency, not an absent application or a development task | High dependency | Record boundary; preserve current sources and checkpoints | No source reconstruction, authentication retry or migration authorized |
+| Public PIXIE guide | `Loptr-Lab/pixie-ecosystem-guide` | Existing hosting notes describe both setup blocker and deployed status; dated records need reconciliation | Medium | Mark superseded observations after current route evidence; retain guide's existing role | No fresh live hosting acceptance; unchanged |
+| Training | `Loptr-Lab/training`, with a second publication inside engine repository | Two instructional publications declare different canonical URLs | Medium | Owner-reviewed publication responsibility and route equivalence before any redirect | No redirect or repository change performed |
+| Made-Sick | `ibloud/made-sick`; shared stylesheet and resource contract | Existing resource owner already reused by Companion; demo loader and visible link use different published aliases | Medium routing | Verify one existing destination before changing both references; retain direct link fallback | Alias failure not established; no page/runtime changes |
+| 50 Ways | `ibloud/50-ways-to-leave-another`; existing assets/site.css and preservation rules | Separate creative/rights-learning role is legitimate; multiple CSS files warrant scoped migration inspection, not replacement | Investigate | Preserve approved artwork/type/palette; use existing generation checks for any later document edit | No identity/CSS changes or legal-clearance claim |
+| Creator OS / Holdings / Device Stewardship | Their respective existing repositories | Distinct local preparation, synthetic game and stewardship research; shared PIXIE name is not duplicate implementation | Keep | Clarify destination labels where needed; retain current boundaries and local privacy controls | Physical-device/service acceptance remains separate |
+| Duet / engine / other creative works | Owning repositories and local canon policies | Review/play routes and descriptions are dated; no evidence warrants merging games or story canon | Investigate routes / Keep identities | Confirm current play route and stage before redirecting; preserve original histories | No fresh gameplay or external hosting acceptance |
+
+Fresh source checks included Made-Sick AGENTS/styles, guide README, Training README,
+50 Ways AGENTS/README, Device Stewardship CONTRIBUTING, Creator OS README,
+Holdings README and Duet README. These are source evidence, not new live acceptance.
+The prior brand and consolidation audits remain supporting assessments; their
+unapproved recommendations were not silently promoted into policy.
+
+### Phase B — bounded local corrections
+
+Root cause: moving legacy declarations into one file without a valid, simplified
+cascade left themes and layout authorities competing. Tailwind's network-generated
+styles remained a second presentation authority. Fixing isolated margins would
+retain that cause.
+
+Changed files: the existing foundation stylesheet, all 24 existing HTML pages,
+this audit and the canonical architecture's source-governance boundary. Added
+`tools/check_portfolio.py` because no portfolio-wide contract check existed in the
+inspected tree. It uses Python's standard library and adds no runtime dependency.
+
+- Removed malformed/repeated scoped rules, runtime Tailwind setup, external font
+  stylesheet dependencies and competing page presentation utilities.
+- Kept the approved charcoal/plum/lilac direction and original content/routes.
+  Shared tokens own body type, line height, gutters, width, section/heading gaps,
+  panels, links, navigation, focus and responsive grids. No product palette changed.
+- Kept one common header with Meet Dominique, Ecosystem, Research proposal,
+  Collaborate, Provenance & AI. Each page has one navigation and main landmark,
+  one h1, and a keyboard-focusable main skip destination.
+- Retained the historic case-study anchor. Added table column-header semantics
+  where a table's first row previously used only data cells.
+- Aligned homepage social metadata with its existing founder description.
+- Clarified the existing public contribution route without adding intake forms.
+- Recorded complete Companion backend GitHub authority as an unresolved dependency,
+  not a reconstruction, migration or source-identification assignment.
+
+### Verification performed on this correction
+
+- `python3 tools/check_portfolio.py`: PASS, 24 pages; one shared stylesheet,
+  consistent five-link navigation, landmarks, IDs, local files and fragments.
+- `git diff --check`: PASS. All original visible prose was compared through DOM
+  text extraction: only the two intended collaboration paragraphs changed.
+- Local Chromium: 96 page/viewport states, all 24 pages at 1440, 820, 390 and
+  320 CSS pixels. No document horizontal overflow, missing rendered images,
+  incorrect stylesheet counts or navigation targets below 44px were detected.
+- Automated solid-color visible-text contrast scan on all 24 pages: minimum
+  6.05:1, with size/weight-dependent WCAG AA thresholds checked. This does not
+  certify every non-text, visited-link, platform or assistive-technology state.
+- Keyboard Tab/Enter skip focus reached main on every page; no heading-level
+  skips or tables without header cells detected. Focus outline is visible.
+- Reduced motion computes to non-smooth scrolling. Runtime mutation of the shared
+  section token changed actual section padding from 26.4px to 61px.
+- Root text enlarged to 200% at a 720px viewport: no document horizontal overflow
+  on the 24 pages. This is a text-size/reflow simulation, not native Safari zoom.
+- Founder → ecosystem → collaborate navigation exercised locally; contributor CTA
+  points at the established Training URL. It was not submitted or used to create
+  an issue. External enquiry/checkpoint/game acceptance was not simulated as live.
+- Screenshots captured at desktop/tablet/narrow widths; representative founder,
+  ecosystem and collaboration full-page renders were visually inspected.
+
+Local browser scripts/results/screenshots are review evidence, not deployment
+receipts. Physical iPad Safari/Files, VoiceOver, a desktop screen reader and an
+independent contributor remain NOT TESTED. No claim of full WCAG compliance.
+
+### Installed plugin and preview status
+
+Installed PIXIE `list_projects` returned the v0.5, 13-project catalog with separate
+website/plugin authentication and no formal membership or synchronized progress.
+The installed skill retrieved in this audit does not contain the new clean-change
+section present in this review branch. The catalog version does not establish
+plugin package version or instruction-release parity. No exact editable PIXIE
+plugin/release ID was returned by plugin discovery; no plugin mutation occurred.
+
+The existing Vercel project `ibloud.github.io` was found at
+`prj_MEaTGokQ30LUnWnkLUhWlipdkK59`. SSO protects deployments except custom domains;
+password-protection configuration is also present. The latest listed READY preview
+is `dpl_EEozB8hPc4FL62An3rUZ4dx77ab1`, source
+`d78f2cc849830acb78c53ae530ce2ef9352d47d2`, not this correction. READY is not visual
+acceptance. No preview build, quota-consuming deployment or authentication retry
+was requested. Quota availability was not established and must be checked before
+any separately authorized preview.
+
+### Publication gate and rollback
+
+Portfolio: local source checks PASS; publication readiness FAIL/PENDING because
+exact-source preview, manual accessibility checks and owner acceptance remain open.
+PIXIE plugin: FAIL/PENDING release parity and exact editable release identity.
+Other ecosystem projects: unchanged; NOT newly release-certified by this audit.
+
+The correction commit and patch are local review artifacts. Do not push the
+snapshot history. After approval, recheck upstream, apply the correction diff on
+the existing review branch, run the checks and inspect exact-source preview.
+Rollback is reversal of that isolated correction patch/commit, not resetting to
+main or deleting earlier review-branch work. Opening a remote PR or pushing the
+branch may trigger preview automation and therefore remains a separate authorized
+external action. Merge, production, DNS, source migrations and synchronization
+remain prohibited without explicit owner approval.
+
+### Connected Companion checks during this audit
+
+The installed `prepare_checkpoint` tool returned a fictional Training checkpoint
+as `draft — not submitted`, with the selected project's GitHub issue URL and
+explicit public visibility/review requirements. Nothing was submitted. The installed
+`resume_checkpoint` read the existing Training issue 42 without an error or comments
+warning at `2026-10-26T18:10:51.259Z`; its reported issue update was
+`2026-10-18T17:35:58Z`. This verifies those two connected calls, not all participant
+access paths, public installation, new skill loading or resolution of earlier
+local-workerd source retrieval failures. No issue, comment or message was posted.

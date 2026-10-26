@@ -74,6 +74,25 @@ Before proposing or creating a directory, database, guide, repository, plugin, p
 
 Public discovery and learning how to connect can use the established surfaces. Private briefs, correspondence and follow-up records must not be placed in public contribution records. A new professional database is not the default; establish a specific unmet need before proposing one.
 
+## Source governance and review boundary — owner-confirmed, 26 October 2026
+
+`ibloud/ibloud.github.io` remains the canonical ecosystem-governance repository.
+`Loptr-Lab/pixie-ecosystem-guide` remains the public PIXIE guide. Each product
+retains its implementation, license and canon authority; neither the guide nor
+Holdings substitutes for the complete Companion backend.
+
+**Outstanding dependency:** the complete Companion backend's GitHub authority
+remains unresolved. Source identification is not an active development task and
+must not trigger reconstruction, repository creation, Sites authentication retries,
+source migration or synchronization activation. Preserve existing Sites, Tangled,
+archives and local checkpoints unchanged until a separately approved handoff.
+
+The existing [portfolio continuity audit and clean-change protocol](https://github.com/ibloud/ibloud.github.io/blob/review/portfolio-continuity-audit-2026-10-26/docs/PORTFOLIO_CONTINUITY_AUDIT_2026-10-26.md)
+records review-branch standards and acceptance evidence. Repository instructions,
+the installed plugin release, local source and deployed behavior are distinct.
+Owner review is required before external publication, hosting changes or release;
+passing local tests does not establish physical-device or public-service acceptance.
+
 ## Architecture
 
 | Work or surface | Ecosystem role | Authority |
