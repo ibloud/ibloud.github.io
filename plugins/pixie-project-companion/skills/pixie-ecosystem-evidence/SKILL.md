@@ -49,3 +49,23 @@ Preserve GitHub as the shared coordination record and the current Site/App/plugi
 If resume_checkpoint reports GitHub HTTP 403 with an API rate-limit message, do not repeat the anonymous request. When a connected GitHub read tool is available, read the exact selected public issue and comments through that contributor's connection, and summarize with source and updated time. Do not copy credentials, use the owner's connection for other visitors, invent results, or ask the contributor to repeat the project briefing. If no connected read tool is available, provide the validated direct issue link and explain the access limit. A one-off successful anonymous read does not prove reliable quota-independent access.
 
 The website offers optional explicit Remember/Forget controls storing only a public issue URL and project ID on that device. Never claim cross-device or cross-domain recall; GitHub remains the shared record.
+
+
+## Mandatory clean-change and brand gates
+
+Before proposing, creating, editing, deploying, or recommending changes in ANY ecosystem project, read the current [ecosystem architecture](https://github.com/ibloud/ibloud.github.io/blob/main/docs/ECOSYSTEM_ARCHITECTURE.md), the [portfolio continuity and binding clean-change protocol](https://github.com/ibloud/ibloud.github.io/blob/review/portfolio-continuity-audit-2026-10-26/docs/PORTFOLIO_CONTINUITY_AUDIT_2026-10-26.md), and the owning repository's current documentation, code, branches and issues. Verify sources fresh in every chat; do not depend on assumed memory or prior assistant claims.
+
+1. **Inspect first:** identify existing pages, features, repos, assets, design tokens, hosting, navigation and accessible onboarding. Reuse before creation. Do not duplicate sites, guides, CSS, repositories, intake forms or documentation.
+2. **Diagnose and scope:** state user goal, actual root cause, current owner authority, planned minimum diff, affected pages, and unknowns. Do not substitute generated code for the public-facing experience.
+3. **Clean code:** meaningful naming, small single-purpose units, readable structures, minimal duplication, no dead code or premature abstractions. Prefer one maintained source of truth and documented interfaces over patches. Remove conflicting CSS selectors rather than stacking overrides. Preserve project-specific branding while sharing cross-site standards.
+4. **Accessibility:** keyboard and screen reader, contrast, focus visibility, zoom/reflow, 18px+ readable text and line height >=1.5, tablet/mobile layout, and reduced motion. A site-wide style change must be controlled by the existing single main stylesheet and its tokens. No unapproved changing color identity.
+5. **Reality checks:** run tests and inspect actual page content, navigation destination, missing assets, rendered visual layout, and API/service state. READY and HTTP 200 do not establish usability. Stop on quota, credentials or authorization errors; don't repeat failed attempts or claim success.
+6. **Owner approval and rollback:** report evidence and limitations before merge, production deploy, DNS change, or deletion. Never claim published without verifying the front-facing page. Keep the review branch and recovery path.
+7. **Continuity:** write dated, precise decisions and test checkpoints in owning GitHub PR/issues; carry forward the governing standards across new chats and PIXIE handoffs. Founder Dominique directs the work; PIXIE is a contributor companion, not her identity.
+
+Clean-code references:
+- https://blog.codacy.com/what-is-clean-code
+- https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29
+- https://www.freecodecamp.org/news/how-to-write-clean-code/
+
+This is an execution gate, not a guarantee that implementations pass. If the current branch or live site conflicts, mark it noncompliant and require a verified correction before publication.
