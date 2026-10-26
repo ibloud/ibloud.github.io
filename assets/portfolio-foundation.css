@@ -4,9 +4,11 @@
  color-scheme:dark;
  --site-bg:#15131e; --site-header:#242232; --site-card:#242232;
  --site-text:#f4eff4; --site-muted:#dbd3e2; --site-border:#686178;
- --site-link:#e3b7e8; --site-focus:#ffe1a0;
+ --site-link:#e4b8e9; --site-focus:#ffe0a0;
  --site-max:1440px; --site-gutter:clamp(1rem,3.3vw,3.4rem);
- --site-section:clamp(1.4rem,2.5vw,2.4rem);
+ --site-section:clamp(1.65rem,2.65vw,2.75rem);
+ --site-heading-gap:clamp(.85rem,1.45vw,1.3rem);
+ --site-paragraph-gap:clamp(.85rem,1.45vw,1.25rem);
  --site-gap:clamp(1.25rem,2.4vw,2.5rem);
  --site-body:clamp(1.125rem,1.05rem + .28vw,1.35rem);
  --site-leading:1.6;
@@ -34,8 +36,15 @@ main>section,main>section.max-w-4xl,main>section.max-w-3xl,.ll-founder-intro,.ll
 main>section+section{margin-top:var(--site-gap)}
 main>section:first-child{padding-top:var(--site-section)}
 main :is(p,li){line-height:var(--site-leading)}
+main p{font-size:var(--site-body)}
+main :is(.ll-kicker,.eyebrow){margin-bottom:.6rem}
 main p,main .ll-lead,main .lead,main .text-content{max-width:100%}
-main p+p{margin-top:1rem}
+main p+p{margin-top:var(--site-paragraph-gap)}
+main h1,main h2,main h3{margin:0 0 var(--site-heading-gap)}
+main h1+p,main h2+p,main h3+p{margin-top:0}
+main p+h2,main p+h3,main ul+h2{margin-top:var(--site-section)}
+main .ll-founder-section h2+ p,main .ll-founder-intro h1+p{margin-top:var(--site-heading-gap)}
+main .ll-founder-links{margin-top:clamp(1.25rem,2vw,2rem)}
 main :is(.grid){gap:clamp(1rem,1.7vw,1.6rem)}
 main :is(.text-zinc-400,.text-zinc-500,.text-gray-400,.text-slate-400){color:var(--site-muted)}
 main :is(.text-indigo-400,.text-indigo-300,.text-pink-300){color:var(--site-link)}
