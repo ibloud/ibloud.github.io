@@ -88,7 +88,10 @@ code { overflow-wrap: anywhere; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media (forced-colors: active) { :focus-visible { outline-color: Highlight; } }
 
-/* Provenance resource footer: consistent spacing and readable focus targets. */
+/* Shared resource-link navigation and footer layout across portfolio pages. */
 .ll-footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-block: 2rem; }
+.footer .wrap { display: flex; flex-wrap: wrap; align-items: center; column-gap: 1rem; row-gap: 0.5rem; }
+.footer .wrap p { flex-basis: 100%; margin: 0; }
+.footer .wrap a { display: inline-flex; align-items: center; min-height: 44px; }
 .ll-footer-links a { display: inline-flex; align-items: center; min-height: 44px; max-width: 100%; }
 @media (max-width: 480px) { .ll-footer-links { flex-direction: column; align-items: stretch; } .ll-footer-links a { width: fit-content; } }
