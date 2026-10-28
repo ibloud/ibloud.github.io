@@ -32,7 +32,7 @@ class Page(HTMLParser):
         if 'style' in attrs:
             self.inline_styles.append(attrs['style'])
         if tag == 'nav':
-            self.in_nav = True
+            self.in_nav = attrs.get('aria-label') == 'Main navigation'
         if self.in_nav and tag == 'a':
             self.in_nav_link = True
             self.nav_labels.append('')
@@ -68,7 +68,7 @@ def main():
                 failures.append(f'{path.relative_to(ROOT)}: {reason}')
 
         text = path.read_text()
-        require(all(page.tags.count(tag) == 1 for tag in ('nav', 'main', 'h1')), 'expected one navigation, main and h1')
+        require(all(page.tags.count(tag) == 1 for tag in ('main', 'h1')) and len(page.nav_labels) == len(NAV_LABELS), 'expected one primary navigation, main and h1')
         require(page.nav_labels == NAV_LABELS, 'primary navigation labels differ')
         require(len(page.ids) == len(set(page.ids)), 'duplicate IDs')
         require(not page.inline_styles and 'style' not in page.tags, 'page-local CSS')
