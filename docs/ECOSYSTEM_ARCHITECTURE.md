@@ -106,6 +106,47 @@ passing local tests does not establish physical-device or public-service accepta
 | PIXIE | Cross-project contributor companion for joining, learning, coordination and resuming work; related publishing surfaces address authorship and production | Owning project sources control implementations; commentary and proposals are not automatic canon |
 | Loptr Lab | Production, governance, training, accessibility, and research practice | Studio repositories control their respective implementations |
 
+
+## Break This Build routing and Halloween status — reviewed 31 October 2026
+
+Break This Build is the existing public testing and development hub at
+https://break.loptrlab.com/. Its source is `duet-review.html` in
+`Loptr-Lab/duet-solo-hackathon`; the existing GitHub Pages workflow publishes
+that file at the root. Reuse this hub. It is not a replacement project,
+general resource directory, shared game engine, or single combined runtime.
+
+| Surface | Role and owning source | Evidence boundary |
+| --- | --- | --- |
+| Break This Build root | Shared Duet/First Movement entry; `Loptr-Lab/duet-solo-hackathon/duet-review.html` | Route people to the specific build and its own issue tracker. |
+| /duet/ and /duet/weaver/ | Weaver reading/provenance surface; `public/weaver/index.html`, published through `scripts/build-weaver-site.py` | Separate from game controls and from proposed Weaver mechanics. |
+| /duet/play/ | Duet static local recovery in the same repository | Two players on one device or a local computer opponent; no remote rooms. |
+| https://duet-multiplayer-production.up.railway.app | Temporary Duet room-code multiplayer demo | Runtime `7a1e8b81ae4b59e30030c2acf46009730867effc` verified through /api/runtime; public simulated-client tests passed; physical-device/accessibility acceptance remains open. Restarts clear matches; metered costs are being observed. |
+| https://ibloud.github.io/ren-rhapsody/ | Ren Rhapsody blueprint, owned by `ibloud/ren-rhapsody` | Artist participation, music rights and Fortnite publication are not established. |
+| https://ibloud.github.io/ren-rhapsody/play/ | Existing First Movement browser prototype, same repository | Source `1de27d8e11544eca734ead6d180eb53b97ad2c01` contains one rooftop scene, beat-assisted jumping, five fragments, synthesized audio and an ending. Public page retrieved; independent completion/iPad/accessibility acceptance still needs evidence. |
+| PIXIE project snapshots | Existing guide/Companion sources and installed plugin release | Reviewed snapshots are dated, not current live acceptance. The retrieved Rhapsody snapshot is dated October 12 and predates the implemented browser slice. A refreshed source record does not by itself release a plugin or deploy the Companion. |
+
+The existing [First Movement Halloween scope](https://github.com/ibloud/ren-rhapsody/blob/main/docs/HALLOWEEN-2026-FIRST-MOVEMENT.md)
+retains October 31 as the internal tested-preview/community-playtest target.
+Finish and verify the existing beginning/action/ending, browser/iPad route,
+original audio provenance and independent observations. If acceptance is not
+met, publish a development showcase and record the missed playable gate.
+Do not silently turn today's target into a five-zone, UEFN, Xbox or 3D rebuild.
+
+[Ren Rhapsody issue #11](https://github.com/ibloud/ren-rhapsody/issues/11)
+already owns the optional three-shot storyboard/tool study. Its chair/rescuer
+staging is distinct from implemented First Movement gameplay; placement and
+cross-project interpretation remain proposals until Dominique accepts them.
+Polyfork is an asset candidate for that existing study, not an established
+integration or new story canon. Preserve ArtCraft trial history; no replacement
+tool pipeline or duplicate storyboard assignment is created by this record.
+
+Checked: canonical map, owning README/scope/play sources, existing issue #11,
+Break This Build source/live page, Duet runtime metadata and PIXIE's reviewed
+snapshot. Source corrections, owner-reviewed publication, playable behavior and
+independent acceptance are separate evidence states. No Companion source
+reconstruction, backend migration, automatic synchronization, membership or
+private-data integration is authorized by these routing corrections.
+
 ## Development lineage
 
 The working lineage is:
