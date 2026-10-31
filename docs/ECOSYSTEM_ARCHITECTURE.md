@@ -122,7 +122,7 @@ general resource directory, shared game engine, or single combined runtime.
 | /duet/play/ | Duet static local recovery in the same repository | Two players on one device or a local computer opponent; no remote rooms. |
 | https://duet-multiplayer-production.up.railway.app | Temporary Duet room-code multiplayer demo | Runtime `7a1e8b81ae4b59e30030c2acf46009730867effc` verified through /api/runtime; public simulated-client tests passed; physical-device/accessibility acceptance remains open. Restarts clear matches; metered costs are being observed. |
 | https://ibloud.github.io/ren-rhapsody/ | Ren Rhapsody blueprint, owned by `ibloud/ren-rhapsody` | Artist participation, music rights and Fortnite publication are not established. |
-| https://ibloud.github.io/ren-rhapsody/play/ | Existing First Movement browser prototype, same repository | Source `1de27d8e11544eca734ead6d180eb53b97ad2c01` contains one rooftop scene, beat-assisted jumping, five fragments, synthesized audio and an ending. Public page retrieved; independent completion/iPad/accessibility acceptance still needs evidence. |
+| https://ibloud.github.io/ren-rhapsody/play/ | Existing First Movement browser prototype, same repository | Source `1de27d8e11544eca734ead6d180eb53b97ad2c01` contains one rooftop scene, beat-assisted jumping, five fragments, synthesized audio and an ending. Earlier public-page retrieval is not current deployment verification. [Ren PR #13](https://github.com/ibloud/ren-rhapsody/pull/13) records automated local completion, synthesized signal and focused recovery fixes; independent completion, physical iPad/accessibility acceptance and corrected public-route verification remain unmet. Development-showcase fallback is prepared for October 31. |
 | PIXIE project snapshots | Existing guide/Companion sources and installed plugin release | Reviewed snapshots are dated, not current live acceptance. The retrieved Rhapsody snapshot is dated October 12 and predates the implemented browser slice. A refreshed source record does not by itself release a plugin or deploy the Companion. |
 
 The existing [First Movement Halloween scope](https://github.com/ibloud/ren-rhapsody/blob/main/docs/HALLOWEEN-2026-FIRST-MOVEMENT.md)
@@ -136,7 +136,7 @@ Do not silently turn today's target into a five-zone, UEFN, Xbox or 3D rebuild.
 already owns the optional three-shot storyboard/tool study. Its chair/rescuer
 staging is distinct from implemented First Movement gameplay; placement and
 cross-project interpretation remain proposals until Dominique accepts them.
-Polyfork is an asset candidate for that existing study, not an established
+[Existing Ren PR #12](https://github.com/ibloud/ren-rhapsody/pull/12) now supplies three original blocking diagrams, editable source, text descriptions and current vendor licensing/access limits; direct asset retrieval/import remains unverified. These review artifacts are not accepted canon or a 3D gameplay conversion. Polyfork is an asset candidate for that existing study, not an established
 integration or new story canon. Preserve ArtCraft trial history; no replacement
 tool pipeline or duplicate storyboard assignment is created by this record.
 
