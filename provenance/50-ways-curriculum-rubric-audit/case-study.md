@@ -2,7 +2,7 @@
 
 Dominique Devereaux · Codex-assisted audit · 3 November 2026
 
-Draft case study for review.
+Portfolio case study.
 
 ## What I wanted to learn
 
