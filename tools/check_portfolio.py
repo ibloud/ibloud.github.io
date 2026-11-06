@@ -10,6 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 NAV_LABELS = ['Meet Dominique', 'Ecosystem', 'Research proposal', 'Collaborate', 'Provenance & AI']
+HOME_NAV_LABELS = ['Work', 'About', 'Contact', 'Ecosystem']
 
 
 class Page(HTMLParser):
@@ -68,8 +69,9 @@ def main():
                 failures.append(f'{path.relative_to(ROOT)}: {reason}')
 
         text = path.read_text()
-        require(all(page.tags.count(tag) == 1 for tag in ('main', 'h1')) and len(page.nav_labels) == len(NAV_LABELS), 'expected one primary navigation, main and h1')
-        require(page.nav_labels == NAV_LABELS, 'primary navigation labels differ')
+        expected_nav = HOME_NAV_LABELS if path == ROOT / 'index.html' else NAV_LABELS
+        require(all(page.tags.count(tag) == 1 for tag in ('main', 'h1')) and page.nav_labels == expected_nav, 'expected one primary navigation, main and h1')
+        require(page.nav_labels == expected_nav, 'primary navigation labels differ')
         require(len(page.ids) == len(set(page.ids)), 'duplicate IDs')
         require(not page.inline_styles and 'style' not in page.tags, 'page-local CSS')
         require('tailwind' not in text.lower(), 'runtime Tailwind dependency')
