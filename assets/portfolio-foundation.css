@@ -27,7 +27,7 @@
  --md-sys-color-secondary:#24594f; --md-sys-color-on-secondary:#fff;
  --md-sys-color-surface:#d5cedb; --md-sys-color-surface-container:#e4deea;
  --md-sys-color-surface-container-high:#c9bfd2; --md-sys-color-on-surface:#211c27;
- --md-sys-color-on-surface-variant:#514757; --md-sys-color-outline:#7c6f85; --md-sys-color-outline-variant:#a79aad;
+ --site-focus:#613e7d; --md-sys-color-on-surface-variant:#514757; --md-sys-color-outline:#7c6f85; --md-sys-color-outline-variant:#a79aad;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:2rem}
@@ -78,8 +78,8 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 .footer .wrap,.portfolio-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.25rem}.footer .wrap p,.portfolio-footer p{flex-basis:100%;margin:0}
 .footer a,.ll-footer-links a,.portfolio-footer a{display:inline-flex;align-items:center;min-height:3rem}
 /* Reading pages keep equal left/right space. Panels share their text measure. */
-.ll-research main,.ll-collaborate main,.ll-provenance-ai-assisted-story-development main,.ll-ecosystem-ai-development-case-study main{width:min(calc(100% - 2 * var(--site-gutter)),76ch)}
-:is(.ll-research,.ll-collaborate,.ll-provenance-ai-assisted-story-development,.ll-ecosystem-ai-development-case-study) main p{max-width:none}
+.ll-reading main,.ll-research main,.ll-collaborate main,.ll-provenance-ai-assisted-story-development main,.ll-ecosystem-ai-development-case-study main{width:min(calc(100% - 2 * var(--site-gutter)),76ch)}
+:is(.ll-reading,.ll-research,.ll-collaborate,.ll-provenance-ai-assisted-story-development,.ll-ecosystem-ai-development-case-study) main p{max-width:none}
 :is(.ll-research,.ll-collaborate) main .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr))}
 .ll-provenance main>section:first-child{max-width:76ch;margin-inline:auto}
 .ll-provenance main>section:first-child p{max-width:none}
