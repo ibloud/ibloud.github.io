@@ -1,5 +1,5 @@
 {
-  "status": "Ready for owner review and push; local only, not pushed",
+  "status": "Prepared for review-branch publication; main remains unchanged",
   "professional_review": "PENDING",
   "public_pitch_path": "https://ibloud.github.io/ecosystem/projects/50-ways/",
   "production_record": "https://50ways.loptrlab.com/",
@@ -13,5 +13,12 @@
     "No physical iPad/Safari/VoiceOver test",
     "No legal, rights or owner creative acceptance implied",
     "Canonical URLs are intended destinations; local changes are not live"
-  ]
+  ],
+  "reconciled_remote_main": "cbbfd5c1412e38ea346404353b89f3d3de5c2790",
+  "release_boundaries": {
+    "review": "PENDING",
+    "music_exploitation": "HOLD",
+    "gods_of_mayhem": "Contributors, professionals, experienced practitioners and thought leaders",
+    "excluded": "Ren media and private evidence"
+  }
 }

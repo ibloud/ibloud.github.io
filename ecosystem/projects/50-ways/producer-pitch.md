@@ -29,7 +29,7 @@ Ownership, retained licenses, creative approvals, fees, royalties, exclusivity, 
 
 The [50 Ways behind-the-scenes site](https://50ways.loptrlab.com/) is the separate working record. Participants and reviewers work through the waterfall, rights management, royalty collection, promotion and collaboration process there. It is an open development and learning model, not a certified system or an assumed financing agreement.
 
-Gods of Mayhem is the human review community: people, professionals, experienced practitioners and thought leaders able to contribute time, resources and experience for the ecosystem. Contribution scope and recognition are agreed; public participation is not formal legal approval or a presumed unpaid engagement.
+Gods of Mayhem is the human review community: contributors, professionals, experienced practitioners and thought leaders able to contribute time, resources and experience for the ecosystem. Contribution scope and recognition are agreed; public participation is not formal legal approval or a presumed unpaid engagement.
 
 ## The next conversation
 

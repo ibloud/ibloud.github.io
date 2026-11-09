@@ -65,7 +65,7 @@ Historical UMG material lists earlier Drake/Cash Money relationships. It is not 
 
 The show is presented here in the portfolio. The separate [50 Ways behind-the-scenes site](https://50ways.loptrlab.com/) preserves its development, learning and professional-review record. Participants work through how the project can be used, promoted and monetized: waterfall/cash timing, rights management, royalty collection, fair compensation and evidence-backed decisions. These remain reviewable questions rather than a certified or fully implemented business model.
 
-Gods of Mayhem is the people, professionals, experienced practitioners and thought leaders who have the capacity to participate for the ecosystem's benefit. Their time and scope are chosen; contribution does not imply endorsement, a professional retainer or waived rights to compensation. The purpose is collaborative correction and better decisions.
+Gods of Mayhem is the contributors, professionals, experienced practitioners and thought leaders who have the capacity to participate for the ecosystem's benefit. Their time and scope are chosen; contribution does not imply endorsement, a professional retainer or waived rights to compensation. The purpose is collaborative correction and better decisions.
 
 Historical production details and the sanitized correspondence/cost summary belong in the [separate learning case](https://50ways.loptrlab.com/research/production-collaboration-history.html), not the show pitch. Private originals remain private.
 
