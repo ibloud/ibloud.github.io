@@ -160,9 +160,9 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 .ll-ecosystem .card :is(h3,h4){overflow-wrap:anywhere}
 .ll-ecosystem :is(figcaption,summary){overflow-wrap:anywhere}
 
-/* PIXIE legal-style sigil: fine gold linework with restrained light shimmer. */
-#public-test .public-test-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,19rem);column-gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+/* Original PIXIE portrait: proportional, up to 1.5x the prior 18rem size. */
+#public-test .public-test-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,clamp(19rem,31vw,27rem));column-gap:clamp(1rem,2vw,2rem);align-items:center}
 #public-test .public-test-copy{min-width:0}
-#public-test .public-test-pixie{width:min(100%,18rem);margin:clamp(1.25rem,3vw,2.5rem) auto 0;justify-self:center;align-self:start;position:relative;left:-1.25rem;isolation:isolate}
+#public-test .public-test-pixie{width:100%;max-width:27rem;margin:0;justify-self:center;align-self:center;position:relative;left:-.75rem}
 #public-test .public-test-pixie img{display:block;width:100%;height:auto;object-fit:contain}
-@media(max-width:48rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(48vw,12rem);margin:1.25rem auto 1.5rem;left:0}}
+@media(max-width:48rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(70vw,19rem);margin:1rem auto 1.5rem;left:0}}
