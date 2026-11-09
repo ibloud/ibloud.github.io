@@ -1,0 +1,91 @@
+<svg role="img" aria-labelledby="rebirth-title rebirth-desc" viewBox="0 0 280 380" xmlns="http://www.w3.org/2000/svg" width="280" height="380">
+<title id="rebirth-title">Rebirth, Death’s Daughter</title>
+<desc id="rebirth-desc">The existing manga cover illustration: a dark-haired, winged figure in a pale robe, with a red eye, a small flame and a serpent. Gold rings and smoke marks surround her against the dark.</desc>
+        <!-- Background glow -->
+        <defs>
+          <radialGradient id="glowGrad" cx="50%" cy="60%" r="50%">
+            <stop offset="0%" style="stop-color:#c0392b;stop-opacity:0.4"/>
+            <stop offset="100%" style="stop-color:#0a0a0f;stop-opacity:0"/>
+          </radialGradient>
+          <radialGradient id="haloGrad" cx="50%" cy="30%" r="30%">
+            <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:0.6"/>
+            <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0"/>
+          </radialGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <ellipse cx="140" cy="300" rx="100" ry="60" fill="url(#glowGrad)"/>
+        <!-- Halo -->
+        <circle cx="140" cy="80" r="55" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.5" filter="url(#glow)"/>
+        <circle cx="140" cy="80" r="48" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.3"/>
+        <!-- Halo glow fill -->
+        <circle cx="140" cy="80" r="50" fill="url(#haloGrad)"/>
+
+        <!-- Wings (dark angel) -->
+        <path d="M140 140 C80 120 20 80 10 140 C5 170 40 160 80 150 C60 180 40 200 50 230 C80 210 110 180 120 160" fill="#1a1a22" stroke="#c9a84c" stroke-width="1" opacity="0.9"/>
+        <path d="M140 140 C200 120 260 80 270 140 C275 170 240 160 200 150 C220 180 240 200 230 230 C200 210 170 180 160 160" fill="#1a1a22" stroke="#c9a84c" stroke-width="1" opacity="0.9"/>
+        <!-- Wing feather details -->
+        <path d="M80 150 C60 165 45 175 50 185" fill="none" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+        <path d="M90 145 C70 160 55 172 60 182" fill="none" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+        <path d="M200 150 C220 165 235 175 230 185" fill="none" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+        <path d="M190 145 C210 160 225 172 220 182" fill="none" stroke="#c9a84c" stroke-width="0.7" opacity="0.5"/>
+
+        <!-- Robe/body -->
+        <path d="M120 130 C100 170 95 240 100 310 L140 315 L180 310 C185 240 180 170 160 130 Z" fill="#f5f0e8" stroke="#0a0a0f" stroke-width="1.5"/>
+        <!-- Robe folds -->
+        <path d="M130 145 C125 190 122 250 120 300" fill="none" stroke="#c8bfaf" stroke-width="0.8"/>
+        <path d="M150 145 C155 190 158 250 160 300" fill="none" stroke="#c8bfaf" stroke-width="0.8"/>
+        <!-- Robe bottom decoration -->
+        <path d="M100 310 C110 318 125 315 140 318 C155 315 168 318 180 310" fill="none" stroke="#c9a84c" stroke-width="1.5"/>
+
+        <!-- Neck -->
+        <rect x="132" y="120" width="16" height="18" fill="#e8d8c0" stroke="#0a0a0f" stroke-width="1"/>
+
+        <!-- Head -->
+        <ellipse cx="140" cy="100" rx="32" ry="36" fill="#e8d8c0" stroke="#0a0a0f" stroke-width="1.5"/>
+
+        <!-- Hair (long, flowing) -->
+        <path d="M108 88 C90 70 85 140 88 200 C95 180 98 140 108 120" fill="#1a0a05" stroke="#0a0a0f" stroke-width="0.5"/>
+        <path d="M172 88 C190 70 195 140 192 200 C185 180 182 140 172 120" fill="#1a0a05" stroke="#0a0a0f" stroke-width="0.5"/>
+        <path d="M108 75 C120 65 135 62 140 62 C145 62 158 65 172 75" fill="#1a0a05" stroke="none"/>
+
+        <!-- Face - eyes (closed, serene / one open) -->
+        <!-- Left eye closed -->
+        <path d="M122 98 C125 96 130 96 133 98" fill="none" stroke="#0a0a0f" stroke-width="1.5" stroke-linecap="round"/>
+        <!-- Right eye OPEN (piercing) -->
+        <ellipse cx="150" cy="97" rx="7" ry="5" fill="white" stroke="#0a0a0f" stroke-width="1.2"/>
+        <circle cx="150" cy="97" r="3.5" fill="#c0392b"/>
+        <circle cx="151" cy="96" r="1.2" fill="white"/>
+        <!-- Nose -->
+        <path d="M138 108 C140 112 142 112 144 108" fill="none" stroke="#c8bfaf" stroke-width="1" stroke-linecap="round"/>
+        <!-- Lips -->
+        <path d="M132 118 C136 121 144 121 148 118" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-linecap="round"/>
+
+        <!-- Serpent coiling around arm/body -->
+        <path d="M100 230 C80 210 75 180 90 160 C100 148 115 145 120 150 C125 155 118 165 108 170 C95 178 92 195 100 210 C108 225 120 230 130 225" fill="none" stroke="#2d7a2d" stroke-width="5" stroke-linecap="round"/>
+        <path d="M100 230 C80 210 75 180 90 160 C100 148 115 145 120 150 C125 155 118 165 108 170 C95 178 92 195 100 210 C108 225 120 230 130 225" fill="none" stroke="#52b252" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+        <!-- Serpent head -->
+        <ellipse cx="132" cy="222" rx="9" ry="6" fill="#2d7a2d" stroke="#0a0a0f" stroke-width="1" transform="rotate(-20,132,222)"/>
+        <circle cx="129" cy="219" r="1.5" fill="#ffff00"/>
+        <!-- Serpent tongue -->
+        <path d="M125 223 C120 223 118 221 116 222 M120 223 C118 225 116 226" fill="none" stroke="#c0392b" stroke-width="1"/>
+
+        <!-- Flame in outstretched hand (right) -->
+        <path d="M165 200 L170 185" fill="none" stroke="#e8d8c0" stroke-width="8" stroke-linecap="round"/>
+        <path d="M165 200 L175 200 L178 195 L172 195" fill="#e8d8c0" stroke="#0a0a0f" stroke-width="1"/>
+        <!-- Flame -->
+        <path d="M172 192 C168 185 170 175 175 170 C172 178 178 172 176 165 C180 172 183 180 179 190 C177 194 174 194 172 192Z" fill="#c0392b" opacity="0.9"/>
+        <path d="M174 190 C172 184 173 178 176 174 C174 180 178 176 176 170 C179 176 180 183 178 189Z" fill="#f39c12" opacity="0.8"/>
+        <path d="M175 188 C174 184 175 180 177 177 C176 181 178 179 177 175 C179 179 179 185 178 188Z" fill="#f5f0e8" opacity="0.9"/>
+
+        <!-- Cinnamon/frankincense smoke wisps at hem -->
+        <path d="M115 305 C112 295 108 285 114 278 C110 286 116 290 113 298" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <path d="M165 305 C168 295 172 285 166 278 C170 286 164 290 167 298" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.5" stroke-linecap="round"/>
+        <path d="M140 308 C138 298 135 290 140 283 C145 290 142 298 140 308" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+
+        <!-- Title kanji-style marks (decorative) -->
+        <text x="20" y="300" font-family="serif" font-size="12" fill="#c9a84c" opacity="0.4" writing-mode="vertical-rl">死の娘</text>
+        <text x="248" y="300" font-family="serif" font-size="12" fill="#c9a84c" opacity="0.4" writing-mode="vertical-rl">炎の旅</text>
+      </svg>

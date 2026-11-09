@@ -33,3 +33,4 @@ jobs:
           python3 -m http.server 4173 --bind 127.0.0.1 > "$RUNNER_TEMP/public-records-http.log" 2>&1 &
           export CHROMIUM_PATH="$(node -p "require('playwright').chromium.executablePath()")"
           node tools/test_public_records_browser.cjs
+          TEST_BASE=http://127.0.0.1:4173 node tools/test_story_pitch.cjs
