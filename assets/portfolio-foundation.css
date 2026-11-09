@@ -194,3 +194,10 @@ body.story-pitch{--site-bg:var(--md-sys-color-surface);--site-header:var(--md-sy
 .story-closing h2{font-size:clamp(2rem,4vw,3.5rem)}
 @media(max-width:50rem){.story-pitch .story-hero{grid-template-columns:minmax(0,1fr)}.story-cover{max-width:28rem;width:100%;justify-self:center}.story-pitch h1{max-width:17ch}.story-pitch .grid.two{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.story-pitch{scroll-behavior:auto}}
+
+/* Shared PIXIE pitch launcher; 50 Ways retains its existing variant. */
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3rem;padding:.65rem .9rem;background:var(--site-card);color:var(--site-link);border:2px solid var(--site-link);border-radius:1rem;text-decoration:none;font-weight:700;z-index:30;box-shadow:0 .3rem 1rem #0005}
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher img{display:block;width:40px;height:40px;object-fit:contain}
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher:focus-visible{outline:3px solid var(--site-link);outline-offset:4px}
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) footer{padding-bottom:max(7rem,env(safe-area-inset-bottom))}
+@media print{:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher{display:none}}
