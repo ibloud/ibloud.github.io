@@ -11,10 +11,14 @@ const record=(key,text='Public test fixture')=>({uri:`at://${DID}/${C}/${key}`,c
 const identity={id:DID,service:[{id:'#atproto_pds',type:'AtprotoPersonalDataServer',serviceEndpoint:'https://eurosky.social'}]};
 (async()=>{
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',headless:true,args:['--no-sandbox']});
- const context=await browser.newContext();const page=await context.newPage();let thirdParty=0,mode='normal',commentPage=0;
+ const context=await browser.newContext();const page=await context.newPage();let thirdParty=0,portraitRequests=0,mode='normal',commentPage=0;
  await page.route('https://**/*',async route=>{
-  thirdParty++;const url=new URL(route.request().url());
+  const url=new URL(route.request().url());
   assert.equal(route.request().method(),'GET');assert.equal(route.request().headers().authorization,undefined);
+  if(url.origin==='https://pixie.loptrlab.com' && url.pathname==='/assets/pixie-hero-proposal.png') {
+   portraitRequests++;return route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"/>'});
+  }
+  thirdParty++;
   if(url.hostname==='plc.directory') return route.fulfill({json:identity});
   if(url.hostname==='eurosky.social') {
    if(mode==='outage') return route.fulfill({status:503,json:{error:'Unavailable'}});
@@ -29,7 +33,7 @@ const identity={id:DID,service:[{id:'#atproto_pds',type:'AtprotoPersonalDataServ
   }
   throw Error(`Unexpected request ${url}`);
  });
- await page.goto(BASE+'/ecosystem/');await page.waitForTimeout(200);assert.equal(thirdParty,0,'no third-party requests before action');
+ await page.goto(BASE+'/ecosystem/');await page.waitForTimeout(200);assert.equal(thirdParty,0,'no data-provider requests before action');assert.equal(portraitRequests,1,'approved PIXIE portrait requested');
  await page.locator('#records-load').click();await page.waitForFunction(()=>document.querySelector('#records-list article'));
  assert.equal(await page.locator('#records-list img').count(),0);assert.equal(await page.evaluate(()=>window.pwned),undefined);
  assert.equal(await page.locator('#records-list a').getAttribute('href'),`https://bsky.app/profile/${DID}/post/one`);
