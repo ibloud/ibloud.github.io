@@ -33,7 +33,7 @@ const identity={id:DID,service:[{id:'#atproto_pds',type:'AtprotoPersonalDataServ
   }
   throw Error(`Unexpected request ${url}`);
  });
- await page.goto(BASE+'/ecosystem/');await page.waitForTimeout(200);assert.equal(thirdParty,0,'no data-provider requests before action');assert.equal(portraitRequests,1,'approved PIXIE portrait requested');
+ await page.goto(BASE+'/ecosystem/');await page.waitForTimeout(200);assert.equal(thirdParty,0,'no data-provider requests before action');assert.equal(await page.locator('.public-test-pixie img').getAttribute('src'),'https://pixie.loptrlab.com/assets/pixie-hero-proposal.png','approved PIXIE portrait source');
  await page.locator('#records-load').click();await page.waitForFunction(()=>document.querySelector('#records-list article'));
  assert.equal(await page.locator('#records-list img').count(),0);assert.equal(await page.evaluate(()=>window.pwned),undefined);
  assert.equal(await page.locator('#records-list a').getAttribute('href'),`https://bsky.app/profile/${DID}/post/one`);
