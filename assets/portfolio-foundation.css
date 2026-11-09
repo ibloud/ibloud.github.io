@@ -159,3 +159,13 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 .ll-ecosystem .card>*{min-width:0;max-width:100%}
 .ll-ecosystem .card :is(h3,h4){overflow-wrap:anywhere}
 .ll-ecosystem :is(figcaption,summary){overflow-wrap:anywhere}
+
+/* PIXIE evolved emblem: two steps smaller, gentle traveling shimmer, no pulsing. */
+#public-test .public-test-intro{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);column-gap:clamp(1rem,3vw,3rem);align-items:start}
+#public-test .public-test-copy{min-width:0}
+#public-test .public-test-pixie{width:min(100%,17rem);margin:0;justify-self:center;align-self:start;position:relative;isolation:isolate}
+#public-test .public-test-pixie img{display:block;width:100%;height:auto;filter:drop-shadow(0 0 .4rem rgba(106,225,246,.17))}
+#public-test .public-test-pixie::after{content:"";position:absolute;inset:12% 6%;pointer-events:none;opacity:0;background:linear-gradient(118deg,transparent 40%,rgba(255,248,215,.11) 48%,rgba(255,255,255,.24) 50%,rgba(120,234,252,.1) 52%,transparent 60%);background-size:260% 100%;mix-blend-mode:screen;animation:pixie-gold-shimmer 8s ease-in-out infinite}
+@keyframes pixie-gold-shimmer{0%,20%{opacity:0;background-position:100% 0}35%{opacity:.75}50%{opacity:0;background-position:0 0}100%{opacity:0;background-position:0 0}}
+@media(max-width:50rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(55vw,12rem);margin:.5rem auto 1.5rem}}
+@media(prefers-reduced-motion:reduce){#public-test .public-test-pixie::after{animation:none;opacity:0}}
