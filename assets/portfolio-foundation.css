@@ -163,9 +163,9 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 /* PIXIE legal-style sigil: fine gold linework with restrained light shimmer. */
 #public-test .public-test-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,19rem);column-gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
 #public-test .public-test-copy{min-width:0}
-#public-test .public-test-pixie{width:min(100%,16rem);margin:clamp(1.25rem,3vw,2.5rem) auto 0;justify-self:center;align-self:start;position:relative;isolation:isolate}
+#public-test .public-test-pixie{width:min(100%,18rem);margin:clamp(1.25rem,3vw,2.5rem) auto 0;justify-self:center;align-self:start;position:relative;left:-1.25rem;isolation:isolate}
 #public-test .public-test-pixie img{display:block;width:100%;height:auto}
 #public-test .public-test-pixie::after{content:"";position:absolute;inset:4% 0;pointer-events:none;opacity:0;background:linear-gradient(115deg,transparent 41%,rgba(255,241,181,.12) 48%,rgba(255,249,211,.30) 50%,rgba(255,241,181,.12) 52%,transparent 59%);background-size:250% 100%;mix-blend-mode:screen;animation:pixie-gold-shimmer 9s ease-in-out infinite}
 @keyframes pixie-gold-shimmer{0%,24%{opacity:0;background-position:100% 0}33%{opacity:.6}46%{opacity:0;background-position:0 0}100%{opacity:0;background-position:0 0}}
-@media(max-width:48rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(48vw,12rem);margin:1.25rem auto 1.5rem}}
+@media(max-width:48rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(48vw,12rem);margin:1.25rem auto 1.5rem;left:0}}
 @media(prefers-reduced-motion:reduce){#public-test .public-test-pixie::after{animation:none;opacity:0}}
