@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 500" role="img" aria-labelledby="title">
+<title id="title">PIXIE golden wings and cyan star</title>
+<defs>
+<linearGradient id="gold" x1=".1" y1="0" x2=".95" y2=".88"><stop stop-color="#9b571b"/><stop offset=".23" stop-color="#ffe6a3"/><stop offset=".43" stop-color="#e6a843"/><stop offset=".66" stop-color="#fff0bd"/><stop offset="1" stop-color="#9e5c23"/></linearGradient>
+<linearGradient id="gold2" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#ffedbe"/><stop offset=".4" stop-color="#b97428"/><stop offset=".7" stop-color="#ffda7f"/><stop offset="1" stop-color="#a25f24"/></linearGradient>
+<radialGradient id="core"><stop stop-color="#fff"/><stop offset=".25" stop-color="#d8ffff"/><stop offset=".58" stop-color="#5df2ff"/><stop offset="1" stop-color="#0a769b" stop-opacity=".25"/></radialGradient>
+<filter id="soft" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="8"/></filter>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g opacity=".45" fill="none" stroke-linecap="round">
+<path d="M314 104C392 22 414 79 350 134 295 179 379 225 356 286" stroke="#8b416e" stroke-width="17" filter="url(#soft)"/>
+<path d="M135 324C25 271 35 390 117 373 205 354 116 432 238 470" stroke="#9e376d" stroke-width="16" filter="url(#soft)"/>
+<path d="M314 104C392 22 414 79 350 134 295 179 379 225 356 286" stroke="#b55b90" stroke-width="2" opacity=".55"/>
+<path d="M135 324C25 271 35 390 117 373 205 354 116 432 238 470" stroke="#b55b90" stroke-width="2" opacity=".55"/>
+</g>
+<g fill="url(#gold)" stroke="#ffe6a3" stroke-width="1.2" stroke-linejoin="round" filter="url(#glow)">
+<path d="M85 18C93 94 161 131 198 182c42 59 42 135 49 192-47-52-73-79-102-139C101 155 70 108 85 18Z"/>
+<path d="M75 115c6 82 48 111 94 154 31 30 45 56 68 106-53-36-94-65-127-120C84 209 73 171 75 115Z" fill="url(#gold2)"/>
+<path d="M90 215c34 44 82 53 110 91 20 28 35 67 44 97-51-47-105-63-133-115-12-23-15-43-21-73Z"/>
+<path d="M258 172c59-72 126-56 139 18 21 130-124 188-149 247 37-109 102-157 111-237 5-46-39-57-101-28Z" fill="url(#gold2)"/>
+</g>
+<g fill="none" stroke="#fff3c3" opacity=".75" stroke-width="2">
+<path d="M89 38C103 124 168 151 200 218"/>
+<path d="M266 179c60-57 113-28 108 28"/>
+</g>
+<circle cx="291" cy="240" r="65" fill="none" stroke="#ffd878" stroke-width="1.4" opacity=".8"/>
+<circle cx="291" cy="240" r="53" fill="#2bcfe6" opacity=".12" filter="url(#soft)"/>
+<path d="M291 162 307 223 368 240 307 257 291 318 274 257 214 240 274 223Z" fill="url(#core)" filter="url(#glow)"/>
+<path d="M291 186v108M237 240h108" stroke="#e6ffff" stroke-width="2" opacity=".85"/>
+<circle cx="291" cy="240" r="8" fill="#fff" filter="url(#glow)"/>
+<g fill="#ffe5a3" opacity=".8"><circle cx="368" cy="120" r="2"/><circle cx="83" cy="307" r="2"/><circle cx="357" cy="333" r="2"/><circle cx="220" cy="80" r="1.5"/><circle cx="166" cy="397" r="1.5"/></g>
+</svg>
