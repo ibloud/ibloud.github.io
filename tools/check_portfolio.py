@@ -75,9 +75,15 @@ def main():
         require(len(page.ids) == len(set(page.ids)), 'duplicate IDs')
         require(not page.inline_styles and 'style' not in page.tags, 'page-local CSS')
         require('tailwind' not in text.lower(), 'runtime Tailwind dependency')
-        require(len(page.stylesheets) == 1, 'expected one stylesheet')
-        if len(page.stylesheets) == 1:
-            require((path.parent / page.stylesheets[0]).resolve() == ROOT / 'assets/portfolio-foundation.css', 'wrong foundation stylesheet')
+        # The established 50 Ways pitch adds its own stylesheet after the foundation.
+        # Keep this precise exception; other pages still use one shared stylesheet.
+        pitch_pages = {'index.html', 'producer-pitch.html', 'treatment.html'}
+        is_pitch = path.parent == ROOT / 'ecosystem/projects/50-ways' and path.name in pitch_pages
+        expected_styles = [ROOT / 'assets/portfolio-foundation.css']
+        if is_pitch:
+            expected_styles.append(ROOT / 'assets/50-ways-pitch.css')
+        actual_styles = [(path.parent / href).resolve() for href in page.stylesheets]
+        require(actual_styles == expected_styles, 'wrong stylesheet sequence')
         for reference in page.references:
             url = urlsplit(reference)
             if url.scheme or url.netloc:
