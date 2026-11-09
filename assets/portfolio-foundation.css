@@ -138,3 +138,31 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 .legal-mayhem-panel .legal-mayhem-note{font-size:.85rem;color:var(--site-muted);margin:1rem 0 0}
 @media(max-width:850px){.legal-mayhem-panel{float:none;width:100%;max-width:35rem;margin:0 auto 2rem}}
 @media(prefers-reduced-motion:reduce){.legal-mark-breath{animation:none;transform:none;opacity:1}}
+
+/* Existing ecosystem public test: shared palette and portfolio PIXIE placement. */
+.ll-ecosystem .public-test-grid{align-items:start}
+.ll-ecosystem .public-test-grid>div{min-width:0}
+.public-test-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-block:1rem}
+#public-test button{background:var(--site-action);color:var(--site-text);border:1px solid var(--site-link);border-radius:.75rem;padding:.65rem 1rem;max-width:100%;white-space:normal}
+#public-test button:disabled{opacity:.7;cursor:wait}
+#public-test button[hidden]{display:none}
+#public-test summary{cursor:pointer;color:var(--site-link)}
+.public-test-results{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin-block:1rem}
+.public-test-results h4{margin-top:0;font-size:1.125rem}
+.public-test-results dl{font-size:.9rem}
+.public-record-text{white-space:pre-wrap;overflow-wrap:anywhere}
+.ll-ecosystem .pixie-launcher{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));display:inline-flex;gap:.5rem;align-items:center;padding:.7rem 1rem;min-height:3rem;background:var(--site-card);color:var(--site-link);border:1px solid var(--site-link);font-weight:700;border-radius:1rem;z-index:10;text-decoration:none}
+.ll-ecosystem .pixie-launcher img{width:40px;height:40px}
+.ll-ecosystem .footer{padding-bottom:7rem}
+.ll-ecosystem :is(a,button,summary){scroll-margin-block:2rem 7rem}
+/* Keep existing card headings within narrow columns at enlarged text sizes. */
+.ll-ecosystem .card>*{min-width:0;max-width:100%}
+.ll-ecosystem .card :is(h3,h4){overflow-wrap:anywhere}
+.ll-ecosystem :is(figcaption,summary){overflow-wrap:anywhere}
+
+/* Original PIXIE portrait: proportional, up to 1.5x the prior 18rem size. */
+#public-test .public-test-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,clamp(19rem,31vw,27rem));column-gap:clamp(1rem,2vw,2rem);align-items:center}
+#public-test .public-test-copy{min-width:0}
+#public-test .public-test-pixie{width:100%;max-width:27rem;margin:0;justify-self:center;align-self:center;position:relative;left:-.75rem}
+#public-test .public-test-pixie img{display:block;width:100%;height:auto;object-fit:contain}
+@media(max-width:48rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(70vw,19rem);margin:1rem auto 1.5rem;left:0}}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 450">
+<title>PIXIE sigil</title>
+<defs>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#a76624"/><stop offset=".21" stop-color="#ffe6a0"/><stop offset=".5" stop-color="#e0aa4b"/><stop offset=".77" stop-color="#fff0bb"/><stop offset="1" stop-color="#a86726"/>
+</linearGradient>
+<linearGradient id="wing" x1="0" y1="0" x2="1" y2=".8">
+<stop stop-color="#ffd98b"/><stop offset=".5" stop-color="#b97a2f"/><stop offset="1" stop-color="#fff0ae"/>
+</linearGradient>
+</defs>
+<g fill="none" stroke="url(#metal)" stroke-linecap="round" stroke-linejoin="round">
+<path d="M35 348V157C35 68 94 26 180 26s145 42 145 131v191" stroke-width="3"/>
+<path d="M45 348V158C45 79 97 37 180 37s135 42 135 121v190" stroke-width="1.3"/>
+<path d="M18 348h324M30 355h300" stroke-width="2"/>
+<circle cx="180" cy="158" r="60" stroke-width="1.5"/>
+<path d="M180 87v142M112 158h136" stroke-width=".7" opacity=".55"/>
+<path d="M180 103 190 148 225 158 190 168 180 213 170 168 135 158 170 148Z" fill="url(#metal)" stroke-width=".8"/>
+<path d="M180 10v40M164 28h32M180 12l4 12 12 4-12 4-4 12-4-12-12-4 12-4Z" fill="url(#metal)" stroke-width=".8"/>
+</g>
+<g fill="url(#wing)" stroke="#f9d38c" stroke-width="1" stroke-linejoin="round">
+<path d="M174 287c-34-58-113-68-107-160 11 51 41 74 78 98 18 14 25 35 29 62Z"/>
+<path d="M173 287C123 246 83 243 76 186c25 31 59 38 78 60 12 15 16 28 19 41Z"/>
+<path d="M173 287c-41-21-75-24-87-66 33 22 61 28 87 66Z"/>
+<path d="M186 287c34-58 113-68 107-160-11 51-41 74-78 98-18 14-25 35-29 62Z"/>
+<path d="M187 287c50-41 90-44 97-101-25 31-59 38-78 60-12 15-16 28-19 41Z"/>
+<path d="M187 287c41-21 75-24 87-66-33 22-61 28-87 66Z"/>
+</g>
+<g fill="none" stroke="url(#metal)" stroke-width="2" stroke-linejoin="round">
+<path d="M124 316c-20 0-24-18-11-25 14-6 25 6 17 16-5 6-13 3-11-3M236 316c20 0 24-18 11-25-14-6-25 6-17 16 5 6 13 3"/>
+<path d="M122 294h116M132 304h96M139 314h82"/>
+<path d="M145 317v30m14-30v30m14-30v30m14-30v30m14-30v30m14-30v30"/>
+</g>
+<g fill="url(#metal)" text-anchor="middle">
+<text x="180" y="400" font-size="38" letter-spacing="10" font-family="Georgia,serif">PIXIE</text>
+</g>
+<g stroke="url(#metal)" stroke-width="2"><path d="M28 389h75M257 389h75"/></g>
+</svg>
