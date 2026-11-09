@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-11-09",
+  "professional_review": "PENDING",
+  "local_checks": {
+    "canonical_site": "python3 tools/check_portfolio.py \u2014 28 HTML pages, navigation/shared CSS/landmarks/IDs/links/fragments passed",
+    "50ways": "Pinned document build/check \u2014 78 generated documents, 84 HTML pages passed; existing PIXIE/classroom tests 10/10 passed; rubric allocations unchanged",
+    "pixie_guide": "npm run build and npm run check passed; no apps/companion changes",
+    "training": "npm run typecheck, validate-ai-literacy and existing lesson browser suite passed, including 1024 deterministic scenario variants. 24 starter Jest tests fail with existing Not implemented errors, as explicitly allowed by the existing CI starter policy. Engine/scoring source and policy unchanged.",
+    "accessibility": "axe-core WCAG 2 A/AA and 2.1 AA: zero violations on nine pages in light/dark modes; 320/390/820/1440 layouts and 200% text passed; keyboard skip/focus passed. Standalone print report deliberately uses a light document surface.",
+    "pdf": "Three pages visually inspected; selectable text, language en, MarkInfo/Marked, StructTreeRoot, H1/H2/Table/TH/TD, bookmarks and extracted section order verified using pypdf development inspection. Not PDF/UA certification.",
+    "package": "JSON Schema 2020-12 validation passed; six JSON-cell CSV round trips; synthetic source byte hash; append-only correction references; manifest paths/member hashes; ZIP checksum and packaging reproducibility passed."
+  },
+  "privacy": "No real recording, private correspondence/contracts, financial/benefit/housing/medical records or credentials acquired or included; no accounts connected, no inbox or cloud ingestion activated.",
+  "release_holds": {
+    "pixie_pr_12": "OPEN; security/release holds preserved; no merge/activation",
+    "training_pr_55": "OPEN; iPad/Safari/VoiceOver/Files and owner acceptance preserved; no merge",
+    "device_acceptance": "Physical iPad/Safari/VoiceOver/Files NOT RUN"
+  },
+  "publication": "Local validation record. A commit/merge is not proof of live behavior; verify served files and downloads independently.",
+  "files": {
+    "canonical": [
+      "ecosystem/index.html",
+      "index.html",
+      "legal-rights/index.html",
+      "legal-rights/sources.html",
+      "legal-rights/sources.json",
+      "legal-rights/validation.html",
+      "legal-rights/validation.json"
+    ],
+    "training": [
+      "docs/index.html",
+      "docs/legal-rights/README.md",
+      "docs/legal-rights/authorities.csv",
+      "docs/legal-rights/contributors.csv",
+      "docs/legal-rights/decisions.csv",
+      "docs/legal-rights/evidence-package.schema.json",
+      "docs/legal-rights/evidence.csv",
+      "docs/legal-rights/index.html",
+      "docs/legal-rights/manifest.json",
+      "docs/legal-rights/package.json",
+      "docs/legal-rights/permissions.csv",
+      "docs/legal-rights/report.css",
+      "docs/legal-rights/report.html",
+      "docs/legal-rights/report.pdf",
+      "docs/legal-rights/sample-v1.zip",
+      "docs/legal-rights/sample-v1.zip.sha256",
+      "docs/legal-rights/synthetic/brief.txt",
+      "docs/legal-rights/timeline.csv",
+      "scripts/package-legal-evidence.py",
+      "scripts/render-legal-report.cjs"
+    ],
+    "pixie": [
+      "assets/evidence-package.schema.json",
+      "assets/evidence-workflow.html",
+      "assets/evidence-workflow.md",
+      "index.html",
+      "scripts/build.mjs"
+    ],
+    "50ways": [
+      "CURRICULUM.html",
+      "CURRICULUM.md",
+      "SOURCES.html",
+      "SOURCES.md",
+      "exercises/fictional-capstone.html",
+      "exercises/fictional-capstone.md",
+      "research/ai-music-001.html",
+      "research/ai-music-001.md",
+      "research/brand-stewardship.html",
+      "research/brand-stewardship.md",
+      "research/enterprise-001.html",
+      "research/enterprise-001.md"
+    ]
+  },
+  "pdf_sha256": "faccaf65e32ccabbdd6abd477a8270237ed5690f5d1a618d484d27267c831ec9"
+}
