@@ -6,6 +6,7 @@ on:
       - 'ecosystem/**'
       - 'tools/**'
       - 'tests/**'
+      - 'docs/PUBLIC_INTEROPERABILITY_TEST.md'
       - '.github/workflows/public-records.yml'
   workflow_dispatch:
 permissions:

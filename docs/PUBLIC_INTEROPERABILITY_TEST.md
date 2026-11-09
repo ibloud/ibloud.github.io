@@ -133,7 +133,17 @@ outbound access permits exact-source preview/target checks and owner acceptance.
 This hold is specific to publication; it does not depend on HappyProto auth,
 private Spaces or OAuth PR #12 being completed.
 
-Public preview: none verified. Production target after accepted release:
+Existing Vercel automation produced a READY preview for implementation commit
+`72eed9e309d8a236a7b9af273ebccaf3b90db954`, deployment
+`dpl_BejfmyUbYmfYYMrqhYqZ7piNono4`, confirmed through the Vercel API:
+https://ibloudgithubio-git-feat-public-atproto-test-loptr-lab.vercel.app/ecosystem/#public-test.
+Its browser/anonymous accessibility remains unverified: the environment blocks
+this preview hostname too. No protection setting or share-link bypass was changed.
+The initial [GitHub CI run](https://github.com/ibloud/ibloud.github.io/actions/runs/42615502597)
+passed unit, portfolio and browser/accessibility checks at that implementation SHA.
+Current-head status belongs in [PR #51](https://github.com/ibloud/ibloud.github.io/pull/51).
+
+Production target after accepted release:
 `https://ibloud.github.io/ecosystem/#public-test` (existing domain redirect also
 preserved). This target is not a claim that this change is deployed. Remaining:
 exact-source preview, live public module/CORS/source/feedback checks, independent
@@ -144,3 +154,15 @@ connection; no settings were changed.
 Rollback after an authorized release: revert this isolated implementation commit
 through the existing review/Pages process. No data migration or provider rollback
 is necessary because the feature writes no participant records.
+
+## Exact files changed
+
+- `ecosystem/index.html`: existing-page test, feedback links, guidance and launcher.
+- `assets/public-records.mjs`: read-only transport, validation, state and rendering.
+- `assets/portfolio-foundation.css`: scoped test styling and enlarged-text reflow.
+- `tests/public-records.test.mjs`: ten transport/data/privacy unit tests.
+- `tools/test_public_records_browser.cjs`: fixture UI/accessibility/regression tests.
+- `tools/test_public_records_live.cjs`: explicit real-service verification.
+- `tools/check_portfolio.py`: precise existing 50 Ways stylesheet exception.
+- `.github/workflows/public-records.yml`: read-only automated PR checks.
+- `docs/PUBLIC_INTEROPERABILITY_TEST.md`: source, verification and release record.
