@@ -124,7 +124,7 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 
 /* Legal & Rights: responsive Gods of Mayhem panel. Shared site stylesheet. */
 .legal-mayhem-panel{float:right;clear:right;width:min(32%,25rem);margin:0 0 2rem 2.5rem;padding:clamp(1.25rem,2vw,2rem);border:1px solid var(--site-border);border-radius:var(--site-radius);background:var(--site-card);color:var(--site-text);position:relative}
-.legal-mayhem-emblem{width:min(100%,15rem);margin:0 auto 1rem;color:var(--site-link)}
+.legal-mayhem-emblem{width:min(100%,15rem);margin:0 auto 1rem;color:#efc775;filter:drop-shadow(0 0 0.55rem rgba(238,185,82,.23))}
 .legal-mayhem-mark{width:100%;height:auto;display:block;overflow:visible}
 .legal-mark-breath{transform-origin:120px 120px;animation:legal-mark-breathe 5s ease-in-out infinite}
 @keyframes legal-mark-breathe{0%,100%{transform:scale(.97);opacity:.72}50%{transform:scale(1.025);opacity:1}}
