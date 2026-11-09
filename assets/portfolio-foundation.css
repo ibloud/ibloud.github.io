@@ -166,3 +166,38 @@ main>:is(p,ul,ol,dl){margin-block:1em}main>article{min-width:0}section>:last-chi
 #public-test .public-test-pixie{width:100%;max-width:27rem;margin:0;justify-self:center;align-self:center;position:relative;left:-.75rem}
 #public-test .public-test-pixie img{display:block;width:100%;height:auto;object-fit:contain}
 @media(max-width:48rem){#public-test .public-test-intro{grid-template-columns:1fr}#public-test .public-test-pixie{width:min(70vw,19rem);margin:1rem auto 1.5rem;left:0}}
+
+/* Story pitch: editorial extension of the shared foundation; no product CSS imported. */
+@font-face{font-family:LoptrEditorial;src:url("fonts/Fraunces-variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+body.story-pitch{--site-bg:var(--md-sys-color-surface);--site-header:var(--md-sys-color-surface-container);--site-card:var(--md-sys-color-surface-container);--site-text:var(--md-sys-color-on-surface);--site-muted:var(--md-sys-color-on-surface-variant);--site-border:var(--md-sys-color-outline-variant);--site-link:var(--md-sys-color-primary);--site-action:var(--md-sys-color-primary-container);--md-sys-color-primary:#ebc578;--md-sys-color-on-primary:#21180c;--md-sys-color-primary-container:#33261c;--md-sys-color-on-primary-container:#f9e1b6;--md-sys-color-secondary:#edb18b;--md-sys-color-surface:#100f13;--md-sys-color-surface-container:#1b191e;--md-sys-color-surface-container-high:#29242c;--md-sys-color-on-surface:#f5eee3;--md-sys-color-on-surface-variant:#c9c0b6;--md-sys-color-outline:#aa967d;--md-sys-color-outline-variant:#51483d;--site-focus:#ffdca2;--site-max:78rem}
+:root[data-theme="light"] body.story-pitch{--md-sys-color-primary:#694718;--md-sys-color-on-primary:#fff9ef;--md-sys-color-primary-container:#e6d7bc;--md-sys-color-on-primary-container:#3a2810;--md-sys-color-secondary:#783d25;--md-sys-color-surface:#f4efe6;--md-sys-color-surface-container:#eae3d6;--md-sys-color-surface-container-high:#e0d5c3;--md-sys-color-on-surface:#211b18;--md-sys-color-on-surface-variant:#574c43;--md-sys-color-outline:#79654d;--md-sys-color-outline-variant:#a4947e;--site-focus:#694718}
+.story-pitch h1,.story-pitch h2,.story-pitch .story-stakes,.story-cover-title,.story-quote blockquote{font-family:LoptrEditorial,Georgia,serif;font-weight:450}
+.story-pitch h1{font-size:clamp(2.6rem,5.5vw,5.2rem);line-height:1.05;letter-spacing:-.04em;max-width:15ch}
+.story-pitch h1 em{font-weight:450;color:var(--site-link)}
+.story-pitch .story-hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);align-items:center;gap:clamp(2rem,5vw,5rem);padding-top:2rem}
+.story-hook{font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.45;color:var(--site-text);margin-top:1.5rem}.story-hero .lead{font-size:1.05rem;margin-block:1.25rem}
+.story-status{font-size:.875rem;color:var(--site-link);border-left:2px solid var(--site-link);padding-left:1rem}
+.story-action-note{font-weight:400}
+.story-pitch .ll-actions a{max-width:100%;display:block;min-width:0}
+.story-cover{margin:0;text-align:center;padding:2rem 1.5rem;position:relative;border:1px solid #806638;background:radial-gradient(ellipse at 50% 55%,#58381e55,transparent 65%),#111017;color:#f5eee3;border-radius:1rem 1rem 7rem 1rem;box-shadow:0 1rem 5rem #0003}
+.story-cover img{display:block;width:min(100%,280px);height:auto;margin:0 auto}
+.story-cover-kicker,.story-cover-volume{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#e7c27b}
+.story-cover-kicker{margin-bottom:.25rem}.story-cover-title{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.2;margin-bottom:0}
+.story-cover figcaption{font-size:.8rem;color:#c9c0b6;line-height:1.6;margin-block:.5rem 1.5rem;overflow-wrap:anywhere}.story-cover-volume{display:block}
+.story-section-heading{max-width:48rem;margin-bottom:2rem}.story-section-heading h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.15}
+.story-pitch .story-stakes{font-size:clamp(1.6rem,2.5vw,2.25rem);line-height:1.3;color:var(--site-link)}
+.story-quote{margin:0;border-top:2px solid var(--site-link);padding:2rem 0}.story-quote blockquote{margin:0;font-size:clamp(1.5rem,2.5vw,2.15rem);line-height:1.45}.story-quote figcaption{font-size:.875rem;color:var(--site-muted);overflow-wrap:anywhere}
+.story-sequence{list-style:none;counter-reset:chapter;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1.5rem}.story-sequence li{margin:0;padding:1.5rem 0;border-top:1px solid var(--site-border);min-width:0}.story-sequence h3{font-size:1.3rem;margin-block:.5rem 1rem}
+.story-details{border-bottom:1px solid var(--site-border);padding-block:1rem}.story-details summary{cursor:pointer;padding-block:.25rem;color:var(--site-link);font-weight:650;overflow-wrap:anywhere}.story-details[open] summary{margin-bottom:1rem}
+.story-history{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.5rem 1rem}.story-history dd{margin:0}.story-archive dt{color:var(--site-link);margin-top:1.5rem}.story-archive dd{max-width:75ch;margin-top:.5rem}
+.story-pitch #historical-posts{margin-top:2rem}.story-pitch .card>*{min-width:0;max-width:100%}.story-pitch :is(h3,h4){overflow-wrap:anywhere}
+.story-closing h2{font-size:clamp(2rem,4vw,3.5rem)}
+@media(max-width:50rem){.story-pitch .story-hero{grid-template-columns:minmax(0,1fr)}.story-cover{max-width:28rem;width:100%;justify-self:center}.story-pitch h1{max-width:17ch}.story-pitch .grid.two{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.story-pitch{scroll-behavior:auto}}
+
+/* Shared PIXIE pitch launcher; 50 Ways retains its existing variant. */
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3rem;padding:.65rem .9rem;background:var(--site-card);color:var(--site-link);border:2px solid var(--site-link);border-radius:1rem;text-decoration:none;font-weight:700;z-index:30;box-shadow:0 .3rem 1rem #0005}
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher img{display:block;width:40px;height:40px;object-fit:contain}
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher:focus-visible{outline:3px solid var(--site-link);outline-offset:4px}
+:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) footer{padding-bottom:max(7rem,env(safe-area-inset-bottom))}
+@media print{:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher{display:none}}
