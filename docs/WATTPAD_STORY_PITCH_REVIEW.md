@@ -96,10 +96,23 @@ links to the canonical architecture's existing Discovery architecture section.
 The timeline, rights and process sources exist in the owning repository; live
 external-page acceptance is not inferred from source retrieval.
 
-The separate Story Finder retrieval of older `ibloud.xyz` posts remains pending.
-The `#historical-posts` section is ready for later verified source links without
-rebuilding this page. No social URL, quotation or publication date is invented;
-this is not an exhaustive archive. Retrieval does not block this review PR.
+Historical evidence update (9 November 2026): Made-Sick draft PR #72's reviewed
+[`story-history-acceptance.md`](https://github.com/ibloud/made-sick/blob/fix/public-story-discovery/docs/story-history-acceptance.md)
+reports 27,490 examined public records, spanning 13 November 2023–6 November
+2026, including 31 full-title posts and 107 original-text matches across the
+required phrases. The retrieved earliest full-title reference is 13 March 2025
+(AT-URI `at://did:plc:b5uem672ci23lqrcz6j6bs2c/app.bsky.feed.post/3lkbcy6gxis2g`,
+CID `bafyreiaxzlwukbcvgpko6him6yhnewilkqbgwllztxdst5jw2fbmyzfpdm`). The
+pitch now links four dated public posts, plus the [full evidence records](https://github.com/ibloud/made-sick/blob/fix/public-story-discovery/docs/story-history-matches.json).
+
+The retrieval used the Bluesky public repository relay, not the direct PDS;
+the actual local HTTP MCP tool returned historical records, but the installed
+PIXIE plugin remains unchanged. Both Story Finder/PIXIE PRs #72/#14 are
+unmerged. Publication timestamps prove public use of the wording, not legal
+ownership, first conception, collaborator intentions or canon acceptance.
+The 2026 Drive dates remain source-document metadata rather than the beginning
+of story development. These links are selected examples, not a complete
+chronology, and do not establish Wattpad audience metrics.
 
 ## Design, verification and release
 
@@ -147,7 +160,7 @@ normal existing CI/preview quotas apply.
 
 ## Exact files
 
-- `ecosystem/projects/deaths-daughter/index.html` — editorial pitch and source/status boundaries.
+- `ecosystem/projects/deaths-daughter/index.html` — editorial pitch, source/status boundaries, and verified historical-post references.
 - `assets/deaths-daughter-cover.svg` — selected existing source cover, accessible metadata added.
 - `assets/portfolio-foundation.css` — scoped editorial styling using existing tokens/font.
 - `ecosystem/index.html` — one relevant creative-work entry link.
