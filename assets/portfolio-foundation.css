@@ -201,3 +201,10 @@ body.story-pitch{--site-bg:var(--md-sys-color-surface);--site-header:var(--md-sy
 :is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher:focus-visible{outline:3px solid var(--site-link);outline-offset:4px}
 :is(.story-pitch,.ll-ecosystem-projects-violets-revenge) footer{padding-bottom:max(7rem,env(safe-area-inset-bottom))}
 @media print{:is(.story-pitch,.ll-ecosystem-projects-violets-revenge) .pixie-launcher{display:none}}
+
+/* Production case-study illustration uses the available reading-side space. */
+.ll-production-example{display:grid;grid-template-columns:minmax(0,2fr) minmax(15rem,1fr);gap:clamp(1.5rem,4vw,4rem);align-items:start}
+.ll-production-example-art{margin:0;padding-top:1rem}
+.ll-production-example-art img{display:block;width:100%;height:auto;max-width:30rem;margin-inline:auto}
+.ll-production-example-art figcaption{margin-top:.75rem;font-size:.9rem}
+@media(max-width:50rem){.ll-production-example{grid-template-columns:minmax(0,1fr)}.ll-production-example-art{padding-top:0}}
