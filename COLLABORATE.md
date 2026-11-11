@@ -19,9 +19,24 @@ Current open review and contribution opportunities are voluntary and unpaid. Bef
 - IP, music, asset, and contributor-rights review
 - Practice-research and academic collaboration
 
+## Independent industry evaluation required
+
+The studio’s production feasibility, scope and commercial assumptions need independent evaluation by an industry professional with a documented track record on profitable shipped projects and verifiable credits. Maintainer review, automated tests and AI-assisted analysis do not replace this evaluation. No evaluator has been appointed or qualifying commercial evaluation verified in this audit.
+
+Before commissioning the evaluation, verify:
+
+- the evaluator’s identity, relevant discipline, credited role and shipped project titles against authoritative credits, publisher records or equivalent corroboration;
+- profitable project outcomes separately, using credible publisher/financial records or a suitably confidential confirmation from an authorized project representative; revenue, downloads, awards and credits alone do not prove profitability;
+- independence from the work being assessed and any financial, employment or personal conflicts, recorded with the assessment’s limitations;
+- a written scope covering the actual build, contributor journey, technical/production risks, accessibility gaps, budget assumptions and a proceed/revise/stop recommendation supported by evidence.
+
+Agree availability, compensation or explicit voluntary status, confidentiality, rights, attribution and deliverables before work. Keep private financial evidence outside public issues; record a consented qualification summary and verification method. This is a qualification for the independent evaluator, not an entry barrier for contributors or a guarantee of commercial success. Unverified eligibility or profitability remains unverified.
+
 ## Propose a contribution
 
-Email `questions@loptrlab.com` with:
+For public repository work, start with the [Training contributor guide](https://github.com/Loptr-Lab/training/blob/main/CONTRIBUTING.md#find-the-code-before-changing-it) and the selected project’s existing GitHub issue. A personal email address or PIXIE account is not required.
+
+For private commissions or institutional discussions, email `questions@loptrlab.com` with:
 
 1. The project and narrowly defined problem you can help address
 2. A relevant portfolio, repository, publication, or experience
