@@ -18,7 +18,7 @@ const {default:AxeBuilder} = require('@axe-core/playwright');
  await page.locator('#play').focus();await page.keyboard.press('Enter');
  await page.waitForTimeout(700);await page.locator('#pause').click();assert.match(await page.locator('#status').innerText(),/Paused/);
  await page.locator('#play').click();await page.waitForTimeout(5500);assert.match(await page.locator('#status').innerText(),/complete/);
- await page.selectOption('#format','tall');assert.equal(await page.locator('canvas').getAttribute('width'),'1080');
+ await page.selectOption('#format','tall');assert.equal(await page.locator('.stage canvas').getAttribute('width'),'1080');
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();assert.deepEqual(axe.violations,[]);
  await page.selectOption('#format','wide');
