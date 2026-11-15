@@ -3,7 +3,7 @@ const {chromium} = require('playwright');
 const {default:AxeBuilder} = require('@axe-core/playwright');
 (async () => {
  const browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH||'/usr/bin/chromium',args:['--no-sandbox']});
- const context=await browser.newContext({acceptDownloads:true});
+ const context=await browser.newContext({acceptDownloads:true,reducedMotion:'reduce'});
  const page=await context.newPage();
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  const base=process.env.TEST_BASE||'http://127.0.0.1:4173';
@@ -13,7 +13,7 @@ const {default:AxeBuilder} = require('@axe-core/playwright');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();assert.deepEqual(axe.violations,[]);
  }
- await page.emulateMedia({reducedMotion:'reduce'});
+
  assert.match(await page.locator('#status').innerText(),/Static/);
  await page.locator('#play').focus();await page.keyboard.press('Enter');
  await page.waitForTimeout(700);await page.locator('#pause').click();assert.match(await page.locator('#status').innerText(),/Paused/);

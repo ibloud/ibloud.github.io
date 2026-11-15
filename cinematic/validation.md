@@ -33,3 +33,9 @@ in the draft PR separately from local checks. Main and Pages production unchange
   (403); no claim of physical-device or anonymous browser acceptance.
 - A temporary direct-access share link was prepared for owner review. It expires
   roughly 23 hours after creation; no project-wide protection setting changed.
+
+Initial CI passed existing unit/static/browser suites but exposed a test timing
+race: changing emulated reduced-motion immediately before Play could deliver its
+change event after Play, correctly returning the product to a static frame.
+The test now sets reduced motion on browser-context creation, so its initial
+static-state and explicit-Play assertions run with a settled preference.
