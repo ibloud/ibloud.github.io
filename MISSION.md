@@ -22,6 +22,14 @@ We welcome people who share the mission and want to contribute, learn, or advanc
 
 Accessibility is a design and operating priority, not a completed universal certification. State what is implemented, what was actually tested, and what remains pending. External human review, device checks, rights clearance, and release gates retain their own requirements; neither funding nor this mission statement substitutes for them.
 
+### Accessibility creates opportunities
+
+Technology should adapt to people. Disabled participants should be able to design, test, train, operate and benefit economically from it, rather than only access a finished product. Profit can sustain innovation; exclusion must not be its business model.
+
+Apply this in existing project reviews: ask about functional access needs at the start; offer text-first, asynchronous and alternative-input paths; agree reasonable adaptations and revisit barriers. State whether a task is training, voluntary contribution or paid professional work before it starts. Commissioned production and research require agreed fair compensation and written terms; do not relabel them as obligatory unpaid playtesting.
+
+Participants choose attribution and public visibility. Do not require diagnoses or biometric movement recordings to participate. Any necessary sensitive-data collection needs a specific purpose, minimisation, consent and a private route. Movement data must not be reused for AI training or another secondary purpose without the required rights and explicit authorisation. Record the task, adaptation, observed result and unresolved barrier—not a profile of the person.
+
 ## Contact
 
 For a scoped contribution, review, or mission-compatible funding discussion: questions@loptrlab.com. Do not send private benefits, medical, banking, housing, or identity records in an initial inquiry.
