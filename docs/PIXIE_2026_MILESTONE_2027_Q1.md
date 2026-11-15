@@ -57,16 +57,14 @@ For public institutions, identify **specific statutory/program authority**, not 
 
 The Holdings README specifies Financial Modeling Prep reference quotations plus FRED macro series DGS10 (10-year U.S. Treasury yield) and VIXCLS (volatility index); normalized records have `referenceOnly: true` and cannot change synthetic PXCOIN or trust/rights/capacity state.
 
-**Verification boundary, 15 Nov 2026:** The repository's documented generated `public/market-data.json` was not present at the default-branch path inspected, and a public Pages snapshot could not be read in this research environment. **Therefore no value below is represented as an observed PIXIE feed value.** Confirm the actual deployment path, timestamp, provider, licensing and values in a separate verification before making live-product claims.
+**Snapshot content supplied by the owner, 15 Nov 2026:** The generated JSON identifies `source.market: "fmp"`, `source.macro: "fred"`, `fetchedAt: "2026-11-15T14:48:15.572Z"` (08:48 CST), and `referenceOnly: true`. The supplied `quotes` array contains exactly two entries, both `source: "fred"` and `freshness: "observation"`. There are **no FMP equity, ETF or crypto entries** in this supplied snapshot. This confirms the provided snapshot's contents, **not** independent public reachability or an active FMP feed. The file's public URL/deployment provenance was not independently retrieved.
 
-For an educational **external macro snapshot only**, 12 November 2026 FRED-derived public reporting showed:
+| Series | Supplied PIXIE snapshot value | Observation timestamp | Responsible use |
+|---|---|---|---|
+| DGS10 | 5.10%, FRED, reference only | 2026-11-12T00:00:00.000Z | Model financing/cost sensitivity using explicit assumptions and quotes, not grant likelihood |
+| VIXCLS | 18.70, FRED, reference only | 2026-11-12T00:00:00.000Z | Describe broad market volatility context; do not infer creator demand or sponsorship |
 
-| Series | Dated externally reported observation | Interpretation *for scenario design*, not forecast |
-|---|---|---|
-| DGS10 | 5.10% (12 Nov 2026) | Price and financing assumptions require quotes; compare lower-overhead remote/borrowed-equipment pilot before borrowed-capital expansion |
-| VIXCLS | 18.70 (12 Nov 2026) | Record market uncertainty; do not infer grant awards, sponsor interest, customer demand, or the success of an individual creative project |
-
-External verification sources: [FRED DGS10](https://fred.stlouisfed.org/series/DGS10) (observation 12 Nov 2026, updated 13 Nov 2026) and [FRED VIXCLS](https://fred.stlouisfed.org/graph/?s%5B1%5D%5Bid%5D=VIXCLS) (observation 12 Nov 2026, updated 13 Nov 2026). FRED and market vendor redistribution/licensing requirements must be checked. These series are context, not an input to user eligibility, individual investment advice or live financial state.
+Official series for external cross-check: [FRED DGS10](https://fred.stlouisfed.org/series/DGS10), [FRED VIXCLS](https://fred.stlouisfed.org/series/VIXCLS). Market-vendor rights and redistribution terms remain subject to review. The timestamp `fetchedAt` is when the snapshot claims it fetched data, **not** the observations' date. The actual feed still requires independent URL, deployment-receipt and source verification before claiming it is publicly operational.
 
 **Example of the actual decision method:** Compare (A) free library workshop plus borrowed device, (B) supervised low-cost parts retrofit, and (C) professional contracted retrofit. Keep each cash/time/accessibility/safety/rights consequence **synthetic until verified costs are sourced**. Advance A as the default beginner route for a teen; take B or C only after supervision, technical feasibility, documented recovery, permission and funding. This does not require a prediction from VIX or Treasury yields.
 
