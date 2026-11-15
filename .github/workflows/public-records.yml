@@ -4,6 +4,7 @@ on:
     paths:
       - 'assets/**'
       - 'ecosystem/**'
+      - 'cinematic/**'
       - 'tools/**'
       - 'tests/**'
       - 'docs/PUBLIC_INTEROPERABILITY_TEST.md'
@@ -34,3 +35,4 @@ jobs:
           export CHROMIUM_PATH="$(node -p "require('playwright').chromium.executablePath()")"
           node tools/test_public_records_browser.cjs
           TEST_BASE=http://127.0.0.1:4173 node tools/test_story_pitch.cjs
+          TEST_BASE=http://127.0.0.1:4173 node tools/test_cinematic.cjs

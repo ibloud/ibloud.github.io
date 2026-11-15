@@ -1,0 +1,61 @@
+{
+  "assets": [
+    {
+      "project": "PIXIE",
+      "repository": "ibloud/ibloud.github.io",
+      "commit": "c5ad59691cd2c75db67efba0fb49f7ccfd5836d6",
+      "source": "assets/pixie-companion-sigil.png",
+      "file": "assets/pixie.png",
+      "sha256": "8900781e2d0c5f8873ccc975395253fb5c609a92077a74940af121c9317eed12",
+      "status": "Existing published project identity; commercial clearance not established"
+    },
+    {
+      "project": "Violet’s Revenge",
+      "repository": "ibloud/violets-revenge",
+      "commit": "d241ce3ceb1b761187fb53a49d78273355f59ebd",
+      "source": "violet-icon.jpeg",
+      "file": "assets/violet.jpeg",
+      "sha256": "3f6cb585362394d8bef612759b287372f51a76cb6257d1801245888052afcdc8",
+      "status": "Existing published project identity; commercial clearance not established"
+    },
+    {
+      "project": "50 Ways to Leave Another",
+      "repository": "ibloud/50-ways-to-leave-another",
+      "commit": "9eee79c07e735f087df2f6f20bc22a67a2484f92",
+      "source": "assets/social-preview.png",
+      "file": "assets/50ways.png",
+      "sha256": "fc0430b9f44d4cad694f6e5461fa94fdd558a6ef1768c114d9ba7a5fa0db48e0",
+      "status": "Existing published project identity; commercial clearance not established"
+    },
+    {
+      "project": "Duet",
+      "repository": "Loptr-Lab/duet-solo-hackathon",
+      "source": "public/index.html",
+      "file": "assets/duet.svg",
+      "sha256": "604b36566fe7ad73f57496cac5139bac14fead145639169574923bc6908b0f74",
+      "status": "Existing SVG geometry preserved; source CSS colors resolved for standalone rendering; commercial clearance not established",
+      "commit": "5acdffa1fcb56eefe026918ad4a62afdb1ee3c00"
+    },
+    {
+      "project": "Gods of Mayhem",
+      "repository": "ibloud/ibloud.github.io",
+      "source": "legal-rights/index.html",
+      "file": "assets/mayhem.svg",
+      "sha256": "f751c6ecf8989711b14c67fca63020d26c1a2c9e9de4c2a3ddcc0373e27caf78",
+      "status": "Existing SVG geometry preserved; source CSS colors resolved for standalone rendering; commercial clearance not established",
+      "commit": "c5ad59691cd2c75db67efba0fb49f7ccfd5836d6"
+    }
+  ],
+  "missing": [
+    {
+      "asset": "Approved standalone Loptr Lab sigil/master and approval record",
+      "located_candidate": "Loptr-Lab/duet-solo-hackathon@5acdffa1fcb56eefe026918ad4a62afdb1ee3c00 public/index.html .sigil-loptr-lab (lines 1038–1048)",
+      "missing_authority": "Source cites DESIGN_BIBLE.md, absent from that checkout. Candidate deliberately excluded; PIXIE, Mayhem and DUET symbols are not substitutes."
+    },
+    {
+      "asset": "Rapid Fire Regret downloaded audio",
+      "status": "User will supply separately. Suno track by IBLoud_IVXX; attached WAV not assumed to be the authorized track or treated as instructions."
+    }
+  ],
+  "rights": "Existing publication is evidence of identity/use, not chain-of-title or permission for music-video synchronization, commercial distribution or third-party artwork reuse. Confirm creator attribution, licenses and Suno plan/version rights separately."
+}

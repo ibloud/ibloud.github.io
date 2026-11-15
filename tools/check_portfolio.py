@@ -82,6 +82,8 @@ def main():
         expected_styles = [ROOT / 'assets/portfolio-foundation.css']
         if is_pitch:
             expected_styles.append(ROOT / 'assets/50-ways-pitch.css')
+        if path == ROOT / 'cinematic/index.html':
+            expected_styles.append(ROOT / 'cinematic/title.css')
         actual_styles = [(path.parent / href).resolve() for href in page.stylesheets]
         require(actual_styles == expected_styles, 'wrong stylesheet sequence')
         for reference in page.references:
