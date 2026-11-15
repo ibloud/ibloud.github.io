@@ -87,3 +87,18 @@ for an additional engine check but its download hosts returned CONNECT/domain
 403; WebKit/Safari engine acceptance is unverified, not represented as passed.
 This environment supports combined WebM/Opus, not MP4/AAC; native MP4 remains
 capability-gated and the local FFmpeg fallback is documented.
+
+Final format/fallback evidence: expanded audio browser suite also downloads a
+9:16 combined recording. ffprobe confirms VP9 1080×1920 + Opus, 5.989s; native
+container audio start 50ms (real-time encoder startup varies). The documented
+local assembly command was executed successfully: H.264 + AAC MP4, exactly 6.000s.
+MP4 native MediaRecorder was unavailable in this Chromium build; local mux is the
+verified MP4 fallback. No claim of frame-perfect cross-browser native encoding.
+
+Review deployment dpl_5KJnCzDQGbuquXp6NmgD5SNMKxEr is READY for implementation
+f2e4337171f48ef464cd0b7d0352ca4c2133ac19, preview target only. Connected fetch
+returns HTTP 200 for HTML, title.js, audio.mjs, title.css and inventory.json;
+retrieved JS/modules/CSS/inventory equal source (ignoring terminal whitespace).
+Subsequent test/evidence-only commits do not change those runtime artifacts.
+Direct physical-device and hosted-browser acceptance remain separate from
+connected fetch/local browser tests. Review links and final CI are in PR #56.

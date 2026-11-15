@@ -54,6 +54,9 @@ const path=require('node:path');
  assert.match(await page.locator('#status').innerText(),/Audio-enabled/);
  const videoEvent=page.waitForEvent('download');await page.locator('#download').click();const video=await videoEvent;
  if(process.env.AUDIO_VIDEO_OUTPUT) await video.saveAs(process.env.AUDIO_VIDEO_OUTPUT);
+ await page.selectOption('#format','tall');await page.locator('#export-audio').click();await page.waitForSelector('#download:not([hidden])',{timeout:20000});
+ const portraitEvent=page.waitForEvent('download');await page.locator('#download').click();const portrait=await portraitEvent;
+ if(process.env.TALL_AUDIO_VIDEO_OUTPUT) await portrait.saveAs(process.env.TALL_AUDIO_VIDEO_OUTPUT);
  const excerptEvent=page.waitForEvent('download');await page.locator('#wav').click();const excerpt=await excerptEvent;
  if(process.env.EXCERPT_OUTPUT) await excerpt.saveAs(process.env.EXCERPT_OUTPUT);
  // Original silent option must not start a source even when audio is loaded.
