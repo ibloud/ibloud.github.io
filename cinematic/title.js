@@ -1,4 +1,5 @@
-import {SECONDS, analyzePCM, excerptTiming, excerptWAV} from './audio.mjs';
+import {SECONDS, analyzePCM, excerptTiming} from './audio.mjs';
+import {requireAudioVideoMP4} from './mp4.mjs';
 const duration = SECONDS * 1000;
 const projects = [['PIXIE','assets/pixie.png'],['Violet’s Revenge','assets/violet.jpeg'],['Gods of Mayhem','assets/mayhem.svg'],['Duet','assets/duet.svg'],['50 Ways','assets/50ways.png']];
 const $ = id => document.getElementById(id);
@@ -92,8 +93,8 @@ function stopSource() {if(source) {try{source.stop();}catch{}source.disconnect()
 function stop() {cancelAnimationFrame(raf);running=false;pause.disabled=true;stopSource();}
 function currentPosition() {return Math.min(duration,Math.max(0,(audioContext.currentTime-clockStart)*1000));}
 function timeline() {
-  $('position').value=(elapsed/1000).toFixed(2);$('position-time').value=`${(elapsed/1000).toFixed(2)} / 6.00 seconds`;
-  $('position').setAttribute('aria-valuetext',`${(elapsed/1000).toFixed(2)} of 6 seconds`);
+  $('position').value=(elapsed/1000).toFixed(2);$('position-time').value=`${(elapsed/1000).toFixed(2)} / ${SECONDS.toFixed(2)} seconds`;
+  $('position').setAttribute('aria-valuetext',`${(elapsed/1000).toFixed(2)} of ${SECONDS} seconds`);
   waveContext.clearRect(0,0,wave.width,wave.height);waveContext.fillStyle=color.bg;waveContext.fillRect(0,0,wave.width,wave.height);
   if(!buffer||!analysis) return;
   const scale=wave.width/buffer.duration;
@@ -135,13 +136,13 @@ function interrupt(message) {
 function updateTiming() {
   timing=excerptTiming(analysis?.events||[],excerptStart,Boolean(buffer));
   $('analysis').textContent=buffer?`${timing.measured.length} measured transients in this excerpt; ${timing.cuts.length} used for panel cuts. ${timing.cuts.length?'':'No usable cut transients: continuous camera motion. '}Final reveal at ${timing.reveal.toFixed(2)} seconds (${timing.measured.some(e=>e.time===timing.reveal)?'measured transient':'editorial hold'}). No BPM is assumed.`:'No audio selected. Silent timing uses fixed editorial cuts.';
-  $('excerpt-summary').textContent=`Six-second excerpt: ${excerptStart.toFixed(2)}–${(excerptStart+SECONDS).toFixed(2)} seconds.`;
-  $('excerpt').setAttribute('aria-valuetext',`${excerptStart.toFixed(2)} seconds; six-second excerpt`);
+  $('excerpt-summary').textContent=`15-second excerpt: ${excerptStart.toFixed(2)}–${(excerptStart+SECONDS).toFixed(2)} seconds.`;
+  $('excerpt').setAttribute('aria-valuetext',`${excerptStart.toFixed(2)} seconds; 15-second excerpt`);
   timeline();
 }
 function combinedSupport() {
   if(!canvas.captureStream||!globalThis.MediaRecorder||!window.MediaStream) return '';
-  return ['video/mp4;codecs=avc1.42E01E,mp4a.40.2','video/webm;codecs=vp9,opus','video/webm;codecs=vp8,opus','video/mp4'].find(type=>MediaRecorder.isTypeSupported(type))||'';
+  return ['video/mp4;codecs=avc1.42E01E,mp4a.40.2','video/mp4;codecs=avc1.420028,opus','video/mp4;codecs=avc1,opus','video/mp4'].find(type=>MediaRecorder.isTypeSupported(type))||'';
 }
 function silentSupport() {
   if(!canvas.captureStream||!globalThis.MediaRecorder) return '';
@@ -150,13 +151,14 @@ function silentSupport() {
 function controls() {
   const busy=recording||decoding;
   for(const id of ['play','replay','static','poster','format','audio-file','motion','position']) $(id).disabled=busy;
-  for(const id of ['excerpt','excerpt-number','clear-audio','wav']) $(id).disabled=busy||!buffer;
+  for(const id of ['excerpt','excerpt-number','clear-audio']) $(id).disabled=busy||!buffer;
   $('export').disabled=busy||!silentSupport();$('export-audio').disabled=busy||!buffer||!combinedSupport();
+  $('export-help').textContent=combinedSupport()?'Teaser export produces one MP4 with the selected recording embedded. Import once; no second upload or separate soundtrack is required.':'This browser cannot encode combined MP4. Use a browser with MP4 recording support; this page will not substitute a silent teaser or separate soundtrack.';
   pause.disabled=!running||recording;
 }
 play.addEventListener('click',async()=> {
   if(elapsed>=duration) elapsed=0;
-  try{await start();status.textContent=buffer?'Playing selected audio excerpt and synchronized panels.':'Playing six-second silent preview.';}
+  try{await start();status.textContent=buffer?'Playing selected audio excerpt and synchronized panels.':'Playing 15-second silent preview.';}
   catch(error){stop();status.textContent=error.message;}
 });
 $('replay').addEventListener('click',async()=> {
@@ -187,7 +189,7 @@ fileInput.addEventListener('change',async()=> {
   try {
     if(!/\.(wav|m4a|mp3)$/i.test(file.name)) throw Error('Choose a WAV, M4A or MP3 file.');
     const decoded=await context().decodeAudioData(await file.arrayBuffer());
-    if(decoded.duration<SECONDS) throw Error('Choose audio at least six seconds long.');
+    if(decoded.duration<SECONDS) throw Error(`Choose audio at least ${SECONDS} seconds long.`);
     if(version!==loadVersion) return;
     const measured=analyzePCM(decoded);measured.peak=measured.envelope.reduce((peak,value)=>Math.max(peak,value),.001);buffer=decoded;analysis=measured;
     $('excerpt').max=$('excerpt-number').max=String(buffer.duration-SECONDS);
@@ -200,7 +202,6 @@ function save(blob,name) {
   const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000);
 }
 $('poster').addEventListener('click',()=>{staticFrame();canvas.toBlob(blob=>{if(blob) save(blob,`loptr-lab-${format.value}-static.png`);},'image/png');});
-$('wav').addEventListener('click',()=>{if(buffer) save(new Blob([excerptWAV(buffer,excerptStart)],{type:'audio/wav'}),'loptr-lab-excerpt.wav');});
 async function exportVideo(withAudio) {
   const mimeType=withAudio?combinedSupport():silentSupport();if(!mimeType) return;
   stop();elapsed=0;render(0);timeline();failedExport=false;exportingAudio=withAudio;
@@ -214,21 +215,25 @@ async function exportVideo(withAudio) {
     recording=true;controls();$('download').hidden=true;
     recorder.ondataavailable=event=>{if(event.data.size) chunks.push(event.data);};
     recorder.onerror=()=>{failedExport=true;if(recorder.state!=='inactive') recorder.stop();};
-    recorder.onstop=()=> {
-      stop();recording=false;stream.getTracks().forEach(track=>track.stop());recordingDestination=null;controls();
+    recorder.onstop=async()=> {
+      stop();stream.getTracks().forEach(track=>track.stop());recordingDestination=null;
       if(downloadURL) URL.revokeObjectURL(downloadURL);
       if(elapsed>=duration&&!failedExport&&chunks.length) {
-        downloadURL=URL.createObjectURL(new Blob(chunks,{type:mimeType}));$('download').href=downloadURL;
-        $('download').download=`loptr-lab-${format.value}${exportingAudio?'-audio':''}.${mimeType.includes('mp4')?'mp4':'webm'}`;$('download').hidden=false;
-        status.textContent=`${exportingAudio?'Audio-enabled':'Silent'} six-second video ready. Download video to save.`;
-      } else {$('download').hidden=true;status.textContent='Export interrupted or encoder failed. Retry with this tab visible, or download the excerpt WAV and silent video for local assembly.';}
+        const blob=new Blob(chunks,{type:recorder.mimeType||mimeType});
+        try {if(exportingAudio) requireAudioVideoMP4(await blob.arrayBuffer(),SECONDS);}
+        catch(error) {recording=false;controls();$('download').hidden=true;status.textContent='No teaser was created: '+error.message;return;}
+        downloadURL=URL.createObjectURL(blob);$('download').href=downloadURL;
+        $('download').download=`${exportingAudio?'rapid-fire-regret-15s':'loptr-lab'}-${format.value}.${mimeType.includes('mp4')?'mp4':'webm'}`;$('download').hidden=false;
+        status.textContent=`${exportingAudio?'Audio-enabled MP4':'Silent'} 15-second video ready. Download video to save.`;
+      } else {$('download').hidden=true;status.textContent='Export interrupted or encoder failed. No teaser was created. Retry MP4 export with this tab visible.';}
+      recording=false;controls();
     };
-    recorder.start();await start(withAudio);status.textContent=`Recording six seconds ${withAudio?'with selected audio':'silently'}. Keep this tab visible.`;
+    recorder.start();await start(withAudio);status.textContent=`Recording 15 seconds ${withAudio?'with selected audio':'silently'}. Keep this tab visible.`;
   }catch(error) {
     failedExport=true;stop();
     if(recorder&&recorder.state!=='inactive') recorder.stop();
     else {recording=false;stream?.getTracks().forEach(track=>track.stop());recordingDestination?.stream.getTracks().forEach(track=>track.stop());recordingDestination=null;controls();}
-    status.textContent='Combined encoder unavailable. Use the original silent video and excerpt WAV downloads, then combine them locally. '+error.message;
+    status.textContent='MP4 encoding unavailable. No incomplete or silent teaser was created. Try a browser supporting MP4 MediaRecorder with audio. '+error.message;
   }
 }
 $('export').addEventListener('click',()=>exportVideo(false));$('export-audio').addEventListener('click',()=>exportVideo(true));
@@ -236,7 +241,7 @@ $('export').addEventListener('click',()=>exportVideo(false));$('export-audio').a
 export function transportState() {return {elapsed:elapsed/1000,audioOffset:buffer?excerptStart+elapsed/1000:null,audioClock:audioContext?.currentTime,clockStart,running,hasSource:Boolean(source),excerptStart,cuts:timing.cuts,reveal:timing.reveal,recording};}
 try {
   images=await Promise.all(projects.map(([,src])=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=reject;image.src=src;})));
-  document.querySelector('.fallback').hidden=true;canvas.hidden=false;document.querySelector('.controls').hidden=false;document.querySelector('.audio-panel').hidden=false;
+  document.querySelector('.fallback').hidden=true;canvas.hidden=false;document.querySelector('.controls').hidden=false;document.querySelector('.audio-panel').hidden=false;document.querySelector('.legacy-exports').hidden=false;
   controls();updateTiming();staticFrame();
-  if(!silentSupport()) status.textContent='Static frame ready. Browser video encoding unavailable; static PNG and local excerpt WAV downloads remain available.';
+  if(!silentSupport()) status.textContent='Static frame ready. Browser video encoding unavailable; static PNG download remains available.';
 }catch {status.textContent='Motion assets unavailable. The static HTML title remains available.';}

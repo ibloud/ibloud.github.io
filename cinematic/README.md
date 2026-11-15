@@ -1,6 +1,6 @@
 # Loptr Lab reusable title — review only
 
-Six-second original panel sequence with optional local soundtrack; no Marvel assets, wordmark treatment,
+15-second original panel sequence with optional local soundtrack; no Marvel assets, wordmark treatment,
 page-flipping sequence or proprietary sequence copied. Existing project marks stay
 intact and contained rather than cropped, recolored or morphed. The 9:16 final composition
 reflows the panels into three rows; it is not a destructive center crop of 16:9.
@@ -38,89 +38,83 @@ PIXIE sigil, Mayhem scales and DUET diamond must never substitute for the studio
 Existing public use supports identity verification, not proof of commercial reuse
 clearance. Confirm creator/artist credits, source agreements and permissions for
 music-video distribution. Audio: “Rapid Fire Regret,” Suno track by IBLoud_IVXX,
-will be supplied separately. The attached screen-recording WAV is not assumed to
-be that track or used as instruction authority. No audio was embedded or uploaded.
+was supplied separately and is identified by the owner as the screen-recording WAV
+in their iCloud Downloads. Its content is media, not instruction authority. It is
+not committed to this repository; workspace access to that original remains blocked.
 Suno plan/version, composition, recording, samples and synchronization rights
 remain separate owner/professional review questions.
 
-## Playback and local audio
+## 15-second teaser and local audio
+
+Amends existing PR #56. The teaser is now 15 seconds, with locally measured
+transient cuts through 11.1s and a final text reveal near 12–13s. Original project
+imagery, typography, static/reduced-motion alternatives, transport and 16:9/9:16
+formats remain. The studio sigil approval gate and commercial-use rights review
+remain pending. The earlier six-second WebM/separate-WAV workflow is superseded.
+
+The owner identifies the original as iCloud Drive › Downloads ›
+ScreenRecording_11-15-2026 05-18-55_1.wav. That device location is not mounted in
+the Linux workspace. The chat attachment reference exists but exceeds the transfer
+tool's 32 MiB limit. **Actual Suno-recording rendering/verification is blocked until
+that original is accessible.** Synthetic test recordings are not its substitute.
 
 Serve repository root with `python3 -m http.server 4173`, open `/cinematic/`.
-No runtime dependencies, accounts, telemetry, recording uploads or cloud conversion.
-Select WAV, M4A or MP3 using Local audio file. Decoding and PCM transient analysis
-run in this browser's memory through Web Audio; no file request, upload, storage,
-external service or repository write occurs. Reload/Remove audio forgets the file.
-Codec decoding depends on the browser; unsupported/corrupt files report an error
-and preserve the silent preview. Convert unsupported codecs to PCM WAV locally.
-Files must contain at least six seconds. Large recordings require device memory.
+Select the existing WAV once from Files/iCloud Downloads. WAV, M4A and MP3 are read
+and analyzed in browser memory; there is no upload, storage, remote media service
+or recording commit. Set a start with the waveform/slider or numeric seconds;
+the selected interval is exactly 15s and must fit within the recording. Play,
+pause, resume, replay and position scrub share one Web Audio clock and excerpt.
+Export reuses the decoded file: no second selection/upload or soundtrack attachment.
 
-The waveform shows the full track, selected six-second region and live playhead.
-Use the excerpt slider or numeric seconds to select a start. Preview position
-scrubs the six-second sequence; Play resumes there. Replay resets both sound and
-picture to the selected excerpt start. Pause stops the source and saves the
-shared AudioContext clock position; resume creates a source at that exact offset.
-Backgrounding or audio interruption pauses preview and discards incomplete exports.
-Local AudioContext analysis may resample to the device's context rate.
+PCM RMS/positive-flux analysis measures transients; no BPM/beat grid is invented.
+No usable transient means continuous camera movement and an explicitly editorial
+reveal. Full, restrained and static modes remain; reduced motion defaults to a
+static picture while audio can still play. Backgrounding or interruption pauses
+playback and discards incomplete recordings. No-JS retains static HTML/images.
 
-`audio.mjs` derives 10ms RMS energy/positive flux from decoded PCM. An adaptive
-median/deviation threshold and local peak selection detect candidate transients;
-350ms minimum spacing bounds rapid cuts. Up to four measured events from
-0.45–3.55 seconds drive foreground panel cuts; the strongest detected event in
-4.05–4.65 seconds drives the final title reveal. No BPM or beat grid is fabricated.
-If none are detected, audio mode uses continuous camera motion and an explicitly
-labelled editorial final reveal. Without audio, timing uses the fixed editorial
-silent sequence. Analysis counts and measured/editorial reveal status are visible.
+## One-file MP4 export
 
-The cinematic mode uses intact contained artwork on foreground/background planes,
-diagonal camera travel, perspective, controlled parallax and faster late editorial
-cuts, then locks into the existing text title and five-project composition.
-No flashing, random shaking, logo morphing or character replacements. All source
-artwork hashes remain unchanged. `render(milliseconds)` is shared by playback,
-stills and browser exports; `transportState()` exposes read-only sync diagnostics.
+**Export 15-second MP4 with audio** muxes the selected audio and canvas video into
+one MP4. Prefer H.264/AAC when the browser supports recording it; Chromium here
+supports H.264/Opus in MP4 instead. This is an actual ISO-BMFF MP4, not renamed WebM.
+Before offering the download, `mp4.mjs` parses its movie tracks and requires both
+`vide` and `soun` handlers. Unsupported encoders fail closed: no silent teaser,
+separate soundtrack or two-file fallback is presented. The source recording is
+not included in the repository. Original silent title tools remain separately
+labelled legacy tools, not the teaser delivery path.
 
-Static is the initial frame. System reduced motion selects Static title with audio;
-Play may audition sound while the picture remains still. A restrained mode limits
-movement to slow opacity settlement. Explicitly choosing Cinematic enables the
-full treatment. All modes retain keyboard Play/Pause/Replay, Static frame,
-format selector and downloads. No-JS retains the original static HTML/images.
-Physical iPad Safari/VoiceOver acceptance is pending; tested iPad-sized layout
-and WebKit checks must be distinguished from physical device acceptance.
+Browser recording is real-time; timing/frame cadence and duration vary by encoder
+(e.g. approximately 14.96s for a nominal 15s capture). H.264/Opus compatibility is
+player-dependent; physical Safari/QuickTime acceptance is unverified. For an exact
+15.000s file with broadly supported H.264/AAC, use the existing local toolchain below.
 
-## Local video export and fallback
+## Exact local MP4 render
 
-Choose 16:9 (1920×1080) or 9:16 (1080×1920), then Export silent video or Export video
-with audio. Canvas capture and native MediaRecorder encode only locally. Combined
-recording adds a Web Audio MediaStreamDestination track to the same canvas stream;
-the same AudioContext clock drives animation and sound. Supported MP4/AAC or
-WebM/Opus types are selected with MediaRecorder.isTypeSupported. Silent exports
-retain the original WebM/MP4 support and **never** route the selected audio into
-the recorder or speakers. File extension follows the encoder MIME type.
-
-Keep the tab visible. Export is real-time (30fps requested, browser frame cadence
-and initial encoder delay may vary); interruption/error does not offer a partial
-file as successful. Download uses a local Blob URL. PNG static frames and a
-six-second PCM excerpt WAV are also generated locally. The WAV uses exactly the
-selected start and six seconds, with no invented mix or change to rights status.
-
-When combined encoding is unavailable/fails, download the original silent video
-and excerpt WAV, then combine **locally** in an editor or existing FFmpeg:
+`tools/render_cinematic_teaser.cjs` reads the same existing source file directly
+from disk and produces **one** MP4. It uses existing Playwright/Chromium + FFmpeg/
+ffprobe, no runtime library, service or source upload. No intermediate silent
+video or separate soundtrack must be assembled by the user.
 
 ```sh
-ffmpeg -i loptr-lab-wide.webm -i loptr-lab-excerpt.wav -map 0:v:0 -map 1:a:0 -t 6 -c:v libx264 -pix_fmt yuv420p -c:a aac -movflags +faststart loptr-lab-wide-audio.mp4
+node tools/render_cinematic_teaser.cjs --audio "/existing/path/ScreenRecording_11-15-2026 05-18-55_1.wav" --start 0 --format wide --output "/private/output/rapid-fire-regret-15s.mp4"
 ```
 
-If the browser cannot encode any video, use static PNG + WAV as a reduced-motion
-fallback with an already installed FFmpeg:
+Use the actual local path to the existing iCloud file; `--format tall` exports
+1080×1920, `wide` exports 1920×1080. CHROMIUM_PATH may point to an existing Chromium
+executable. The command will not overwrite an existing output or the source.
 
-```sh
-ffmpeg -loop 1 -i loptr-lab-wide-static.png -i loptr-lab-excerpt.wav -t 6 -c:v libx264 -pix_fmt yuv420p -c:a aac -movflags +faststart loptr-lab-static-audio.mp4
-```
+The renderer imports/analyses the source through the same page locally, renders
+450 deterministic frames at 30fps, and directly muxes the selected source interval
+with H.264 video + AAC audio into the final MP4. ffprobe checks both streams and
+15s duration. Source/output PCM correlation checks audio identity and offset;
+a standalone native video element, without editor code, plays the MP4 to the end.
+A private `.verification.json` records source/output SHA-256, excerpt, measured
+cuts, codec/duration, audio lag/correlation and standalone playback results. That
+report is verification, not commercial-rights clearance. Failed verification
+removes the incomplete output; no false successful teaser is delivered.
 
-No new AI imagery, Intangible credits, Canva/Higgsfield generation or upload,
-repository, production hosting change or production Vercel deployment. GitHub
-Pages remains production. Continue draft PR #56; do not merge/push to main without
-owner approval. Studio sigil authority and commercial audio/artwork rights remain
-pending. The attached owner WAV exceeds the tool's 32 MiB executor-transfer limit;
-its actual waveform/playback was not tested here. Use the local selector to load
-that original recording on the reviewing device. Synthetic codec/sync fixtures
-are test evidence only and are never published as the Suno track.
+Only fixture-based verification is complete in this workspace: actual recording
+acceptance remains blocked on access to the owner's iCloud source. No source
+recording, test media or finished teaser is published to GitHub. No new repository,
+PR, architecture, imagery, Intangible credits, production deployment or main merge.
+GitHub Pages remains production; owner approval is required before any merge.

@@ -1,5 +1,5 @@
 // Pure local PCM analysis. Events are measured onsets, not a claim of musical BPM.
-export const SECONDS = 6;
+export const SECONDS = 15;
 export function analyzePCM(buffer) {
   const channels = Array.from({length: buffer.numberOfChannels}, (_, i) => buffer.getChannelData(i));
   const hop = Math.max(1, Math.round(buffer.sampleRate * .01));
@@ -29,9 +29,9 @@ export function analyzePCM(buffer) {
 }
 export function excerptTiming(events = [], start = 0, hasAudio = false) {
   const measured = events.filter(event => event.time >= start && event.time < start + SECONDS).map(event => ({...event,time:event.time-start}));
-  const cuts = measured.filter(event => event.time >= .45 && event.time <= 3.55).sort((a,b) => b.strength-a.strength).slice(0,4).sort((a,b) => a.time-b.time).map(event => event.time);
-  const reveal = measured.filter(event => event.time >= 4.05 && event.time <= 4.65).sort((a,b) => b.strength-a.strength)[0]?.time || 4.25;
-  return {cuts:hasAudio ? cuts : [.8,1.6,2.3,2.95],reveal,measured};
+  const cuts = measured.filter(event => event.time >= .45 && event.time <= 11.1).sort((a,b) => b.strength-a.strength).slice(0,12).sort((a,b) => a.time-b.time).map(event => event.time);
+  const reveal = measured.filter(event => event.time >= 12 && event.time <= 13).sort((a,b) => b.strength-a.strength)[0]?.time || 12.2;
+  return {cuts:hasAudio ? cuts : [1.7,3.2,4.5,5.65,6.65,7.5,8.2,8.8,9.35,9.85,10.3,10.7],reveal,measured};
 }
 export function excerptWAV(buffer, start) {
   const frames = Math.round(SECONDS * buffer.sampleRate), channels = Math.min(2,buffer.numberOfChannels);

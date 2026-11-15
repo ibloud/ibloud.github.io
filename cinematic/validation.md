@@ -1,3 +1,7 @@
+Current state: 15-second single-MP4 teaser implementation; actual Suno-recording
+render/acceptance BLOCKED on access to the owner’s iCloud source. The earlier
+six-second and separate-WAV results below are historical, not final delivery.
+
 # Review validation — 15 November 2026
 
 - Existing portfolio static contract: PASS, 32 pages, links/landmarks/navigation/stylesheets.
@@ -102,3 +106,55 @@ retrieved JS/modules/CSS/inventory equal source (ignoring terminal whitespace).
 Subsequent test/evidence-only commits do not change those runtime artifacts.
 Direct physical-device and hosted-browser acceptance remain separate from
 connected fetch/local browser tests. Review links and final CI are in PR #56.
+
+# 15-second single-MP4 amendment (same PR #56)
+
+Owner identifies actual supplied audio as iCloud Drive › Downloads ›
+ScreenRecording_11-15-2026 05-18-55_1.wav. Workspace/attachments/tmp/mount searches
+found no copy. That is a device-local path, not a Linux mount or readable network
+URL; available connectors provide no iCloud filesystem. Existing chat attachment
+exceeds the download tool's 32 MiB transfer limit. An existing authorized download
+link/access to the same original is required to render/certify the actual teaser.
+No new upload was requested and no source recording was published. Do not present
+any synthetic fixture export as “Rapid Fire Regret.”
+
+Amended implementation:
+- Duration is 15s throughout preview/transport/excerpt/analysis; strongest measured
+  transients drive cuts through 11.1s and reveal at a measured 12–13s event when
+  available. Static, restrained, keyboard transport, 16:9/9:16 and artwork retained.
+- Primary export muxes one actual MP4 with selected audio/video. Native choices
+  include H.264/AAC and H.264/Opus. Parsed ISO-BMFF ftyp/moov/trak/hdlr must confirm
+  both video and audio tracks before download. Renamed WebM, missing tracks and
+  native movie-duration drift beyond 150ms are refused. No separate soundtrack or
+  silent fallback is supplied as teaser delivery. Original silent title tools are
+  separately labelled legacy tools; the standalone WAV download was removed.
+- Existing-toolchain local renderer accepts the original file path directly,
+  measures timing through the same preview code, renders 450 frames at 30fps and
+  directly muxes the 15-second source interval into one H.264/AAC MP4. It checks
+  codecs, duration, source/output PCM correlation/lag and standalone native-player
+  playback to completion (including audio decoding). Private verification report
+  includes source/output SHA-256; the source never receives a public URL/upload.
+
+Verification:
+- 16 unit tests pass: existing records, measured timing/offset/silence, WAV helper
+  integrity, MP4 missing-track/renamed-container/truncation/overrun rejection.
+- 32-page portfolio/link/landmark/style contract passes; JS syntax and diff checks.
+- Original cinematic browser regression passes at new duration, including silent
+  title tools, static/no-JS, keyboard, reduced motion, formats and PNG.
+- Updated audio suite passes local import/no upload, shared clock, pause/resume/
+  replay, measured cuts, iPad-sized touch/reflow/axe/200% text, both combined MP4
+  formats, corrupt input, silent isolation and encoder refusal without substitute.
+  Downloaded MP4 is parsed and played to the end in a separate native video
+  element with no editor code; decoded audio bytes and timeline are checked.
+- Native MP4 with a synthetic waveform: ffprobe identifies H.264 + Opus; standalone
+  playback decodes picture and sound. A concurrent heavy-render stress test produced
+  a 17.386s native file: correctly rejected by the new duration guard. Native capture
+  is not described as frame-perfect; exact delivery uses the local renderer.
+- Deterministic synthetic wide and tall exports: ffprobe H.264 + AAC, 450 video
+  frames, 15.000000s. Both play through to 15s in an independent native player.
+  Source/output PCM correlation 0.999954; lag 0.000s. These are pipeline fixtures,
+  not the supplied Suno recording; no media fixture or export is committed.
+
+Physical iPad/Safari/QuickTime and actual owner-recording acceptance remain pending.
+Studio sigil approval, commercial music/artwork rights, Pages production and main
+merge restrictions are unchanged. Hosted preview/final CI evidence is in PR #56.
