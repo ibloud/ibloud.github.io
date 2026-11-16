@@ -1,3 +1,49 @@
+# Repository instruction entry — ibloud/ibloud.github.io
+
+Scope: this repository. Portfolio, creative-family map and shared ecosystem documentation home.
+
+Before work, explicitly read the [shared ecosystem instructions](https://github.com/ibloud/ibloud.github.io/blob/docs/agent-design-continuity/docs/ECOSYSTEM_INSTRUCTIONS.md)
+(or `docs/ECOSYSTEM_INSTRUCTIONS.md` in a locally available `ibloud/ibloud.github.io` checkout),
+then the local sources below and any applicable nested `AGENTS.md`.
+A link does not automatically load or inherit instructions. The shared file is under
+review in portfolio PR #59; it is not yet a merged production record. If unavailable,
+identify the gap and stop only work dependent on it; do not fabricate its contents.
+Local security, privacy, canon, license, tests and release authority remain local.
+
+## Local essentials and sources
+
+GitHub Pages is production; Vercel is review preview only. Preserve assets/portfolio-foundation.css as the single stylesheet and the scoped Rebirth instructions.
+
+Read: [MISSION.md](MISSION.md), [COLLABORATE.md](COLLABORATE.md), [docs/ECOSYSTEM_ARCHITECTURE.md](docs/ECOSYSTEM_ARCHITECTURE.md), [docs/PORTFOLIO_DESIGN.md](docs/PORTFOLIO_DESIGN.md).
+Inspect existing changes, open issues/PRs and unpublished work before creating a duplicate.
+Use the current contribution entry in README and the local contribution policy where present;
+record ideas as proposals, not automatic assignments. Identify exact source conflicts and
+preserve behavior; do not invent precedence or relax a hold.
+
+## Existing work
+
+Existing instruction assignment: [PR #59](https://github.com/ibloud/ibloud.github.io/pull/59); extend it while open. Portfolio strategy/cinematic proposals are separate.
+
+## Checks and release boundary
+
+Commands confirmed in local scripts/configuration (not a claim of current passing results):
+
+- `python3 tools/check_portfolio.py`
+- `node --test tests/public-records.test.mjs`
+
+Owner-confirmed GitHub Pages production https://ibloud.github.io/; Vercel review only; no new preview created.
+No merge, deploy, release, DNS, authentication or infrastructure change is authorized
+by this instruction structure. Preserve existing palettes, symbols, stylesheet ownership,
+privacy and governance gates. Report committed documentation, checks, previews, merged
+source and observed live behavior separately. Automated checks do not establish physical
+iPad/Safari/VoiceOver acceptance. MCP tools do not automatically discover or enforce this file.
+
+Nested instructions: [Death’s Daughter artwork and halo](ecosystem/projects/deaths-daughter/AGENTS.md).
+
+---
+
+## Retained project instructions
+
 # Portfolio agent instructions
 
 Scope: this repository. Read this file and any deeper AGENTS.md applying to files you change.
