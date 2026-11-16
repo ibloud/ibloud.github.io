@@ -76,3 +76,27 @@ a reachable page or a merged PR does not prove end-to-end behavior or human acce
 No merge, deployment, hosting/DNS change, release or hold removal follows from this
 structure. The portfolio's GitHub Pages production/Vercel review arrangement applies
 only to the portfolio unless another repository's own configuration establishes it.
+
+## Required order of operations — owner correction, 16 November 2026
+
+1. Read supplied briefs and affected substantive sources before deciding. Record
+   exactly what was read and what remains unavailable; never claim an unread source
+   was checked. Search relevant local work, review branches and prior assignments
+   before asking the owner to resend existing information.
+2. Identify overlapping work and the smallest correction. Extend the existing
+   assignment; do not build a replacement and force it to fit.
+3. Preserve explicit requirements, including ethnicity, cultural identity, anatomical
+   details and approved artwork. Do not substitute defaults or infer missing approval.
+   Ask one focused question when a consequential decision is missing or contradictory.
+   Apply this standard to incomplete owner directions without making the owner repeat
+   directions already supplied.
+4. Follow existing code structure, dependencies and stylesheet ownership. Verify the
+   requested behavior and supplied acceptance criteria before claiming completion.
+   An unresolved requirement or inaccessible required source blocks dependent work.
+5. Report evidence, assumptions, changes, tests and remaining gaps separately.
+   A task contract is editable reported context, not proof that a source was read.
+
+Legal and rights information is educational, not professional advice or a determination
+of ownership, clearance, licensing, compliance or eligibility. Preserve source, date,
+asset, use and jurisdiction limits. Refer unresolved professional determinations to an
+appropriately qualified professional. Do not present AI assistance as independent review.
