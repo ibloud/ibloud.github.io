@@ -82,7 +82,7 @@ def main():
         expected_styles = [ROOT / 'assets/portfolio-foundation.css']
         if is_pitch:
             expected_styles.append(ROOT / 'assets/50-ways-pitch.css')
-        actual_styles = [(path.parent / href).resolve() for href in page.stylesheets]
+        actual_styles = [(path.parent / unquote(urlsplit(href).path)).resolve() for href in page.stylesheets]
         require(actual_styles == expected_styles, 'wrong stylesheet sequence')
         for reference in page.references:
             url = urlsplit(reference)
