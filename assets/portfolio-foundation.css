@@ -208,3 +208,25 @@ body.story-pitch{--site-bg:var(--md-sys-color-surface);--site-header:var(--md-sy
 .ll-production-example-art img{display:block;width:100%;height:auto;max-width:30rem;margin-inline:auto}
 .ll-production-example-art figcaption{margin-top:.75rem;font-size:.9rem}
 @media(max-width:50rem){.ll-production-example{grid-template-columns:minmax(0,1fr)}.ll-production-example-art{padding-top:0}}
+
+/* Death’s Daughter manuscript preview. Project-only additions to the shared sheet. */
+.dd-manuscript .dd-art-frame{position:relative;line-height:0}.dd-manuscript .dd-art-frame>img{width:100%;height:auto;display:block}.dd-manuscript .dd-portrait{padding:0;overflow:hidden}.dd-manuscript .dd-portrait figcaption,.dd-manuscript .dd-portrait button{margin:1rem}.dd-halo{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;fill:none;stroke:#efc56b;stroke-width:3;mix-blend-mode:screen}.dd-halo g{animation:dd-breathe 7s ease-in-out infinite;transform-origin:710px 265px}.dd-paused .dd-halo g{animation-play-state:paused}@keyframes dd-breathe{0%,100%{opacity:.2}50%{opacity:.85}}
+.dd-sword{margin:0 auto;max-width:42rem}.dd-sword img{display:block;width:100%;height:auto}.dd-manuscript figcaption{font-size:1rem;line-height:1.65;color:var(--site-muted);margin-top:1rem}.dd-silent-line{font-size:clamp(1.4rem,3vw,2.4rem);max-width:28ch;text-align:center;margin:2rem auto}.dd-fragments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-block:2rem}.dd-card{border:1px solid var(--site-border);padding:1.25rem;min-width:0}.dd-card img{width:100%;height:auto;display:block;margin-block:1rem}.dd-missing{border-style:dashed;display:flex;flex-direction:column;justify-content:center}.dd-lacuna{font-size:4rem;text-align:center}.dd-red-book{background:#571c25;color:#fff0dd;display:flex;flex-direction:column;justify-content:center}.dd-red-book h3{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3rem);color:inherit}.dd-manuscript p,.dd-manuscript li{font-size:max(1rem,18px)}
+@media(max-width:55rem){.dd-fragments{grid-template-columns:1fr}.dd-card{max-width:35rem;width:100%;box-sizing:border-box;margin-inline:auto}}@media(prefers-reduced-motion:reduce){.dd-halo g{animation:none;opacity:.4}}
+
+
+/* Owner review: top-aligned introduction and existing art in reading-side space. */
+.dd-manuscript .story-hero{align-items:start;padding-top:1.5rem}.dd-rights-layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(14rem,.8fr);gap:clamp(2rem,5vw,5rem);align-items:start}.dd-rights-layout>div{min-width:0}.dd-rights-art,.dd-aside-art{margin:1rem 0 0}.dd-rights-art img,.dd-aside-art img{display:block;width:100%;height:auto}.dd-rights-art{max-width:26rem;justify-self:end}.dd-aside-art{max-width:18rem;margin:1.5rem auto 0}.dd-aside-art img{max-height:24rem;object-fit:contain}.dd-manuscript .dd-aside-art figcaption{font-size:1rem}@media(max-width:50rem){.dd-rights-layout{grid-template-columns:1fr}.dd-rights-art{justify-self:center;max-width:22rem}}
+
+/* Death’s Daughter owner review: balanced hero, one section rule, selected studies. */
+.dd-manuscript .story-hero h1{font-size:clamp(2.8rem,6vw,6rem);line-height:1.08;letter-spacing:normal;margin-block:1.6rem 2rem}
+.dd-manuscript .story-hero .story-hook{font-family:LoptrEditorial,Georgia,serif;font-size:clamp(1.4rem,2.2vw,2rem);line-height:1.4;color:var(--site-link);max-width:32ch;margin-block:0 1.5rem}
+.dd-manuscript .story-hero .ll-actions{margin-block:2rem 1.5rem;row-gap:1rem}
+.dd-manuscript .dd-review-links{margin-block:1.5rem;line-height:1.8}
+.dd-manuscript .story-details:last-child{border-bottom:0}
+.dd-manuscript .dd-aside-art{max-width:26rem}
+.dd-manuscript .dd-aside-art img{max-height:none}
+.dd-manuscript .dd-rights-layout{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.dd-manuscript .dd-rights-art{max-width:none;width:100%}
+.dd-manuscript :is(#financials,#ai-disclosure){margin-top:2rem;scroll-margin-top:7rem}
+@media(max-width:50rem){.dd-manuscript .dd-rights-layout{grid-template-columns:1fr}.dd-manuscript .dd-rights-art{max-width:38rem}}
