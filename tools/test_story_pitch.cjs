@@ -11,7 +11,7 @@ const assert=require('node:assert/strict');
   page.on('request',r=>requests.push(r.url()));
   await page.goto(base+'/ecosystem/projects/deaths-daughter/');await page.evaluate(()=>document.fonts.ready);
   assert.ok(requests.every(url=>url.startsWith(base)),'no external fonts, scripts, trackers or embeds');
-  assert.equal(await page.locator('h1').innerText(),'From Fan Fiction to Original Worlds');
+  assert.equal((await page.locator('#pitch-title').innerText()).replace(/\s+/g,' ').trim(),'The Diary of Death’s Daughter');
   assert.equal(await page.locator('main').count(),1);assert.equal(await page.locator('iframe,input,form').count(),0);
   const chapterTitles=await page.locator('.story-sequence h3').allTextContents();
   assert.deepEqual(chapterTitles,["Satan's Fury","The Serpent of Old","Death's Daughter is Born","The Flaming Sword","The Journey of the Flame"]);
