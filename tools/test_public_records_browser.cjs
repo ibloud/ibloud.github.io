@@ -35,8 +35,9 @@ const identity={id:DID,service:[{id:'#atproto_pds',type:'AtprotoPersonalDataServ
  });
  await page.goto(BASE+'/ecosystem/');await page.waitForTimeout(200);assert.equal(thirdParty,0,'no data-provider requests before action');assert.equal(await page.locator('.public-test-pixie img').getAttribute('src'),'https://pixie.loptrlab.com/assets/pixie-hero-proposal.png','approved PIXIE portrait source');
  const contributionCards=page.locator('#learn .card');
- assert.deepEqual(await contributionCards.locator('h3').allTextContents(),['Training','PIXIE Project Companion','PIXIE Creator OS']);
- const creatorLinks=contributionCards.nth(2).locator('a');
+ assert.deepEqual(await contributionCards.locator('h3').allTextContents(),['Training','PIXIE Project Companion','PIXIE Codex','PIXIE Creator OS']);
+ assert.equal(await contributionCards.nth(2).locator('a').getAttribute('href'),'https://codex.loptrlab.com/');
+ const creatorLinks=contributionCards.nth(3).locator('a');
  assert.deepEqual(await creatorLinks.evaluateAll(links=>links.map(a=>a.getAttribute('href'))),['projects/pixie-creator/','https://ibloud.github.io/pixie-creator-os/','https://github.com/ibloud/pixie-creator-os/blob/main/CONTRIBUTING.md']);
  await creatorLinks.first().focus();
  for(let i=0;i<3;i++) {
@@ -72,7 +73,7 @@ const identity={id:DID,service:[{id:'#atproto_pds',type:'AtprotoPersonalDataServ
  await page.locator('#feedback-load').click();await page.waitForFunction(()=>!document.querySelector('#feedback-load').disabled);
  for(const width of [320,768,1024,1440]) for(const theme of ['dark','light']) {
   await page.setViewportSize({width,height:1000});await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
-  assert.equal(await page.locator('#learn .grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),width>=1200?3:width>=768?2:1,`contribution columns at ${width}`);
+  assert.equal(await page.locator('#learn .grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),width>=768?2:1,`contribution columns at ${width}`);
   const report=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   assert.deepEqual(report.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),[],`axe ${width}/${theme}`);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`overflow ${width}/${theme}`);results.push(`${width}/${theme}: axe and layout pass`);
