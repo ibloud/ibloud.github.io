@@ -48,3 +48,15 @@ Validation for this text-only correction: portfolio structural/link check and di
 ## Purchase-link instruction — 17 November 2026
 
 The owner explicitly requested adding the live purchase link after providing listing screenshots. This supersedes the earlier requirement to withhold the CTA pending companion verification. The Jupiter panel now links directly to the exact owner-supplied MPC listing. No price currency or companion inclusion is asserted. No checkout was performed. Original card-back binaries are still not accessible through the chat attachment/workspace tools; the inline images are visually available but have no downloadable file identifier or local path. Requested originals as PNG/JPG/ZIP or a direct image URL; do not generate substitutes or use the PIXIE card backs as Jupiter artwork.
+
+## PIXIE review clarification supplied by owner — 17 November 2026
+
+The owner identified https://codex.loptrlab.com as the site displaying the requested deck and pasted a report attributed to `Codex-visual-review.pdf`, an unpublished review dated 8 October 2026. This update relies on the supplied text and inline art, not independent reading of that PDF or the website. A direct site request on 17 November returned HTTP403. No repository mapping or downloadable image URL was recovered from that blocked request.
+
+Under “PIXIE / Creative Experience Decks”, the supplied report distinguishes:
+
+- **Playing Deck — Visual studies:** “Familiar cards. A guardian at the threshold.” Standard 52 cards plus two proposed ranked jokers (54); Bridge, Hearts, Spades and Bid Whist. Existing AI-generated concept art uses heart lanterns, club flowers, repaired diamonds and spade doorways. No complete 54-face set verified; final faces in development. Earlier Clubs art shows a paper book; intended final object is the sigilled digital codex. Preserve the existing image as a study; do not repaint it or claim the object was already corrected.
+- **Reflection Deck — Design proposal:** “Observe. Understand. Choose.” Custom 54-card system with 22 archetypes and 32 journey cards: four eight-card chapters, Awakening, Listening, Repair and Choosing. Short titles, optional prompts and no reversals are proposals. Interpretation/decisions stay with the reader. Concept art exists; completed faces and approved card-by-card guide remain open. This is neither standard 78-card tarot nor automatically the Death’s Daughter oracle/Little Red Book.
+- **Violet’s Revenge:** separate Gothic Forensics edition of 52 Cards of War, “Every card is a case file”, purple/luminol blue/black. **Float Cards:** separate card duel for Violet’s table in Sewers & Shadows. Neither owns the supplied PIXIE art.
+
+The source report says no PIXIE-specific files beyond the review PDF were found in its scanned sources. That is a reported bounded search, not proof the original files were never committed. Actual image publication remains blocked on obtaining the original binary or accessible image URL. The existing Jupiter purchase CTA remains intact. Structural check passed after this copy correction; final-head Vercel and physical-device acceptance remain outstanding.
