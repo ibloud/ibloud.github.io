@@ -11,3 +11,10 @@ Build with `python3 build-codex.py`; validate with `python3 validate-codex.py` a
 Existing PIXIE tools run locally: collaborator introduction download, budget scenarios and JSON export, reflection prompts. No intake or checkout was added. Cost assumptions remain illustrative. Bot implementation does not establish a live service.
 
 Validation covers source structure, internal links, IDs, image descriptions, sitemap and script syntax. Browser rendering and device interaction require visual review; no deployment is needed to review the standalone HTML copy.
+
+## Archive status — 17 November 2026
+
+Owner authorized archive labeling and publication on this date. Every generated
+page links to the current GitHub-backed deck showcase. Historical content, routes,
+artwork, hosting identity and public audience are preserved. This is not the
+current development source; continue in ibloud/ibloud.github.io.
