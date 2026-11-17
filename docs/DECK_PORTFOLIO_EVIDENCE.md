@@ -60,3 +60,9 @@ Under “PIXIE / Creative Experience Decks”, the supplied report distinguishes
 - **Violet’s Revenge:** separate Gothic Forensics edition of 52 Cards of War, “Every card is a case file”, purple/luminol blue/black. **Float Cards:** separate card duel for Violet’s table in Sewers & Shadows. Neither owns the supplied PIXIE art.
 
 The source report says no PIXIE-specific files beyond the review PDF were found in its scanned sources. That is a reported bounded search, not proof the original files were never committed. Actual image publication remains blocked on obtaining the original binary or accessible image URL. The existing Jupiter purchase CTA remains intact. Structural check passed after this copy correction; final-head Vercel and physical-device acceptance remain outstanding.
+
+## Missing ecosystem route — 17 November 2026
+
+Checked current `origin/main:ecosystem/index.html` and the deck review branch: the manually authored capability section listed Training, PIXIE Project Companion and Creator OS but contained no Codex entry. This is a source omission; public HTTP was not successfully inspected. Added the exact owner-supplied https://codex.loptrlab.com/ route to that section using existing card/link markup and the shared two-column grid for four entries. Description relies on owner-supplied review text; no repository mapping, sign-in integration, image retrieval or completed-product status is inferred. Main remains unchanged until owner review/merge.
+
+The newly supplied inline Jupiter card-back reference shows a silver Jupiter glyph in a purple medallion against a star field. It must not be confused with PIXIE’s purple winged card backs. Its binary is not exposed in the workspace or by a downloadable attachment identifier, so no image substitution was made. Direct Google Drive/site access remains unresolved.
