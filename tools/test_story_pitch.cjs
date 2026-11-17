@@ -55,7 +55,7 @@ const assert=require('node:assert/strict');
    results.push(`${width}/${theme}: PASS`);
   }
   await page.setViewportSize({width:320,height:1000});await page.evaluate(()=>document.documentElement.style.fontSize='200%');
-  const enlarged=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(el=>el.getBoundingClientRect().right>innerWidth+1).slice(0,20).map(el=>({tag:el.tagName,cls:el.className,text:el.textContent.slice(0,60),right:el.getBoundingClientRect().right}))}));
+  const enlarged=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(el=>el.getBoundingClientRect().right>innerWidth+1&&!el.closest('.table-wrap')).slice(0,30).map(el=>({tag:el.tagName,cls:el.className,text:el.textContent.slice(0,60),right:el.getBoundingClientRect().right}))}));
   assert.ok(enlarged.scroll<=enlarged.width,'200% text at 320px: '+JSON.stringify(enlarged));
   await page.emulateMedia({reducedMotion:'reduce'});assert.equal(await page.evaluate(()=>getComputedStyle(document.documentElement).scrollBehavior),'auto');
   await page.evaluate(()=>{document.documentElement.style.fontSize='';document.documentElement.dataset.theme='dark';});await page.setViewportSize({width:1440,height:1100});await page.goto(base+'/ecosystem/projects/deaths-daughter/');await page.evaluate(()=>{document.documentElement.dataset.theme='dark';return document.fonts.ready;});
