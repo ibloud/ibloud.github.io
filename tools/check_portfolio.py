@@ -7,6 +7,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import sys
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 NAV_LABELS = ['Meet Dominique', 'Ecosystem', 'Research proposal', 'Collaborate', 'Provenance & AI']
@@ -17,6 +18,10 @@ class Page(HTMLParser):
     def __init__(self):
         super().__init__()
         self.tags = []
+        self.in_head = False
+        self.head_titles = 0
+        self.descriptions = []
+        self.canonicals = []
         self.ids = []
         self.references = []
         self.stylesheets = []
@@ -28,6 +33,15 @@ class Page(HTMLParser):
     def handle_starttag(self, tag, attributes):
         attrs = dict(attributes)
         self.tags.append(tag)
+        if tag == 'head':
+            self.in_head = True
+        if self.in_head:
+            if tag == 'title':
+                self.head_titles += 1
+            if tag == 'meta' and attrs.get('name') == 'description':
+                self.descriptions.append(attrs.get('content', '').strip())
+            if tag == 'link' and attrs.get('rel') == 'canonical':
+                self.canonicals.append(attrs.get('href', ''))
         if 'id' in attrs:
             self.ids.append(attrs['id'])
         if 'style' in attrs:
@@ -44,6 +58,8 @@ class Page(HTMLParser):
                 self.references.append(attrs[key])
 
     def handle_endtag(self, tag):
+        if tag == 'head':
+            self.in_head = False
         if tag == 'nav':
             self.in_nav = False
         if tag == 'a':
@@ -63,12 +79,22 @@ def parse(path):
 def main():
     pages = {path: parse(path) for path in ROOT.rglob('*.html')}
     failures = []
+    sitemap_urls = [node.text for node in ET.parse(ROOT / 'sitemap.xml').iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+    if len(sitemap_urls) != len(set(sitemap_urls)):
+        failures.append('sitemap.xml: duplicate URLs')
     for path, page in pages.items():
         def require(condition, reason):
             if not condition:
                 failures.append(f'{path.relative_to(ROOT)}: {reason}')
 
         text = path.read_text()
+        relative = path.relative_to(ROOT).as_posix()
+        public_url = 'https://ibloud.github.io/' + relative.removesuffix('index.html')
+        require(page.head_titles == 1, 'expected one document title in head')
+        require(len(page.descriptions) == 1 and bool(page.descriptions[0]), 'expected one nonempty description')
+        require(len(page.canonicals) == 1 and page.canonicals[0].startswith('https://ibloud.github.io/'), 'expected one HTTPS portfolio canonical')
+        if page.canonicals == [public_url]:
+            require(public_url in sitemap_urls, 'self-canonical page missing from sitemap')
         expected_nav = HOME_NAV_LABELS if path == ROOT / 'index.html' else NAV_LABELS
         require(all(page.tags.count(tag) == 1 for tag in ('main', 'h1')) and page.nav_labels == expected_nav, 'expected one primary navigation, main and h1')
         require(page.nav_labels == expected_nav, 'primary navigation labels differ')
@@ -98,7 +124,7 @@ def main():
     if failures:
         print('\n'.join(failures))
         return 1
-    print(f'PASS: {len(pages)} HTML pages; shared CSS/navigation, landmarks, IDs, local links and fragments.')
+    print(f'PASS: {len(pages)} HTML pages; shared CSS/navigation, landmarks, IDs, local links, fragments and SEO metadata.')
     return 0
 
 
