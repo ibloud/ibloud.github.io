@@ -6,3 +6,5 @@
 @media print{body{background:white;color:black}.site-header nav,.skip,.actions,footer{display:none}.catalogue-card,.rule-card{break-inside:avoid}.cover{color:black;border-color:black}.rule-card{background:white}.muted,.caption,p{color:#222!important}a{color:black}}
 
 .site-header .wordmark{white-space:normal;font-size:1.4rem;max-width:420px}footer .wordmark{white-space:normal}
+
+.archive-notice{background:#fff3cd;color:#241b0c;padding:1.25rem max(1.25rem,calc((100% - 1200px)/2));border-bottom:3px solid #98711a;font:1rem/1.6 system-ui,sans-serif;overflow-wrap:anywhere}.archive-notice strong{font-size:1.15rem}.archive-notice p{margin:.5rem 0;max-width:75ch;color:inherit}.archive-notice a{color:#493600;text-decoration:underline}.archive-notice a:focus-visible{outline:3px solid #493600;outline-offset:3px}
