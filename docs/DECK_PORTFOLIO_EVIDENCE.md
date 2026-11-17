@@ -66,3 +66,58 @@ The source report says no PIXIE-specific files beyond the review PDF were found 
 Checked current `origin/main:ecosystem/index.html` and the deck review branch: the manually authored capability section listed Training, PIXIE Project Companion and Creator OS but contained no Codex entry. This is a source omission; public HTTP was not successfully inspected. Added the exact owner-supplied https://codex.loptrlab.com/ route to that section using existing card/link markup and the shared two-column grid for four entries. Description relies on owner-supplied review text; no repository mapping, sign-in integration, image retrieval or completed-product status is inferred. Main remains unchanged until owner review/merge.
 
 The newly supplied inline Jupiter card-back reference shows a silver Jupiter glyph in a purple medallion against a star field. It must not be confused with PIXIE’s purple winged card backs. Its binary is not exposed in the workspace or by a downloadable attachment identifier, so no image substitution was made. Direct Google Drive/site access remains unresolved.
+
+
+## Sites source recovery and existing-repository integration — 17 November 2026
+
+The owner requested migration from Sites, then approved reuse of the existing
+portfolio assignment rather than a new repository. Both Sites repositories were
+retrieved directly through their native source access. Earlier retrieval failures
+above remain dated results; source and artwork are now recovered, not lost.
+
+- Codex: project `appgprj_6ac7ab828adc81918d22be93a94352af`, five commits through
+  `c9a22dded828c67d187b3f83f5c86d270cd922b2`, preserved on
+  [archive/sites-codex-2026-11-17](https://github.com/ibloud/ibloud.github.io/tree/archive/sites-codex-2026-11-17).
+- Deck Collection: project `appgprj_6ac832ffb5508191af78abbbe15d2e4f`, original
+  history preserved on
+  [archive/sites-deck-collection-2026-11-17](https://github.com/ibloud/ibloud.github.io/tree/archive/sites-deck-collection-2026-11-17).
+  Its README records the owner's October 8 request for a separate website.
+
+Each preserved branch contains the complete build script, curated source,
+research notes, static 16-page output, original artwork and hosting identity.
+These branches are source archives, not merged portfolio pages or deployment
+branches. No separate repository or duplicate engine was created. Rebuild from
+either branch with `python3 build-codex.py`, then `python3 validate-codex.py`.
+Both builds reproduced tracked output and passed their 16-page validators.
+
+The recovered sites share catalogue/source data and artwork. Differences include
+the canonical domain, branding, footer and a small collection stylesheet addition.
+Do not merge the domains or treat their separate identities as accidental.
+Their catalogue and historical estimates are preserved, not adopted as current
+product, canon, pricing or rights authority. The portfolio continues to use its
+one authoritative stylesheet and current project-status distinctions.
+
+Unchanged PNGs copied from Codex `dist/assets/` to portfolio `assets/`:
+
+| Portfolio asset | SHA-256 |
+|---|---|
+| pixie-deck-suits.png | d765c2683543910cef60f5008e631d67e1691972b597b2516b5adfedc3e2b66f |
+| pixie-deck-back.png | aceb54ef15f387b496c30fcda1fd8b4b6a7db17625d84bc4bda07a2221f302bb |
+| pixie-deck-spades.png | a1b97e04d4edf0d9f435c8d31b67ca70ce4a081d04ffc3d908f4fc84bc7f1995 |
+
+The showcase now displays the four playing-card studies and, inside its existing
+details panel, the card-back study. Full-size links preserve legibility. No
+repainting, generated replacement art, finished-deck claim or Death's Daughter
+oracle substitution was introduced. The separate guidance launcher is unchanged.
+Original generation model/version and full print-ready face set remain unverified.
+
+Verification: 31-page portfolio structural/link check, 10 public-record tests and
+whitespace check passed. Local Chromium at 390, 820 and 1440 CSS pixels loaded both
+showcase images with descriptions and no document overflow. Physical Safari/iPad/
+VoiceOver acceptance remains unverified. The deterministic evidence checker allowed
+the supplied scoped review; it does not independently authenticate evidence.
+
+This is GitHub source preservation and an owner-review portfolio update. Neither
+Sites deployment, DNS record nor production Pages route was changed. Switching
+`codex.loptrlab.com` and `decks.loptrlab.com` hosting remains a separate cutover;
+GitHub Pages cannot serve two independent custom-domain sites from this one repo.
