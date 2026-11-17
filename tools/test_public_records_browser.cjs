@@ -73,7 +73,7 @@ const identity={id:DID,service:[{id:'#atproto_pds',type:'AtprotoPersonalDataServ
  await page.locator('#feedback-load').click();await page.waitForFunction(()=>!document.querySelector('#feedback-load').disabled);
  for(const width of [320,768,1024,1440]) for(const theme of ['dark','light']) {
   await page.setViewportSize({width,height:1000});await page.evaluate(t=>document.documentElement.dataset.theme=t,theme);
-  assert.equal(await page.locator('#learn .grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),width>=1200?3:width>=768?2:1,`contribution columns at ${width}`);
+  assert.equal(await page.locator('#learn .grid').evaluate(el=>getComputedStyle(el).gridTemplateColumns.split(' ').length),width>=768?2:1,`contribution columns at ${width}`);
   const report=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   assert.deepEqual(report.violations.map(v=>({id:v.id,nodes:v.nodes.map(n=>n.target)})),[],`axe ${width}/${theme}`);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`overflow ${width}/${theme}`);results.push(`${width}/${theme}: axe and layout pass`);

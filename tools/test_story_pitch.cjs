@@ -27,7 +27,7 @@ const assert=require('node:assert/strict');
   assert.equal(await violetPage.locator('a.pixie-launcher').evaluate(el=>getComputedStyle(el).position),'fixed');
   await violetPage.close();
   assert.equal(await page.locator('a[href*="docs.google.com"],a[href*="drive.google.com"]').count(),0,'owner-only source documents remain unlinked');
-  assert.match(await page.locator('.story-status').innerText(),/Pre-publication development/);
+  assert.match(await page.locator('.story-status').innerText(),/Development preview · Manga & oracle concept/);
   assert.match(await page.locator('#historical-posts').innerText(),/Source-verified/);
   assert.match(await page.locator('#historical-posts').innerText(),/27,490 records/);
   assert.equal(await page.locator('#historical-posts .story-evidence-list li').count(),4);
