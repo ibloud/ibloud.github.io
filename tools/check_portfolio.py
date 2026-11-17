@@ -7,6 +7,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import sys
+import json
+import re
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -95,6 +97,19 @@ def main():
         require(len(page.canonicals) == 1 and page.canonicals[0].startswith('https://ibloud.github.io/'), 'expected one HTTPS portfolio canonical')
         if page.canonicals == [public_url]:
             require(public_url in sitemap_urls, 'self-canonical page missing from sitemap')
+            if public_url != 'https://ibloud.github.io/':
+                blocks = re.findall(r'<script type="application/ld\+json" id="site-breadcrumbs">(.*?)</script>', text, re.S)
+                require(len(blocks) == 1, 'expected one breadcrumb trail')
+                if len(blocks) == 1:
+                    try:
+                        trail = json.loads(blocks[0])
+                        items = trail['itemListElement']
+                        require(trail['@type'] == 'BreadcrumbList' and len(items) >= 2, 'invalid breadcrumb type or length')
+                        require([item['position'] for item in items] == list(range(1, len(items) + 1)), 'unordered breadcrumbs')
+                        require(all(item['name'].strip() and item['item'].startswith('https://ibloud.github.io/') for item in items), 'invalid breadcrumb label or URL')
+                        require(items[-1]['item'] == public_url, 'breadcrumb does not end at canonical page')
+                    except (ValueError, KeyError, TypeError, IndexError):
+                        require(False, 'invalid breadcrumb JSON')
         expected_nav = HOME_NAV_LABELS if path == ROOT / 'index.html' else NAV_LABELS
         require(all(page.tags.count(tag) == 1 for tag in ('main', 'h1')) and page.nav_labels == expected_nav, 'expected one primary navigation, main and h1')
         require(page.nav_labels == expected_nav, 'primary navigation labels differ')
