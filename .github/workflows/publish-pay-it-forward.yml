@@ -28,15 +28,22 @@ jobs:
           repository: Loptr-Lab/pay-it-forward
           ref: main
           path: app
-      - name: Build static app for project subpath
+      - name: Build static app
         working-directory: app
         run: |
           npm install
-          GITHUB_PAGES=true npm run build
-      - name: Copy app into Pages site
+          npm run build
+      - name: Publish app routes at expected URLs
         run: |
-          mkdir -p portfolio/pay-it-forward
-          cp -R app/out/. portfolio/pay-it-forward/
+          mkdir -p portfolio/adventure portfolio/route
+          cp -R app/out/adventure/. portfolio/adventure/
+          cp -R app/out/route/. portfolio/route/
+          if [ -d app/out/_next ]; then
+            cp -R app/out/_next portfolio/
+          fi
+          if [ -d app/public ]; then
+            cp -R app/public/. portfolio/
+          fi
           touch portfolio/.nojekyll
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
