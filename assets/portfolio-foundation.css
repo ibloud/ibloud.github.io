@@ -238,3 +238,11 @@ body.story-pitch{--site-bg:var(--md-sys-color-surface);--site-header:var(--md-sy
 
 /* Keep enlarged manuscript text within its column across system fonts. */
 .dd-manuscript{overflow-wrap:anywhere}.dd-manuscript :is(h1,h2){overflow-wrap:anywhere}.dd-manuscript .story-hero>div{min-width:0}
+
+
+/* Visible breadcrumbs sourced from page breadcrumb structured data */
+.ll-breadcrumbs { max-width: 1200px; margin: 0 auto; padding: .8rem clamp(1rem,4vw,3rem); font-size: .82rem; }
+.ll-breadcrumbs ol { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; list-style:none; margin:0; padding:0; }
+.ll-breadcrumbs li + li::before { content:"/"; opacity:.55; margin-right:.5rem; }
+.ll-breadcrumbs a { color:var(--site-link,inherit); text-underline-offset:3px; }
+.ll-breadcrumbs [aria-current="page"] { opacity:.75; }
