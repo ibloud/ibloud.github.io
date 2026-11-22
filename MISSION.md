@@ -30,6 +30,12 @@ Apply this in existing project reviews: ask about functional access needs at the
 
 Participants choose attribution and public visibility. Do not require diagnoses or biometric movement recordings to participate. Any necessary sensitive-data collection needs a specific purpose, minimisation, consent and a private route. Movement data must not be reused for AI training or another secondary purpose without the required rights and explicit authorisation. Record the task, adaptation, observed result and unresolved barrier—not a profile of the person.
 
+## Current organizational support routes
+
+Loptr Lab accepts optional support through [Buy Me a Coffee](https://buymeacoffee.com/loptrlab) for creative and lore work, [Patreon](https://www.patreon.com/LoptrLab/) for technical-development support and updates, [GitHub Sponsors](https://github.com/sponsors/ibloud) for open-source and technical work, and [PayPal.me/ibloud](https://paypal.me/ibloud) for direct support. Each provider controls its own current tiers, amounts, fees and terms; no separate unified Mayhem membership or sponsorship ladder is created by these links.
+
+Support sustains the work; it does not determine who may play, learn, contribute, collaborate or be heard. Payment does not buy membership status, rank, contributor status, governance votes, canon authority, private access, approvals, ownership, employment or project IP rights. Platform payment destinations do not establish the legal recipient, tax classification, charitable status, deductibility, consolidated receipts or entity-level financial statements. See the [Ecosystem brands & business-status register](https://ibloud.github.io/legal-rights/ecosystem-status.html) for the current evidence boundary.
+
 ## Contact
 
 For a scoped contribution, review, or mission-compatible funding discussion: questions@loptrlab.com. Do not send private benefits, medical, banking, housing, or identity records in an initial inquiry.
