@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document is the canonical public map of how Dominique Devereaux's creative archives, prototypes, games, research, and contributor pathways relate. It records development lineage without declaring every work part of one literal fictional continuity.
+This document is the canonical public map of how Dominique Devereaux's creative archives, prototypes, games, research, and contributor pathways relate. It records development lineage without declaring every work part of one literal fictional continuity. For the current evidence-qualified legal status of ecosystem names and any intended or implied business structure, use the [Ecosystem brands & business-status register](https://ibloud.github.io/legal-rights/ecosystem-status.html) and the [Loptr Lab Legal & Rights hub](https://ibloud.github.io/legal-rights/). Those records do not override each project's local license, canon, contract or rights authority.
 
 
 ## Repository instructions and source map — 16 November 2026
