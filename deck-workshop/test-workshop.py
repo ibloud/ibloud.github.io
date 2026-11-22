@@ -32,7 +32,7 @@ assert "https://ui-sdk.dev/web@0.1.0-beta.14/tabs.js" in source and "web@0.js" n
 assert len(audit.ui_lists)==1 and audit.ui_lists[0].get("aria-label")=="Choose a game system"
 assert '<ui-tabs-tab value="veiled-dominion"><button id="tab-vd" type="button">' in source
 assert '<ui-tabs-tab value="violets-revenge"><button id="tab-vr" type="button">' in source
-assert 'data-ui-sdk-fallback="true"' in source and "ArrowRight" in source and "ArrowLeft" in source
+assert 'uiSdkFallback="true"' in source and "ArrowRight" in source and "ArrowLeft" in source
 assert len(audit.forms)==2
 assert all(x.get("data-system") in {"veiled-dominion","violets-revenge"} for x in audit.forms)
 assert len({x.get("data-system") for x in audit.forms})==2
@@ -51,7 +51,7 @@ assert "https://ui-sdk.dev/web@0.1.0-beta.14/tabs.js" in lab and "web@0.js" not 
 assert len(lab_audit.ui_lists)==1 and lab_audit.ui_lists[0].get("aria-label")=="Choose a game system"
 assert '<ui-tabs-tab value="sealed"><button id="tab-sealed" type="button">' in lab
 assert '<ui-tabs-tab value="violet"><button id="tab-violet" type="button">' in lab
-assert 'data-ui-sdk-fallback="true"' in lab and "ArrowRight" in lab and "ArrowLeft" in lab
+assert 'uiSdkFallback="true"' in lab and "ArrowRight" in lab and "ArrowLeft" in lab
 assert 'const cards=[' in lab
 payload=re.search(r'const cards=(\[.*?\]);\nconst \$=',lab,re.S)
 assert payload, "card data block missing"
