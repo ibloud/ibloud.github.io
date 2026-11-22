@@ -218,6 +218,10 @@ Where relevant, project documentation identifies the role of AI assistance and d
 │   └── index.html
 ├── ecosystem/
 │   └── index.html
+├── deck-workshop/
+│   ├── index.html
+│   ├── card-lab.html
+│   └── docs/RECONCILIATION.md
 ├── collaborate/
 │   └── index.html
 ├── provenance/

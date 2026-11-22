@@ -121,3 +121,21 @@ This is GitHub source preservation and an owner-review portfolio update. Neither
 Sites deployment, DNS record nor production Pages route was changed. Switching
 `codex.loptrlab.com` and `decks.loptrlab.com` hosting remains a separate cutover;
 GitHub Pages cannot serve two independent custom-domain sites from this one repo.
+
+
+## Deck Workshop implementation and release breadcrumb — 22 November 2026
+
+The standalone workspace was added to portfolio main through [PR #70](https://github.com/ibloud/ibloud.github.io/pull/70), merged as [ecb0f0eb096960a716108117c2e4c66d0df372db](https://github.com/ibloud/ibloud.github.io/commit/ecb0f0eb096960a716108117c2e4c66d0df372db).
+
+- `deck-workshop/index.html`: two separate review lanes, Veiled Dominion and Violet's Revenge, with browser-local review notes and manual export.
+- `deck-workshop/card-lab.html`: 52-card legacy reference catalogue and local card-handling sandbox (search, filters, deck assembly, shuffle, draw, hand and discard actions). It does not adjudicate game rules.
+- `deck-workshop/docs/RECONCILIATION.md`: source reconciliation and explicit preservation boundary for the user-created archive branch.
+- `deck-workshop/test-workshop.py` and `.github/workflows/deck-workshop.yml`: focused structural checks; both Deck Workshop checks passed on the PR source commit before merge.
+
+The 52-card reference is a legacy Veiled Dominion / Sealed Deck artifact, not the current four-player Veiled Dominion rules engine. The Violet-themed visual edition is not Violet's Revenge card-game canon. Violet's separate card-game proposal remains incomplete and source-bounded. The two review lanes do not share rules, data, state or bots.
+
+The merge triggered GitHub Pages production workflow run [45042031561](https://github.com/ibloud/ibloud.github.io/actions/runs/45042031561), which completed with conclusion `success` on 22 November 2026 for merge commit `ecb0f0eb096960a716108117c2e4c66d0df372db`. This verifies the Pages build/deployment workflow result, not direct HTTP availability or interactive behavior. Attempts to inspect both public routes from this environment were blocked, so live route behavior and visual acceptance remain unverified. Published routes intended by the build:
+- https://ibloud.github.io/deck-workshop/
+- https://ibloud.github.io/deck-workshop/card-lab.html
+
+No change was made to `decks.loptrlab.com`, DNS, Railway, the retired bots, or the preserved archive branch. No physical iPad/Safari/VoiceOver acceptance is claimed.
