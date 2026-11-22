@@ -28,7 +28,7 @@ assert len(audit.ui_tabs)==1 and len(audit.ui_tab_items)==2 and len(audit.ui_pan
 assert audit.ui_tabs[0].get("default-value")=="veiled-dominion"
 assert {x.get("value") for x in audit.ui_tab_items}=={"veiled-dominion","violets-revenge"}
 assert {x.get("value") for x in audit.ui_panels}=={"veiled-dominion","violets-revenge"}
-assert "https://ui-sdk.dev/web@0.1.0-beta.14/tabs.js" in source and "web@0.js" not in source
+assert "https://ui-sdk.dev/web@0.1.0-beta.13/tabs.js" in source and "web@0.js" not in source
 assert len(audit.ui_lists)==1 and audit.ui_lists[0].get("aria-label")=="Choose a game system"
 assert '<ui-tabs-tab value="veiled-dominion"><button id="tab-vd" type="button">' in source
 assert '<ui-tabs-tab value="violets-revenge"><button id="tab-vr" type="button">' in source
@@ -47,7 +47,7 @@ assert len(lab_audit.ui_tabs)==1 and len(lab_audit.ui_tab_items)==2 and len(lab_
 assert lab_audit.ui_tabs[0].get("default-value")=="sealed"
 assert {x.get("value") for x in lab_audit.ui_tab_items}=={"sealed","violet"}
 assert {x.get("value") for x in lab_audit.ui_panels}=={"sealed","violet"}
-assert "https://ui-sdk.dev/web@0.1.0-beta.14/tabs.js" in lab and "web@0.js" not in lab
+assert "https://ui-sdk.dev/web@0.1.0-beta.13/tabs.js" in lab and "web@0.js" not in lab
 assert len(lab_audit.ui_lists)==1 and lab_audit.ui_lists[0].get("aria-label")=="Choose a game system"
 assert '<ui-tabs-tab value="sealed"><button id="tab-sealed" type="button">' in lab
 assert '<ui-tabs-tab value="violet"><button id="tab-violet" type="button">' in lab
