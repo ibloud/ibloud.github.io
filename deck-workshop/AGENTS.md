@@ -10,6 +10,6 @@
 
 ## UI SDK usage
 
-The workshop and card-lab system selectors use the UI SDK Web Components `Tabs` pattern via the exact pinned CDN release `web@0.1.0-beta.14`. Reference: https://ui-sdk.dev/docs/web-components/components/tabs and https://ui-sdk.dev/docs/web-components/installation. The UI SDK is beta; do not float the CDN version or expand its use into game rules/state without a separate review. Keep the two game systems, their data, registries, rules adapters, fixtures and provenance isolated. Keep all workshop records local-only. The SDK is an interaction layer, not a source of game canon.
+The workshop and card-lab system selectors use the UI SDK Web Components `Tabs` pattern via the exact pinned CDN release `web@0.1.0-beta.13`. Reference: https://ui-sdk.dev/docs/web-components/components/tabs and https://ui-sdk.dev/docs/web-components/installation. The UI SDK is beta; do not float the CDN version or expand its use into game rules/state without a separate review. Keep the two game systems, their data, registries, rules adapters, fixtures and provenance isolated. Keep all workshop records local-only. The SDK is an interaction layer, not a source of game canon.
 
 - Read `UI-SDK-VALIDATION.md` before changing the UI SDK integration. The Tabs module is loaded from the exact pinned per-component CDN path; preserve the native fallback and update static contract checks when markup changes.
