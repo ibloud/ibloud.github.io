@@ -134,7 +134,7 @@ The standalone workspace was added to portfolio main through [PR #70](https://gi
 
 The 52-card reference is a legacy Veiled Dominion / Sealed Deck artifact, not the current four-player Veiled Dominion rules engine. The Violet-themed visual edition is not Violet's Revenge card-game canon. Violet's separate card-game proposal remains incomplete and source-bounded. The two review lanes do not share rules, data, state or bots.
 
-The merge triggered GitHub Pages production workflow run [45042031561](https://github.com/ibloud/ibloud.github.io/actions/runs/45042031561). At the time this breadcrumb was prepared, that run had not yet been confirmed successful. Therefore the merge and passing PR checks are verified, while production publication and live route behavior remain unverified. Expected routes, pending deployment verification:
+The merge triggered GitHub Pages production workflow run [45042031561](https://github.com/ibloud/ibloud.github.io/actions/runs/45042031561), which completed with conclusion `success` on 22 November 2026 for merge commit `ecb0f0eb096960a716108117c2e4c66d0df372db`. This verifies the Pages build/deployment workflow result, not direct HTTP availability or interactive behavior. Attempts to inspect both public routes from this environment were blocked, so live route behavior and visual acceptance remain unverified. Published routes intended by the build:
 - https://ibloud.github.io/deck-workshop/
 - https://ibloud.github.io/deck-workshop/card-lab.html
 
