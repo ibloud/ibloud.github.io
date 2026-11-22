@@ -37,7 +37,7 @@ assert len(cards)==52, len(cards)
 assert len({c["id"] for c in cards})==52
 assert {c["suit"] for c in cards}=={"♠","♥","♦","♣"}
 assert all(c.get("name") and c.get("text") for c in cards)
-for marker in ('id="shuffle"','id="draw"','id="discardSelected"','id="reset"','id="returnDiscard"','handSelected','role="status"'):
+for marker in ('id="shuffle"','id="draw"','id="discardSelected"','id="reset"','id="returnDiscard"','id="addFiltered"','id="removeSelected"','handSelected','role="status"'):
     assert marker in lab, marker
 assert "deck=[]" in lab, "builder should start with an empty selected deck"
 assert 'https://github.com/ibloud/violets-revenge/blob/main/docs/VIOLETS-REVENGE-CARD-DEMO-SCOPE.md' in lab
