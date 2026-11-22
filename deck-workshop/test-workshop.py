@@ -5,7 +5,7 @@ import json, re
 class Audit(HTMLParser):
     def __init__(self):
         super().__init__()
-        self.ids=set(); self.errors=[]; self.tabs=[]; self.panels=[]; self.forms=[]; self.links=[]; self.ui_tabs=[]; self.ui_tab_items=[]; self.ui_panels=[]
+        self.ids=set(); self.errors=[]; self.tabs=[]; self.panels=[]; self.forms=[]; self.links=[]; self.ui_tabs=[]; self.ui_tab_items=[]; self.ui_panels=[]; self.ui_lists=[]
     def handle_starttag(self, tag, attrs):
         a=dict(attrs)
         if "id" in a:
@@ -14,6 +14,7 @@ class Audit(HTMLParser):
         if a.get("role")=="tab":self.tabs.append(a)
         if a.get("role")=="tabpanel":self.panels.append(a)
         if tag=="ui-tabs":self.ui_tabs.append(a)
+        if tag=="ui-tabs-list":self.ui_lists.append(a)
         if tag=="ui-tabs-tab":self.ui_tab_items.append(a)
         if tag=="ui-tabs-panel":self.ui_panels.append(a)
         if tag=="form":self.forms.append(a)
@@ -22,11 +23,16 @@ class Audit(HTMLParser):
 source=Path("index.html").read_text(encoding="utf-8")
 audit=Audit(); audit.feed(source)
 assert not audit.errors, audit.errors
+assert not audit.errors, audit.errors
 assert len(audit.ui_tabs)==1 and len(audit.ui_tab_items)==2 and len(audit.ui_panels)==2
 assert audit.ui_tabs[0].get("default-value")=="veiled-dominion"
 assert {x.get("value") for x in audit.ui_tab_items}=={"veiled-dominion","violets-revenge"}
 assert {x.get("value") for x in audit.ui_panels}=={"veiled-dominion","violets-revenge"}
-assert "https://ui-sdk.dev/web@0.1.0-beta.14.js" in source and "web@0.js" not in source
+assert "https://ui-sdk.dev/web@0.1.0-beta.14/tabs.js" in source and "web@0.js" not in source
+assert len(audit.ui_lists)==1 and audit.ui_lists[0].get("aria-label")=="Choose a game system"
+assert '<ui-tabs-tab value="veiled-dominion"><button id="tab-vd" type="button">' in source
+assert '<ui-tabs-tab value="violets-revenge"><button id="tab-vr" type="button">' in source
+assert 'data-ui-sdk-fallback="true"' in source and "ArrowRight" in source and "ArrowLeft" in source
 assert len(audit.forms)==2
 assert all(x.get("data-system") in {"veiled-dominion","violets-revenge"} for x in audit.forms)
 assert len({x.get("data-system") for x in audit.forms})==2
@@ -36,11 +42,16 @@ for marker in ("loptr-workshop:v1:veiled-dominion","loptr-workshop:v1:violets-re
 
 lab=Path("card-lab.html").read_text(encoding="utf-8")
 lab_audit=Audit(); lab_audit.feed(lab)
+assert not lab_audit.errors, lab_audit.errors
 assert len(lab_audit.ui_tabs)==1 and len(lab_audit.ui_tab_items)==2 and len(lab_audit.ui_panels)==2
 assert lab_audit.ui_tabs[0].get("default-value")=="sealed"
 assert {x.get("value") for x in lab_audit.ui_tab_items}=={"sealed","violet"}
 assert {x.get("value") for x in lab_audit.ui_panels}=={"sealed","violet"}
-assert "https://ui-sdk.dev/web@0.1.0-beta.14.js" in lab and "web@0.js" not in lab
+assert "https://ui-sdk.dev/web@0.1.0-beta.14/tabs.js" in lab and "web@0.js" not in lab
+assert len(lab_audit.ui_lists)==1 and lab_audit.ui_lists[0].get("aria-label")=="Choose a game system"
+assert '<ui-tabs-tab value="sealed"><button id="tab-sealed" type="button">' in lab
+assert '<ui-tabs-tab value="violet"><button id="tab-violet" type="button">' in lab
+assert 'data-ui-sdk-fallback="true"' in lab and "ArrowRight" in lab and "ArrowLeft" in lab
 assert 'const cards=[' in lab
 payload=re.search(r'const cards=(\[.*?\]);\nconst \$=',lab,re.S)
 assert payload, "card data block missing"
