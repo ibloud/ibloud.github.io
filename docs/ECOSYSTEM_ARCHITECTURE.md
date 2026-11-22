@@ -263,3 +263,16 @@ This section is the canonical ecosystem hosting note. Other repositories link he
 The existing [50 Ways portfolio entry](https://ibloud.github.io/ecosystem/projects/50-ways/) presents the show: story, creative vision, music and potential collaboration. The separate https://50ways.loptrlab.com/ site is the behind-the-scenes production, education and review record. Participants work through how the work might be used, promoted and monetized, including the waterfall, rights management, royalty collection and collaboration process. These are distinct connected experiences, not interchangeable preview/production versions or a finished model certified by the portfolio. This follows the portfolio/project separation used for Violet’s Revenge and Battle the Beast while preserving each work’s own medium, scope and rights.
 
 Gods of Mayhem is the human community of contributors, professionals, experienced practitioners and thought leaders with the time, resources and capacity to participate for the ecosystem’s benefit. They contribute experience and bounded review by choice. Agree scope, attribution, confidentiality, time and any compensation; do not presume endorsement, membership, credentials or a professional retainer. Collaborative correction and evidence protect everyone; public participation is not automatic legal approval. Private records and held PIXIE/Training capabilities retain their existing gates.
+
+
+## Deck Workshop implementation breadcrumb — 22 November 2026
+
+The portfolio repository now contains a standalone, local-first review workspace at [Deck Workshop](../deck-workshop/). It is a review surface, not a shared game runtime or replacement for either owning repository.
+
+- [Workshop overview](../deck-workshop/index.html) keeps Veiled Dominion and Violet's Revenge in separate review lanes, with independent browser-local notes and manual export.
+- [Card Lab](../deck-workshop/card-lab.html) exposes the archived 52-card reference for catalogue inspection and local deck-handling tests. This is a legacy Veiled Dominion / Sealed Deck reference only; it is not the current four-player rules engine.
+- Violet's Revenge remains a distinct horror game and separate card-game proposal. The Violet-themed 52-card artwork is not its card-game canon. No card list, turn flow, rules engine or terminal conditions have been inferred for it.
+- Source reconciliation and the preserved user-created [Deck Collection archive branch](https://github.com/ibloud/ibloud.github.io/tree/archive/sites-deck-collection-2026-11-17) are documented in the [workshop reconciliation record](../deck-workshop/docs/RECONCILIATION.md). The archive remains intact and is not a deployment source.
+- No Railway service, Discord bot, Roomy integration, API, multiplayer backend, custom domain or DNS change is part of this workspace.
+
+**Release evidence:** PR [#70](https://github.com/ibloud/ibloud.github.io/pull/70) was merged to main as [ecb0f0e](https://github.com/ibloud/ibloud.github.io/commit/ecb0f0eb096960a716108117c2e4c66d0df372db). The Deck Workshop-specific CI checks passed before merge. The GitHub Pages production workflow was triggered by the merge; its completion and live route acceptance are recorded separately and must not be inferred from the merge. Physical iPad/Safari/VoiceOver acceptance remains outstanding.
