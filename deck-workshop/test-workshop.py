@@ -22,13 +22,12 @@ class Audit(HTMLParser):
 source=Path("index.html").read_text(encoding="utf-8")
 audit=Audit(); audit.feed(source)
 assert not audit.errors, audit.errors
-assert len(audit.tabs)==2 and len(audit.panels)==2
 assert len(audit.ui_tabs)==1 and len(audit.ui_tab_items)==2 and len(audit.ui_panels)==2
 assert audit.ui_tabs[0].get("default-value")=="veiled-dominion"
 assert {x.get("value") for x in audit.ui_tab_items}=={"veiled-dominion","violets-revenge"}
+assert {x.get("value") for x in audit.ui_panels}=={"veiled-dominion","violets-revenge"}
 assert "https://ui-sdk.dev/web@0.1.0-beta.14.js" in source and "web@0.js" not in source
 assert len(audit.forms)==2
-assert {x.get("aria-controls") for x in audit.tabs}=={x.get("id") for x in audit.panels}
 assert all(x.get("data-system") in {"veiled-dominion","violets-revenge"} for x in audit.forms)
 assert len({x.get("data-system") for x in audit.forms})==2
 assert "card-lab.html" in audit.links
@@ -40,6 +39,7 @@ lab_audit=Audit(); lab_audit.feed(lab)
 assert len(lab_audit.ui_tabs)==1 and len(lab_audit.ui_tab_items)==2 and len(lab_audit.ui_panels)==2
 assert lab_audit.ui_tabs[0].get("default-value")=="sealed"
 assert {x.get("value") for x in lab_audit.ui_tab_items}=={"sealed","violet"}
+assert {x.get("value") for x in lab_audit.ui_panels}=={"sealed","violet"}
 assert "https://ui-sdk.dev/web@0.1.0-beta.14.js" in lab and "web@0.js" not in lab
 assert 'const cards=[' in lab
 payload=re.search(r'const cards=(\[.*?\]);\nconst \$=',lab,re.S)
