@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101014"><title>Card Lab · Loptr Lab</title><style>
+:root{color-scheme:dark;--bg:#101014;--panel:#1b1a22;--line:#44404c;--ink:#f5f0e8;--muted:#c4bfca;--gold:#e6be75;--violet:#c5a5ef;font:16px/1.5 system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink)}header,main,footer{max-width:1200px;margin:auto;padding:22px}header{border-bottom:1px solid var(--line)}h1,h2,h3{font-family:Georgia,serif;font-weight:400}h1{font-size:clamp(2.4rem,7vw,4.5rem);margin:.1em 0}h2{font-size:1.8rem}.muted{color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--gold);font-size:.78rem}.notice{border-left:4px solid var(--gold);background:var(--panel);padding:14px 18px;margin:18px 0}.tabs,.toolbar,.actions{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tabs button,button,select,input{font:inherit;color:var(--ink);background:#24222b;border:1px solid var(--line);border-radius:8px;padding:11px 14px;min-height:46px}.tabs button[aria-selected=true]{border-color:var(--gold);color:var(--gold)}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}input,select{max-width:100%}.toolbar input{flex:1;min-width:180px}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,1fr);gap:18px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px}.playing-card{min-height:220px;text-align:left;display:flex;flex-direction:column;gap:8px;background:linear-gradient(150deg,#292631,#17161d);padding:14px;border:1px solid var(--line);border-radius:12px}.playing-card[aria-pressed=true]{outline:2px solid var(--gold)}.playing-card .rank{font:2rem Georgia,serif}.playing-card .suit{font-size:1.5rem}.playing-card .desc{font-size:.9rem;color:var(--muted)}.red{color:#f09aab}.black{color:#e9e3d8}.zone{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}.zone h3{margin:.2em 0}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);border-radius:8px;padding:8px;min-width:65px;text-align:center}.count{color:var(--gold);font-variant-numeric:tabular-nums}.hidden{display:none!important}footer{border-top:1px solid var(--line);margin-top:28px;color:var(--muted)}@media(max-width:760px){.layout{grid-template-columns:1fr}header,main,footer{padding:16px}.grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr))}.playing-card{min-height:200px}}
+</style></head><body><header><a href="./" style="color:inherit">← Workshop</a><p class="eyebrow">Loptr Lab · Card workshop</p><h1>Card Lab</h1><p class="muted">Browse, inspect, assemble and test card handling on iPad or desktop.</p></header><main>
+<div class="tabs" role="tablist"><button id="tab-sealed" role="tab" aria-selected="true" aria-controls="sealed">Veiled Dominion · Sealed Deck</button><button id="tab-violet" role="tab" aria-selected="false" aria-controls="violet">Violet’s Revenge</button></div>
+<section id="sealed" role="tabpanel" aria-labelledby="tab-sealed">
+<div class="notice"><strong>Legacy system, clearly bounded.</strong><p class="muted">This is the preserved 52 Cards of War reference from the legacy Veiled Dominion card/dice/chess design. It is not the current four-player Veiled Dominion rules engine. Card text is preserved as reference; the tabletop controls below test card handling only and do not adjudicate game rules.</p></div>
+<div class="toolbar"><input id="search" type="search" placeholder="Search card name or text" aria-label="Search cards"><select id="suit" aria-label="Filter by suit"><option value="">All suits</option><option value="♠">♠ Conquest</option><option value="♥">♥ Restoration</option><option value="♦">♦ Intelligence</option><option value="♣">♣ Fortification</option></select><select id="kind" aria-label="Filter card type"><option value="">All ranks</option><option value="pip">Number cards</option><option value="face">Court / fate cards</option></select><span class="count" id="catalogueCount">52 cards</span></div>
+<div class="layout"><section><h2>Card catalogue</h2><div id="catalogue" class="grid" aria-live="polite"></div></section><aside><div class="zone"><h3>Tabletop test</h3><p class="muted">Select cards from the catalogue, then add them to your test deck. Shuffle and draw are local simulations only.</p><div class="actions"><button id="addSelected">Add selected</button><button id="shuffle">Shuffle</button><button id="draw">Draw 1</button><button id="reset">Reset deck</button></div><p>Draw pile: <strong class="count" id="drawCount">52</strong> · Discard: <strong class="count" id="discardCount">0</strong></p></div><div class="zone"><h3>Hand <span class="count" id="handCount">0</span></h3><div id="hand" class="chips"></div><button id="discardSelected" style="margin-top:12px">Discard selected in hand</button></div><div class="zone"><h3>Discard pile</h3><div id="discard" class="chips"></div><button id="returnDiscard" style="margin-top:12px">Return discard to deck</button></div><p id="status" class="muted" role="status" aria-live="polite">Ready. Select cards to begin.</p></aside></div>
+</section>
+<section id="violet" role="tabpanel" aria-labelledby="tab-violet" hidden><div class="notice" style="border-color:var(--violet)"><strong>Separate game. Separate card authority.</strong><p class="muted">Violet’s Revenge’s horror prototype and proposed card game are not the Veiled Dominion Sealed Deck. The archived Violet-themed edition is visual art direction only. No canonical Violet card list or complete card rules are imported here.</p></div><h2>Violet’s Revenge card system</h2><p class="muted">This workspace is reserved for the separately sourced Violet’s Revenge deck. The card-game scope, mechanics plan and legacy bot do not establish a complete approved deck or rules engine yet.</p><p><a href="https://github.com/ibloud/violets-revenge/blob/main/docs/VIOLETS-REVENGE-CARD-DEMO-SCOPE.md" style="color:var(--violet)">Open canonical card-demo scope</a> · <a href="https://github.com/ibloud/violets-revenge/blob/main/docs/VIOLETS-REVENGE-MECHANICS-PLAN.md" style="color:var(--violet)">Review proposed mechanics</a></p></section>
+</main><footer>Source: preserved Deck Collection archive, source/card-sources.json · Card Lab is a local review tool. No notes, game state or card actions are sent to a server.</footer>
+<script>
+const cards=[
+  {
+    "id": "♠2",
+    "suit": "♠",
+    "rank": "2",
+    "name": "Skirmish Strike",
+    "text": "Attack str. 2. Weakest blade, but costs nothing in return.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠3",
+    "suit": "♠",
+    "rank": "3",
+    "name": "Raiding Party",
+    "text": "Attack str. 3. On success, opponent discards 1 card at random.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠4",
+    "suit": "♠",
+    "rank": "4",
+    "name": "Flanking Thrust",
+    "text": "Attack str. 4. May target any piece, ignoring normal movement range once in Phase III.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠5",
+    "suit": "♠",
+    "rank": "5",
+    "name": "War March",
+    "text": "Attack str. 5. If blocked, you still advance 1 square in Phase III.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠6",
+    "suit": "♠",
+    "rank": "6",
+    "name": "Iron Assault",
+    "text": "Attack str. 6. Opponent's block card must exceed this value, not just match it.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠7",
+    "suit": "♠",
+    "rank": "7",
+    "name": "Siege Blade",
+    "text": "Attack str. 7. On win, gain +1 bonus to confirmation dice roll.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠8",
+    "suit": "♠",
+    "rank": "8",
+    "name": "Vanguard Charge",
+    "text": "Attack str. 8. Play with a second Spades card to combine their values.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠9",
+    "suit": "♠",
+    "rank": "9",
+    "name": "Blood Oath",
+    "text": "Attack str. 9. If this attack is blocked, opponent must reveal 1 hidden piece.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠10",
+    "suit": "♠",
+    "rank": "10",
+    "name": "Conqueror's Edge",
+    "text": "Attack str. 10. On victory, immediately draw 1 card from the discard pile.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥2",
+    "suit": "♥",
+    "rank": "2",
+    "name": "Ember Spark",
+    "text": "Recover 1 RP. Kindle the flame — small but certain.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥3",
+    "suit": "♥",
+    "rank": "3",
+    "name": "Field Dressing",
+    "text": "Recover 2 RP or draw 1 card. Choose before playing.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥4",
+    "suit": "♥",
+    "rank": "4",
+    "name": "Healer's Touch",
+    "text": "Recover 2 RP and grant one Pawn a +1 shield buff in Phase III.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥5",
+    "suit": "♥",
+    "rank": "5",
+    "name": "Rallying Cry",
+    "text": "Recover 3 RP or remove one negative status from your pieces.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥6",
+    "suit": "♥",
+    "rank": "6",
+    "name": "Valor's Gift",
+    "text": "Draw 2 cards. Opponent may also draw 1 — generosity is its own weapon.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥7",
+    "suit": "♥",
+    "rank": "7",
+    "name": "Mender's Grace",
+    "text": "Recover 4 RP. If you have no cards left after playing, draw 2 instead.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥8",
+    "suit": "♥",
+    "rank": "8",
+    "name": "Lifeblood Surge",
+    "text": "Recover 4 RP and restore 1 previously spent Phase I upgrade token.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥9",
+    "suit": "♥",
+    "rank": "9",
+    "name": "Undying Resolve",
+    "text": "Recover 5 RP. Your next chess piece that would be captured survives with 1 HP instead.",
+    "kind": "pip"
+  },
+  {
+    "id": "♥10",
+    "suit": "♥",
+    "rank": "10",
+    "name": "Phoenix Rite",
+    "text": "Recover all lost RP from this phase. Once per game — the full restoration.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦2",
+    "suit": "♦",
+    "rank": "2",
+    "name": "Whisper Network",
+    "text": "Peek at the top card of the draw pile. Replace or leave it.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦3",
+    "suit": "♦",
+    "rank": "3",
+    "name": "Scout's Report",
+    "text": "Peek at 1 random card from opponent's hand without revealing it.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦4",
+    "suit": "♦",
+    "rank": "4",
+    "name": "Spy's Glance",
+    "text": "Look at any 2 cards in opponent's hand. Do not reveal.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦5",
+    "suit": "♦",
+    "rank": "5",
+    "name": "Courier Intercept",
+    "text": "Look at opponent's entire hand for 5 seconds. No stealing.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦6",
+    "suit": "♦",
+    "rank": "6",
+    "name": "Shadow Mapwork",
+    "text": "Force opponent to reveal 1 hidden chess piece's location (not type).",
+    "kind": "pip"
+  },
+  {
+    "id": "♦7",
+    "suit": "♦",
+    "rank": "7",
+    "name": "Agent Extraction",
+    "text": "Steal 1 specific card from opponent's hand (name the card; if absent, steal random).",
+    "kind": "pip"
+  },
+  {
+    "id": "♦8",
+    "suit": "♦",
+    "rank": "8",
+    "name": "False Orders",
+    "text": "Steal 1 random card and swap it for 1 card from your hand.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦9",
+    "suit": "♦",
+    "rank": "9",
+    "name": "Black Cipher",
+    "text": "Steal 2 random cards from opponent's hand. Opponent draws 1 in compensation.",
+    "kind": "pip"
+  },
+  {
+    "id": "♦10",
+    "suit": "♦",
+    "rank": "10",
+    "name": "Grand Betrayal",
+    "text": "Steal up to 3 cards of your choice. Opponent may only play defense cards next turn.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣2",
+    "suit": "♣",
+    "rank": "2",
+    "name": "Wicker Shield",
+    "text": "Block str. 2. Fragile but fast — can be played as a reaction instantly.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣3",
+    "suit": "♣",
+    "rank": "3",
+    "name": "Leather Guard",
+    "text": "Block str. 3. If this fully absorbs an attack, draw 1 card.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣4",
+    "suit": "♣",
+    "rank": "4",
+    "name": "Iron Buckler",
+    "text": "Block str. 4. Reduce any attack to 0 if within 2 of this card's value.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣5",
+    "suit": "♣",
+    "rank": "5",
+    "name": "Tower Shield",
+    "text": "Block str. 5. Hold as a Phase III armor buff instead: +1 to one confirmation roll.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣6",
+    "suit": "♣",
+    "rank": "6",
+    "name": "Bulwark Wall",
+    "text": "Block str. 6. On full block, counter for 1 RP damage back to attacker.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣7",
+    "suit": "♣",
+    "rank": "7",
+    "name": "War Phalanx",
+    "text": "Block str. 7. May protect a chess piece from capture once in Phase III.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣8",
+    "suit": "♣",
+    "rank": "8",
+    "name": "Fortress Gate",
+    "text": "Block str. 8. If held in hand at Phase III start, fortify one chess square permanently.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣9",
+    "suit": "♣",
+    "rank": "9",
+    "name": "Ironclad Aegis",
+    "text": "Block str. 9. After blocking, immediately play any 1 card from hand for free.",
+    "kind": "pip"
+  },
+  {
+    "id": "♣10",
+    "suit": "♣",
+    "rank": "10",
+    "name": "Unbreakable Line",
+    "text": "Block str. 10. Full block guaranteed regardless of attack value. Discard after use.",
+    "kind": "pip"
+  },
+  {
+    "id": "♠J",
+    "suit": "♠",
+    "rank": "J",
+    "name": "The Lieutenant",
+    "text": "Deploy a Pawn one square forward on the board (pre-staging) immediately. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♠Q",
+    "suit": "♠",
+    "rank": "Q",
+    "name": "The Strategist",
+    "text": "Draw 3 cards, keep 2, discard 1. Intelligence wins wars before they start. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♠K",
+    "suit": "♠",
+    "rank": "K",
+    "name": "The Warlord",
+    "text": "Double your next attack, OR gain Iron Resolve: immune to 1 capture in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♠A",
+    "suit": "♠",
+    "rank": "A",
+    "name": "The Wild Fate",
+    "text": "Declare any suit. Use as pip 1 or 14. Or hold as Last Stand: nullify 1 check in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♥J",
+    "suit": "♥",
+    "rank": "J",
+    "name": "The Lieutenant",
+    "text": "Deploy a Pawn one square forward on the board (pre-staging) immediately. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♥Q",
+    "suit": "♥",
+    "rank": "Q",
+    "name": "The Strategist",
+    "text": "Draw 3 cards, keep 2, discard 1. Intelligence wins wars before they start. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♥K",
+    "suit": "♥",
+    "rank": "K",
+    "name": "The Warlord",
+    "text": "Double your next attack, OR gain Iron Resolve: immune to 1 capture in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♥A",
+    "suit": "♥",
+    "rank": "A",
+    "name": "The Wild Fate",
+    "text": "Declare any suit. Use as pip 1 or 14. Or hold as Last Stand: nullify 1 check in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♦J",
+    "suit": "♦",
+    "rank": "J",
+    "name": "The Lieutenant",
+    "text": "Deploy a Pawn one square forward on the board (pre-staging) immediately. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♦Q",
+    "suit": "♦",
+    "rank": "Q",
+    "name": "The Strategist",
+    "text": "Draw 3 cards, keep 2, discard 1. Intelligence wins wars before they start. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♦K",
+    "suit": "♦",
+    "rank": "K",
+    "name": "The Warlord",
+    "text": "Double your next attack, OR gain Iron Resolve: immune to 1 capture in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♦A",
+    "suit": "♦",
+    "rank": "A",
+    "name": "The Wild Fate",
+    "text": "Declare any suit. Use as pip 1 or 14. Or hold as Last Stand: nullify 1 check in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♣J",
+    "suit": "♣",
+    "rank": "J",
+    "name": "The Lieutenant",
+    "text": "Deploy a Pawn one square forward on the board (pre-staging) immediately. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♣Q",
+    "suit": "♣",
+    "rank": "Q",
+    "name": "The Strategist",
+    "text": "Draw 3 cards, keep 2, discard 1. Intelligence wins wars before they start. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♣K",
+    "suit": "♣",
+    "rank": "K",
+    "name": "The Warlord",
+    "text": "Double your next attack, OR gain Iron Resolve: immune to 1 capture in Phase III. Works for any suit.",
+    "kind": "face"
+  },
+  {
+    "id": "♣A",
+    "suit": "♣",
+    "rank": "A",
+    "name": "The Wild Fate",
+    "text": "Declare any suit. Use as pip 1 or 14. Or hold as Last Stand: nullify 1 check in Phase III. Works for any suit.",
+    "kind": "face"
+  }
+];
+const $=id=>document.getElementById(id);
+let selected=new Set(),deck=[...cards],hand=[],discard=[];
+function suitClass(s){return s==="♥"||s==="♦"?"red":"black"}
+function cardNode(c,button=true){const el=document.createElement(button?"button":"div");el.className="playing-card "+suitClass(c.suit);if(button){el.type="button";el.setAttribute("aria-pressed",String(selected.has(c.id)));el.addEventListener("click",()=>{selected.has(c.id)?selected.delete(c.id):selected.add(c.id);render()})}const rank=document.createElement("span");rank.className="rank";rank.textContent=c.rank;const suit=document.createElement("span");suit.className="suit";suit.textContent=c.suit;const name=document.createElement("strong");name.textContent=c.name;const desc=document.createElement("span");desc.className="desc";desc.textContent=c.text;el.append(rank,suit,name,desc);return el}
+function render(){const q=$("search").value.toLowerCase(),s=$("suit").value,k=$("kind").value;const list=cards.filter(c=>(!q||(c.name+" "+c.text+" "+c.rank).toLowerCase().includes(q))&&(!s||c.suit===s)&&(!k||c.kind===k));$("catalogue").replaceChildren(...list.map(c=>cardNode(c)));$("catalogueCount").textContent=list.length+" cards";$("drawCount").textContent=deck.length;$("discardCount").textContent=discard.length;$("handCount").textContent=hand.length;$("hand").replaceChildren(...hand.map(c=>cardNode(c,false)));$("discard").replaceChildren(...discard.map(c=>cardNode(c,false)))}
+function announce(s){$("status").textContent=s}
+$("search").addEventListener("input",render);$("suit").addEventListener("change",render);$("kind").addEventListener("change",render);
+$("addSelected").addEventListener("click",()=>{const add=cards.filter(c=>selected.has(c.id));if(!add.length)return announce("Select one or more cards first.");for(const c of add)if(!deck.some(x=>x.id===c.id))deck.push(c);selected.clear();render();announce(add.length+" selected card(s) added to the test deck.")});
+$("shuffle").addEventListener("click",()=>{for(let i=deck.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck[i],deck[j]]=[deck[j],deck[i]]}render();announce("Draw pile shuffled locally.")});
+$("draw").addEventListener("click",()=>{if(!deck.length)return announce("Draw pile is empty.");hand.push(deck.pop());render();announce("Drew 1 card.")});
+$("discardSelected").addEventListener("click",()=>{const ids=new Set([...$("hand").querySelectorAll(".playing-card")].filter((_,i)=>hand[i]&&selected.has(hand[i].id)).map((_,i)=>i));if(!selected.size)return announce("Select a card in the catalogue to mark it; use the hand controls after selecting a card.");const c=hand.find(x=>selected.has(x.id));if(!c)return announce("No matching selected card is in your hand.");hand=hand.filter(x=>x.id!==c.id);discard.push(c);selected.delete(c.id);render();announce("Moved "+c.name+" to discard.")});
+$("reset").addEventListener("click",()=>{deck=[...cards];hand=[];discard=[];selected.clear();render();announce("Test deck reset to the 52-card reference.")});
+$("returnDiscard").addEventListener("click",()=>{deck.push(...discard);discard=[];render();announce("Discard pile returned to draw pile. Shuffle if desired.")});
+const tabs=[...document.querySelectorAll('[role=tab]')];tabs.forEach(t=>t.addEventListener("click",()=>{tabs.forEach(x=>x.setAttribute("aria-selected",String(x===t)));$("sealed").hidden=t.id!=="tab-sealed";$("violet").hidden=t.id!=="tab-violet"}));render();
+</script></body></html>
