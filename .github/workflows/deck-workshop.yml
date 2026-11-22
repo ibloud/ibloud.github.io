@@ -6,7 +6,7 @@ on:
       - ".github/workflows/deck-workshop.yml"
   push:
     branches:
-      - "feat/deck-workshop-foundation"
+      - "feat/deck-workshop-*"
     paths:
       - "deck-workshop/**"
       - ".github/workflows/deck-workshop.yml"

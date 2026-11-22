@@ -10,3 +10,11 @@ Standalone review workspace for two separate game systems. The preserved Deck Co
 - No Railway, Discord, Roomy, API or multiplayer backend is connected.
 
 No custom domain, DNS, GitHub Pages or production hosting change. Do not modify/delete/deploy the archive branch.
+
+## Accessible interaction layer
+
+The two system selectors on the workshop and card-lab pages use UI SDK Web Components Tabs, pinned to `@ui-sdk/web` **0.1.0-beta.13** via the versioned CDN URL. The SDK supplies tab keyboard/focus behavior; Loptr Lab keeps its own markup, styling, local-only review stores, card data and game boundaries. This is a beta dependency, not a rules engine or shared game runtime. Do not replace the pinned version with a floating `@0` URL without review.
+
+## UI SDK validation
+
+See [UI SDK validation and remaining review](UI-SDK-VALIDATION.md) for the pinned tabs entry, network-failure fallback, automated checks, and the browser/device acceptance checklist.
