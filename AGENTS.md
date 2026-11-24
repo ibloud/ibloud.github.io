@@ -2,11 +2,10 @@
 
 Scope: this repository. Portfolio, creative-family map and shared ecosystem documentation home.
 
-Before work, explicitly read the [shared ecosystem instructions](https://github.com/ibloud/ibloud.github.io/blob/docs/agent-design-continuity/docs/ECOSYSTEM_INSTRUCTIONS.md)
+Before work, explicitly read the [shared ecosystem instructions](https://github.com/ibloud/ibloud.github.io/blob/main/docs/ECOSYSTEM_INSTRUCTIONS.md)
 (or `docs/ECOSYSTEM_INSTRUCTIONS.md` in a locally available `ibloud/ibloud.github.io` checkout),
 then the local sources below and any applicable nested `AGENTS.md`.
-A link does not automatically load or inherit instructions. The shared file is under
-review in portfolio PR #59; it is not yet a merged production record. If unavailable,
+A link does not automatically load or inherit instructions. Portfolio PR #59 merged on 16 November 2026; read the current canonical shared file. If unavailable,
 identify the gap and stop only work dependent on it; do not fabricate its contents.
 Local security, privacy, canon, license, tests and release authority remain local.
 
@@ -50,6 +49,7 @@ Scope: this repository. Read this file and any deeper AGENTS.md applying to file
 
 ## Continuity and source access
 - Read the current task, applicable instructions, affected source, relevant design records, and open PRs before recommending or changing work.
+- Use what we have first: check native application features, reuse existing assets and infrastructure, and obtain explicit approval before additional spending. Propose a workaround or custom automation only for a specific unmet need.
 - Identify what is already implemented, assigned, or awaiting verification. Amend existing work where appropriate; do not duplicate or restart it.
 - If an answer depends on a linked page, video, or file, read its substantive contents first. If inaccessible, stop that dependent work and request the contents. Repository source may be used when the user authorizes it.
 - Name specific uncertainties. Do not invent approvals, implementation status, canon, or verification.
