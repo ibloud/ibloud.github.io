@@ -3,7 +3,7 @@
 Founder & Lead Systems Architect, Loptr Lab | Also known as I.B. Loud
 
 ## Education
-- PhD studies, Organizational Leadership – Information Technology (in progress; author-reported, institution and dates not confirmed).
+- Prior doctoral coursework, Organizational Leadership – Information Technology — University of Phoenix (author-reported; not currently enrolled).
 - MPA, Government Administration — Kennesaw State University, 2007.
 - MBA, Network and Communication Management — Keller Graduate School of Management, 2010.
 - BS, Management — Southern Polytechnic State University (year not supplied).
@@ -16,6 +16,7 @@ Founder & Lead Systems Architect, Loptr Lab | Also known as I.B. Loud
 Devereaux, D. D. (2007). Are Kennesaw State University Policies Adequate and Unbiased Regarding Sexual Assault and Harassment for the Population They Serve? Listed in Google Scholar; full text, venue and peer-review status not independently verified.
 
 ## Current research and public writing
+- [Leading the Build — living dissertation](https://ibloud.github.io/research/#living-dissertation), independent practice research.
 - Designing Humanity into Technology — proposed practice-research framework.
 - The Architecture of Inequality — public Field Notes series; not peer-reviewed publications.
 - PIXIE and Duet — design and implementation case studies; no completed human-subject findings claimed.
