@@ -77,6 +77,36 @@ No merge, deployment, hosting/DNS change, release or hold removal follows from t
 structure. The portfolio's GitHub Pages production/Vercel review arrangement applies
 only to the portfolio unless another repository's own configuration establishes it.
 
+## Use what we have first — owner correction, 24 November 2026
+
+This is a mandatory decision gate within the existing order of operations, not a
+new workflow or service. Before recommending or implementing automation, asset
+generation, integrations, purchases or custom code:
+
+1. Check the current application's documented native capabilities and existing
+   settings, including rules, filters, import/export and accessibility features.
+   When a native feature meets the need, recommend or use it first within the
+   owner's authorization. Explain the shortest usable path, including any device
+   or permission requirements.
+2. Reuse approved assets, existing files, existing subscriptions/credits and
+   established integrations, infrastructure and assignments before generating
+   replacements or introducing dependencies. Preserve identity, provenance,
+   quality and local authority.
+3. Identify the specific gap left by native functionality or existing resources.
+   Only then propose a custom automation, integration or new implementation.
+   Explain why it is necessary, its maintenance burden, and whether the owner
+   can complete the task directly.
+4. Before incurring additional cost, obtain explicit approval for the amount
+   and purpose. Do not spend credits, purchase tools, start paid services or
+   silently duplicate work because a tool is available.
+
+Record the native feature or existing resource checked, the remaining gap (if
+any), and the selected action. An assistant-managed workaround is not the
+default when the application already solves the problem. If native support
+cannot be verified, state that uncertainty; do not assume it does not exist.
+Do not claim that repository instructions automatically control another chat,
+host, installed plugin or application.
+
 ## Required order of operations — owner correction, 16 November 2026
 
 1. Read supplied briefs and affected substantive sources before deciding. Record
